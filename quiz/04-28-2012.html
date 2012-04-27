@@ -48,27 +48,133 @@
 
 <body>
 
-	<div id="one" data-role="page" data-theme="a">
+	<div id="quizone" data-role="page" data-theme="a">
 
 		<div data-role="header" data-position="fixed">
-			<h1>Welcome</h1>
+			<h1>Quizzes</h1>
 		</div><!-- /header -->
 
 		<div data-role="content">	
-			<p>If I wasnt lazy there would be something here! For now try click Quiz</p>	
+			<p id="score">Score: 0</p>	
+			
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Past</li>
+				<li><a href="#pagequiz1">Episode 1 Quiz</a></li>
+				<li data-role="list-divider">Present</li>
+				<li><a href="#pagequiz2">Episode 5 Quiz</a></li>
+				<li data-role="list-divider">Future</li>
+				<li><a href="#pagequiz3">Episode 6 Quiz</a></li>
+			</ul>	
 		</div><!-- /content -->
 		
 		<div data-role="footer" data-id="foot" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="iten.html">Itinerary</a></li>
-					<li><a onclick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="index.html" class="ui-btn-active">Quiz</a></li>
 					<li><a href="bio.html">Bio</a></li>
 				</ul>
 			</div><!-- /navbar -->
 		</div><!-- /footer -->
 		
 	</div><!-- /page one -->
+	
+ 	<div id="pagequiz1" class="quizpage" data-role="page" data-theme="a">
+
+		<div data-role="header">
+			<h1>Quiz 1</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" id="quiz1" class="quizcontent">
+			<h1 class="hide banner right">Correct!</h1>	
+			<h1 class="hide banner wrong">Incorrect!</h1>	
+			<p>What planet was Anakin Skywalker born on?</p>	
+			
+			<ul data-role="listview" data-inset="true">
+				<li><a class="right answer" href="#">Tattooine</a></li>
+				<li><a class="wrong answer" href="#">Earth</a></li>
+				<li><a class="wrong answer" href="#">Alderaan</a></li>
+				<li><a class="wrong answer" href="#">Corellia</a></li>
+				<li><a class="wrong answer" href="#">Coruscant</a></li>
+			</ul>	
+		</div><!-- /content -->
+		
+		<div data-role="footer" data-id="foot" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="iten.html">Itinerary</a></li>
+					<li><a href="index.html" data-rel="back" class="ui-btn-active">Quiz</a></li>
+					<li><a href="bio.html">Bio</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
+	</div><!-- /quiz one -->
+
+	<div id="pagequiz2" class="quizpage" data-role="page" data-theme="a">
+
+		<div data-role="header">
+			<h1>Quiz 2</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" id="quiz2" class="quizcontent">
+			<h1 class="hide banner right">Correct!</h1>	
+			<h1 class="hide banner wrong">Incorrect!</h1>	
+			<p>Who is Luke Skywalker's father?</p>	
+			
+			<ul data-role="listview" data-inset="true">
+				<li><a class="wrong answer" href="#">Obi Wan</a></li>
+				<li><a class="wrong answer" href="#">Jabba the Hutt</a></li>
+				<li><a class="right answer" href="#">Darth Vader</a></li>
+				<li><a class="wrong answer" href="#">Han Solo</a></li>
+				<li><a class="wrong answer" href="#">Greedo</a></li>
+			</ul>	
+		</div><!-- /content -->
+		
+		<div data-role="footer" data-id="foot" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="iten.html">Itinerary</a></li>
+					<li><a href="index.html" data-rel="back" class="ui-btn-active">Quiz</a></li>
+					<li><a href="bio.html">Bio</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
+	</div><!-- /quiz2  -->
+
+
+	<div id="pagequiz3" class="quizpage" data-role="page" data-theme="a">
+
+		<div data-role="header">
+			<h1>Quiz 3</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" id="quiz3" class="quizcontent">
+			<h1 class="hide banner right">Correct!</h1>	
+			<h1 class="hide banner wrong">Incorrect!</h1>	
+			<p>The creatures that help the rebels on Endor are called...</p>	
+			
+			<ul data-role="listview" data-inset="true">
+				<li><a class="wrong answer" href="#">Jawas</a></li>
+				<li><a class="wrong answer" href="#">Hutts</a></li>
+				<li><a class="right answer" href="#">Ewoks</a></li>
+				<li><a class="wrong answer" href="#">Storm Troopers</a></li>
+				<li><a class="wrong answer" href="#">Tauntauns</a></li>
+			</ul>	
+		</div><!-- /content -->
+		
+		<div data-role="footer" data-id="foot" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="iten.html">Itinerary</a></li>
+					<li><a href="index.html" data-rel="back" class="ui-btn-active">Quiz</a></li>
+					<li><a href="bio.html">Bio</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
+	</div><!-- /quiz3  -->
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->

@@ -1,3 +1,22 @@
+//function that either gets the quiz for today, or sends you to the page showing your score if there are none
+function getTodaysQuiz() {
+  // the date as a 8 digit number 04-27-2012
+  var fullDate = new Date();
+  //convert month to 2 digits
+  var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : '0' + (fullDate.getMonth()+1);
+
+  var currentDate =  twoDigitMonth + "-" + fullDate.getDate() + "-" + fullDate.getFullYear();
+  console.log(currentDate);
+  // new page url
+  var pageUrl = "quiz/" + currentDate + ".html";
+  // transition to that page if it exists, otherwise transition to no quizes page
+  console.log($.mobile.changePage(pageUrl, { transition: "slideup"} ));
+  if ($.mobile.changePage(pageUrl, { transition: "slideup"} ) == undefined) {
+      $.mobile.changePage("quiz/index.html", { transition: "fade"} )
+  };
+  //$.mobile.changePage(pageUrl, { transition: "slideup"} );
+};
+
 $("#quizone").live("pageshow", function (event) {
       var score = localStorage.getItem("score");
       //localStorage.removeItem("score");
