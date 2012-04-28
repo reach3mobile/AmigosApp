@@ -9,17 +9,29 @@ function getTodaysQuiz() {
   console.log(currentDate);
   // The last quiz that was taken
   var quizNumber = localStorage.getItem("quizNumber");
-  if (quizNumber) {
+  if (quizNumber == null) {
     quizNumber = "quiz-1";
     localStorage.setItem("quizNumber", "quiz-1");
   };
   // new page url
-  var pageUrl = "/quiz/" + currentDate + "/" + quizNumber + ".html";
+  var pageUrl = "quiz/" + currentDate + "/" + quizNumber + ".html";
   // transition to that page if it exists, otherwise transition to no quizes page
   console.log(pageUrl);
-  if ($.mobile.changePage(pageUrl) == undefined) {
-      $.mobile.changePage("quiz/index.html");
-  };
+  
+  $.ajax({
+      url:pageUrl,
+      type:'HEAD',
+      error:
+          function(){
+              //do something depressing
+              alert("No Page with that name!")
+          },
+      success:
+          function(){
+              //do something cheerful :)
+              $.mobile.changePage(pageUrl);
+          }
+  });
   //$.mobile.changePage(pageUrl, { transition: "slideup"} );
 };
 
@@ -36,11 +48,13 @@ $("#quizone").live("pageshow", function (event) {
 var currentPage;
 function quizCompleted(page) {
   // check to see if this question has been answered, if so we need to disable it
-  if (localStorage.getItem(page) == "true") {
+  if (localStorage.getItem(page) == null) {
     //console.log(page + " returning true");
-    return true;
-  }else {
+    return null;
+  }else if (localStorage.getItem(page) == "true"){
     //console.log(page + " returning false");
+    return true;
+  }else if (localStorage.getItem(page) == "false") {
     return false;
   };
 }
@@ -61,11 +75,13 @@ $( document ).delegate(".quizpage", "pageinit", function() {
   if (quizCompleted($(this).attr("id")) == true) {
     $("div.ui-page-active h1.banner.right").removeClass("hide");
     $("div.ui-page-active a.right").css('background-color', 'green');
+  }else if (quizCompleted($(this).attr("id")) == false) {
+    $("div.ui-page-active h1.banner.wrong").removeClass("hide");
   };
   
   $('a.answer').click(function(e){
          // disable the buttons because this quiz has been completed
-         if (quizCompleted(currentPage) == true) {
+         if (quizCompleted(currentPage) != null) {
            e.preventDefault();
            return;
          }else {
@@ -81,6 +97,8 @@ $( document ).delegate(".quizpage", "pageinit", function() {
             // hide the correct banner and display the incorrect banner
             bannerWrong.removeClass("hide");
             bannerRight.addClass("hide");
+            // store that this has been answered wrong
+            localStorage.setItem(currentPage, false);
          }else if($(this).hasClass("right")) {
            // change the background color of the clicked link (update needed to keep corners round)
             $(this).parent().css('background-color', 'green');
