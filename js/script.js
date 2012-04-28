@@ -10,15 +10,15 @@ function getTodaysQuiz() {
   // The last quiz that was taken
   var quizNumber = localStorage.getItem("quizNumber");
   if (quizNumber == null) {
-    quizNumber = 1;
-    localStorage.setItem("quizNumber", 1);
+    quizNumber = "quiz-1";
+    localStorage.setItem("quizNumber", "quiz-1");
   };
   // new page url
-  var pageUrl = "/quiz/" + currentDate + "/quiz-" + quizNumber + ".html";
+  var pageUrl = "quiz/" + currentDate + "/" + quizNumber + ".html";
   // transition to that page if it exists, otherwise transition to no quizes page
-  console.log($.mobile.changePage(pageUrl, { transition: "slideup"} ));
+  console.log(pageUrl);
   if ($.mobile.changePage(pageUrl, { transition: "slideup"} ) == undefined) {
-      $.mobile.changePage("/quiz/index.html", { transition: "fade"} )
+      $.mobile.changePage("quiz/index.html", { transition: "fade"} )
   };
   //$.mobile.changePage(pageUrl, { transition: "slideup"} );
 };
