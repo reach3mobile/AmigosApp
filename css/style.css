@@ -124,18 +124,18 @@ figure { margin: 0; }
    Forms
    ========================================================================== */
 
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
+/*form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }*/
 
 /* Indicate that 'label' will shift focus to the associated form element */
-label { cursor: pointer; }
+/*label { cursor: pointer; }*/
 
 /*
  * 1. Correct color not inheriting in IE6/7/8/9
  * 2. Correct alignment displayed oddly in IE6/7
  */
 
-legend { border: 0; *margin-left: -7px; padding: 0; }
+/*legend { border: 0; *margin-left: -7px; padding: 0; }*/
 
 /*
  * 1. Correct font-size not inheriting in all browsers
@@ -143,52 +143,52 @@ legend { border: 0; *margin-left: -7px; padding: 0; }
  * 3. Define consistent vertical alignment display in all browsers
  */
 
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+/*button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }*/
 
 /*
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
  * 2. Correct inner spacing displayed oddly in IE6/7
  */
 
-button, input { line-height: normal; *overflow: visible; }
-
+/*button, input { line-height: normal; *overflow: visible; }
+*/
 /*
  * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
  */
 
-table button, table input { *overflow: auto; }
-
+/*table button, table input { *overflow: auto; }
+*/
 /*
  * 1. Display hand cursor for clickable form elements
  * 2. Allow styling of clickable form elements in iOS
  */
 
-button, input[type="button"], input[type="reset"], input[type="submit"], [role="button"] { cursor: pointer; -webkit-appearance: button; }
-
+/*button, input[type="button"], input[type="reset"], input[type="submit"], [role="button"] { cursor: pointer; -webkit-appearance: button; }
+*/
 /*
  * Consistent box sizing and appearance
  */
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+/*input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
 input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }*/
 
 /*
  * Remove inner padding and border in FF3/4: h5bp.com/l
  */
 
-button::-moz-focus-inner { border: 0; padding: 0; }
+/*button::-moz-focus-inner { border: 0; padding: 0; }*/
 
 /*
  * 1. Remove default vertical scrollbar in IE6/7/8/9
  * 2. Allow only vertical resizing
  */
 
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
+/*textarea { overflow: auto; vertical-align: top; resize: vertical; }*/
 
 /* Colors for form validity */
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
+/*input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }*/
 
 
 /* =============================================================================
@@ -200,10 +200,140 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author:
+   Author: Brianna Kirkland
    ========================================================================== */
 
 
+header {
+	text-align:center;
+	line-height: 1.2em;
+}
+
+.subnav {
+	/*display: inline;*/
+	width: 12.5%;
+}
+
+/* ----pasted in from demo-----*/
+.ac-container {
+  margin-bottom:30px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+  text-align:left;
+  width:400px;
+}
+.ac-container label {
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:initial;
+  /*background-image:-webkit-linear-gradient(top, #FFFFFF 1%, #EAEAEA 100%);*/
+  background-origin:initial;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  /*color:#777777;*/
+  cursor:pointer;
+  display:block;
+  font-family:BebasNeueRegular, 'Arial Narrow', Arial, sans-serif;
+  font-size:19px;
+  height:30px;
+  line-height:33px;
+  padding-bottom:5px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:5px;
+  position:relative;
+  text-shadow:rgba(255, 255, 255, 0.796875) 1px 1px 1px;
+  z-index:20;
+}
+.ac-container label:hover {
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:#FFFFFF;
+  background-image:initial;
+  background-origin:initial;
+  background-position:initial initial;
+  background-repeat:initial initial;
+}
+.ac-container input:checked + label, .ac-container input:checked + label:hover {
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:#C6E1EC;
+  background-image:initial;
+  background-origin:initial;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  box-shadow:rgba(155, 155, 155, 0.296875) 0 0 0 1px, rgba(0, 0, 0, 0.0976563) 0 2px 2px;
+  color:#3D7489;
+  text-shadow:rgba(255, 255, 255, 0.597656) 0 1px 1px;
+}
+.ac-container label:hover::after, .ac-container input:checked + label:hover::after {
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:transparent;
+  background-image:url(http://tympanus.net/Tutorials/CSS3Accordion/images/arrow_down.png);
+  background-origin:initial;
+  background-position:50% 50%;
+  background-repeat:no-repeat no-repeat;
+  content:'';
+  height:24px;
+  position:absolute;
+  right:13px;
+  top:7px;
+  width:24px;
+}
+.ac-container input:checked + label:hover::after {
+  background-image:url(http://tympanus.net/Tutorials/CSS3Accordion/images/arrow_up.png);
+}
+.ac-container input {
+  display:none;
+}
+.ac-container article {
+  -webkit-transition-delay:initial, initial;
+  -webkit-transition-duration:0.3s, 0.6s;
+  -webkit-transition-property:height, box-shadow;
+  -webkit-transition-timing-function:ease-in-out, linear;
+  background-attachment:initial;
+  background-clip:initial;
+  background-color:rgba(255, 255, 255, 0.496094);
+  background-image:initial;
+  background-origin:initial;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  height:0;
+  margin-top:-1px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  position:relative;
+  z-index:10;
+}
+.ac-container article p {
+  color:#777777;
+  font-size:14px;
+  font-style:italic;
+  line-height:23px;
+  padding-bottom:20px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:20px;
+  text-shadow:rgba(255, 255, 255, 0.796875) 1px 1px 1px;
+}
+.ac-container input:checked ~ article {
+  -webkit-transition-delay:initial, initial;
+  -webkit-transition-duration:0.5s, 0.1s;
+  -webkit-transition-property:height, box-shadow;
+  -webkit-transition-timing-function:ease-in-out, linear;
+  box-shadow:rgba(155, 155, 155, 0.296875) 0 0 0 1px;
+}
+.ac-container input:checked ~ article.ac-small {
+  height:140px;
+}
+.ac-container input:checked ~ article.ac-medium {
+  height:180px;
+}
+.ac-container input:checked ~ article.ac-large {
+  height:230px;
+}
 
 
 
