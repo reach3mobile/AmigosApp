@@ -7,12 +7,18 @@ function getTodaysQuiz() {
 
   var currentDate =  twoDigitMonth + "-" + fullDate.getDate() + "-" + fullDate.getFullYear();
   console.log(currentDate);
+  // The last quiz that was taken
+  var quizNumber = localStorage.getItem("quizNumber");
+  if (quizNumber == null) {
+    quizNumber = 1;
+    localStorage.setItem("quizNumber", 1);
+  };
   // new page url
-  var pageUrl = "quiz/" + currentDate + ".html";
+  var pageUrl = "/quiz/" + currentDate + "/quiz-" + quizNumber + ".html";
   // transition to that page if it exists, otherwise transition to no quizes page
   console.log($.mobile.changePage(pageUrl, { transition: "slideup"} ));
   if ($.mobile.changePage(pageUrl, { transition: "slideup"} ) == undefined) {
-      $.mobile.changePage("quiz/index.html", { transition: "fade"} )
+      $.mobile.changePage("/quiz/index.html", { transition: "fade"} )
   };
   //$.mobile.changePage(pageUrl, { transition: "slideup"} );
 };
@@ -46,6 +52,7 @@ $(".quizpage").live("pageshow", function (event) {
         $("div.ui-page-active h1.banner.right").removeClass("hide");
         $("div.ui-page-active a.right").css('background-color', 'green');
       };
+      console.log(currentPage);
 });
 
 $( document ).delegate(".quizpage", "pageinit", function() {
