@@ -8,22 +8,32 @@ function getTodaysDate() {
   return finalDate;
 };
 
+// get the day as a number 0-6
+function getDayoftheWeek() {
+  var today = new Date();
+  today = today.getDay();
+  console.log(today);
+  return today;
+};
+
 function nextPageUrl(thisPage) {
   // WARNING: this could have problems if someone leaves the quiz open and then completes it the next day... Fix later.
+  // get the current URL
+  var url = $.mobile.path.parseUrl(window.location);
+  console.log(url.pathname)
   // get the number out of the current page ID
    var pgNumb = parseInt(thisPage.match(/\d+/));
    // add 1
    pgNumb += 1;
    // there are only 40 questions so if the next page is 40 goto the total score page
-   if (pgNumb == 40) {
+   if (pgNumb == 41) {
      return "quizindex.html";
    };
    // insert it back into the page ID
    var newPage = thisPage.replace(/(\d+)/g, pgNumb);
-   
    // return the complete URL
-   //console.log(window.location);
-   return newPage + ".html";
+   console.log(url.pathname + "#" + newPage);
+   return url.pathname + "#" + newPage;
 };
 
 function remainingQuiz() {
@@ -38,12 +48,13 @@ function remainingQuiz() {
   // todays date
   var today = new Date();
   // check to see if the storage contains the date, if not set to today
-  if (localStorage.getItem("today") != null) {
+  if (localStorage.getItem("today") == null) {
     localStorage.setItem("today", today);
   };
   // if the date is not today then we need to reset to 0 again
   if (localStorage.getItem("today") != today) {
     console.log("resetting quizes");
+    localStorage.setItem("lastQuiz", "quiz-day-" + getDayoftheWeek() +".html#quiz-1");
     localStorage.setItem("today", today);
     localStorage.setItem("answered", 0);
     localStorage.setItem("scoreToday", 0);
@@ -63,7 +74,8 @@ function remainingQuiz() {
 
 function nextQuiz() {
   if (remainingQuiz() == true) {
-    $.mobile.changePage(localStorage.getItem("lastQuiz"));
+    console.log("next page URL", localStorage.getItem("lastQuiz"));
+    window.location = localStorage.getItem("lastQuiz"); 
   }else {
     $.mobile.changePage("quizindex.html");
   };
@@ -87,20 +99,21 @@ function prevQuiz() {
 
 //function that either gets the quiz for today, or sends you to the page showing your score if there are none
 function getTodaysQuiz() {
-  // the date as a 8 digit number 04-27-2012
+  // the date
   var fullDate = new Date();
   
   // last day of the event, if it is past this date we just redirect to the final score page
-  var endDate = new Date("May 20, 2012");
+  var endDate = new Date("May 21, 2012");
   if (fullDate >= endDate) {
     $.mobile.changePage("quizindex.html");
   }else {
+    
     // it is within the play period, lets see if they player left off somewhere
     var lastQuiz = localStorage.getItem("lastQuiz");
     // if they did, AND we still have quizes left for today then go to that quiz
     if (lastQuiz != null && remainingQuiz() == true) {
       console.log(localStorage.getItem("lastQuiz"));
-      $.mobile.changePage(localStorage.getItem("lastQuiz"));
+      window.location = localStorage.getItem("lastQuiz");
       return;
     // otherwise send them to the score page again
     }else if (remainingQuiz() == false) {
@@ -109,12 +122,15 @@ function getTodaysQuiz() {
       return;
     };
     // player has never played before so send to first quiz
-    var pageUrl = "quiz-1.html";
-    console.log(pageUrl);
-    $.mobile.changePage(pageUrl);
+    window.location = "quiz-day-0.html#quiz-1";
+    //window.location = "quiz-day-" + today + ".html#quiz-2";
   };
 
 };
+
+$("*").live("pageshow", function (event) {
+  remainingQuiz(); 
+});
 
 $("#quizindex").live("pageshow", function (event) {
       var score = localStorage.getItem("score");

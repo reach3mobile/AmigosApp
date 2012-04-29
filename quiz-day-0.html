@@ -47,28 +47,75 @@
 </head>
 
 <body>
+	
+ 	<div id="quiz-1" class="quizpage" data-role="page" data-theme="a">
 
-	<div id="one" data-role="page" data-theme="a">
-
-		<div data-role="header" data-position="fixed">
-			<h1>Welcome</h1>
+		<div data-role="header">
+			<h1>NM Past Quiz</h1>
 		</div><!-- /header -->
 
-		<div data-role="content">	
-			<p>If I wasnt lazy there would be something here! For now try click Quiz. This is the main index page for the app.</p>	
+		<div data-role="content" id="quiz1" class="quizcontent">
+			<p class="score">Total Score: 0/40</p>
+			<p class="dayscore">Score Today: 0/5</p>
+			<h1 class="hide banner right">Genius!</h1>	
+			<h1 class="hide banner wrong">Better luck next time!</h1>	
+			<p>How high above the river is the Rio Grande Gorge Bridge?</p>	
+			
+			<ul data-role="listview" data-inset="true">
+				<li><a class="right answer a" href="#">650 Feet</a></li>
+				<li><a class="wrong answer b" href="#">2500 Feet</a></li>
+				<li><a class="wrong answer c" href="#">2 Feet</a></li>
+			</ul>
+			<a onclick="prevQuiz();" data-role="button">Previous Question</a>
+			<a class="nextQuizButton hidden" onclick="nextQuiz();" data-role="button">Next Question</a>	
 		</div><!-- /content -->
 		
 		<div data-role="footer" data-id="foot" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="iten.html">Itinerary</a></li>
-					<li><a data-ajax="false" onClick="getTodaysQuiz();">Quiz</a></li>
+					<li><a href="index.html" data-rel="back" class="ui-btn-active">Quiz</a></li>
 					<li><a href="bio.html">Bio</a></li>
 				</ul>
 			</div><!-- /navbar -->
 		</div><!-- /footer -->
+
+	</div><!-- /quiz one -->
+	
+	<div id="quiz-2" class="quizpage" data-role="page" data-theme="a">
+
+		<div data-role="header">
+			<h1>NM Past Quiz</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" id="quiz2" class="quizcontent">
+			<p class="score">Total Score: 0/40</p>
+			<p class="dayscore">Score Today: 0/5</p>
+			<h1 class="hide banner right">Genius!</h1>	
+			<h1 class="hide banner wrong">Better luck next time!</h1>	
+			<p>What land did the United States buy from Mexico in the “Gadsden Purchase”?</p>	
+			
+			<ul data-role="listview" data-inset="true">
+				<li><a class="wrong answer a" href="#">40 Acres</a></li>
+				<li><a class="right answer b" href="#">All land west of the Rio Grande, including New Mexico’s boot heel</a></li>
+				<li><a class="wrong answer c" href="#">2000 Acres</a></li>
+			</ul>
+			<a onclick="prevQuiz();" data-role="button">Previous Question</a>
+			<a class="nextQuizButton hidden" onclick="nextQuiz();" data-role="button">Next Question</a>	
+		</div><!-- /content -->
 		
-	</div><!-- /page one -->
+		<div data-role="footer" data-id="foot" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="iten.html">Itinerary</a></li>
+					<li><a href="quizindex.html" class="ui-btn-active">Quiz</a></li>
+					<li><a href="bio.html">Bio</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
+	</div><!-- /quiz-2 -->
+
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
@@ -86,12 +133,16 @@
   <script src="js/helper.js"></script>
   <script src="js/script.js"></script>
   
+  <script>
+    MBP.scaleFix();
+  </script>
   <!-- end scripts-->
 
   <!-- Debugger - remove for production -->
   <!-- <script src="https://getfirebug.com/firebug-lite.js"></script> -->
 
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID. mathiasbynens.be/notes/async-analytics-snippet -->
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
   <script>
     var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
