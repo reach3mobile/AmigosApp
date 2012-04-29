@@ -26,11 +26,6 @@ function nextPageUrl(thisPage) {
    return "quiz/" + getTodaysDate() + "/" + newPage + ".html";
 };
 
-// sends you to the next quiz 
-function nextQuiz() {
-  $.mobile.changePage(nextPageUrl(currentPage));
-};
-
 //function that either gets the quiz for today, or sends you to the page showing your score if there are none
 function getTodaysQuiz() {
   // the date as a 8 digit number 04-27-2012
@@ -82,6 +77,13 @@ function quizCompleted(page) {
 $(".quizpage").live("pageshow", function (event) {
       //console.log($page.attr("id"));
       currentPage = $(this).attr("id");
+      // grab the current score
+      if (localStorage.getItem("score") == null) {
+        localStorage.setItem("score", 0);
+      };
+      var score = parseInt(localStorage.getItem("score"));
+      // update it
+      $("div.ui-page-active p.score").text("Total Score: " + score + "/40");
       if (quizCompleted(currentPage) == true) {
         $("div.ui-page-active h1.banner.right").removeClass("hide");
         $("div.ui-page-active a.right").css('background-color', 'green');
@@ -91,8 +93,8 @@ $(".quizpage").live("pageshow", function (event) {
 });
 
 $( document ).delegate(".quizpage", "pageinit", function() {
-  // grab the current score
-  var score = parseInt(localStorage.getItem("score"));
+  
+  
   if (quizCompleted($(this).attr("id")) == true) {
     $("div.ui-page-active h1.banner.right").removeClass("hide");
     $("div.ui-page-active a.right").css('background-color', 'green');
@@ -129,7 +131,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
             bannerWrong.addClass("hide");
             
             // update the score in the localStorage database
-            score += 10;
+            score += 1;
             localStorage.setItem("score", score);
             
             // store that this quiz has been answered sucessfully
@@ -138,7 +140,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          };
     
          // the url for the next page so we can automatically return there
-         console.log("next page: " + nextPageUrl(currentPage));
+         //console.log("next page: " + nextPageUrl(currentPage));
          localStorage.setItem("lastQuiz", nextPageUrl(currentPage));
   });
   
