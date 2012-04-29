@@ -210,7 +210,7 @@ header {
 }
 
 .subnav {
-	/*display: inline;*/
+	display:inline-block;
 	width: 12.5%;
 }
 
