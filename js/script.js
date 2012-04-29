@@ -8,6 +8,29 @@ function getTodaysDate() {
   return finalDate;
 };
 
+function nextPageUrl(thisPage) {
+  // WARNING: this could have problems if someone leaves the quiz open and then completes it the next day... Fix later.
+  // get the number out of the current page ID
+   var pgNumb = parseInt(thisPage.match(/\d+/));
+   // add 1
+   pgNumb += 1;
+   // there are only 5 questions per day so if this is the last one then we need to return to the score page
+   if (pgNumb == 6) {
+     return "quiz/index.html";
+   };
+   // insert it back into the page ID
+   var newPage = thisPage.replace(/(\d+)/g, pgNumb);
+   
+   // return the complete URL
+   //console.log(window.location);
+   return "quiz/" + getTodaysDate() + "/" + newPage + ".html";
+};
+
+// sends you to the next quiz 
+function nextQuiz() {
+  $.mobile.changePage(nextPageUrl(currentPage));
+};
+
 //function that either gets the quiz for today, or sends you to the page showing your score if there are none
 function getTodaysQuiz() {
   // the date as a 8 digit number 04-27-2012
@@ -63,6 +86,7 @@ $(".quizpage").live("pageshow", function (event) {
         $("div.ui-page-active h1.banner.right").removeClass("hide");
         $("div.ui-page-active a.right").css('background-color', 'green');
       };
+      
       console.log(currentPage);
 });
 
@@ -110,11 +134,12 @@ $( document ).delegate(".quizpage", "pageinit", function() {
             
             // store that this quiz has been answered sucessfully
             //console.log("setting " +currentPage + " true");
-            localStorage.setItem(currentPage, true);
+            localStorage.setItem(currentPage, $(this.attr("class")));
          };
     
-         // last completed quiz url so we can automatically return here
-         localStorage.setItem("lastQuiz", "/quiz/" + getTodaysDate() + "/" + currentPage + ".html");
+         // the url for the next page so we can automatically return there
+         console.log("next page: " + nextPageUrl(currentPage));
+         localStorage.setItem("lastQuiz", nextPageUrl(currentPage));
   });
   
 });
