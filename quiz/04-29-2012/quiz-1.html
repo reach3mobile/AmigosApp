@@ -48,24 +48,23 @@
 
 <body>
 	
- 	<div id="one" class="quizpage" data-role="page" data-theme="a">
+ 	<div id="quiz-1" class="quizpage" data-role="page" data-theme="a">
 
 		<div data-role="header">
 			<h1>Quiz 1</h1>
 		</div><!-- /header -->
 
 		<div data-role="content" id="quiz1" class="quizcontent">
-			<h1 class="hide banner right">Correct!</h1>	
-			<h1 class="hide banner wrong">Incorrect!</h1>	
+			<h1 class="hide banner right">Genius!</h1>	
+			<h1 class="hide banner wrong">Better luck next time!</h1>	
 			<p>What planet was Anakin Skywalker born on?</p>	
 			
 			<ul data-role="listview" data-inset="true">
-				<li><a class="right answer" href="#">Tattooine</a></li>
-				<li><a class="wrong answer" href="#">Earth</a></li>
-				<li><a class="wrong answer" href="#">Alderaan</a></li>
-				<li><a class="wrong answer" href="#">Corellia</a></li>
-				<li><a class="wrong answer" href="#">Coruscant</a></li>
-			</ul>	
+				<li><a class="right answer a" href="#">Tattooine</a></li>
+				<li><a class="wrong answer b" href="#">Earth</a></li>
+				<li><a class="wrong answer c" href="#">Alderaan</a></li>
+			</ul>
+			<a onclick="nextQuiz();" data-role="button">Next Question</a>	
 		</div><!-- /content -->
 		
 		<div data-role="footer" data-id="foot" data-position="fixed">

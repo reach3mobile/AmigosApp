@@ -1,37 +1,34 @@
-//function that either gets the quiz for today, or sends you to the page showing your score if there are none
-function getTodaysQuiz() {
-  // the date as a 8 digit number 04-27-2012
+// get the current date as mm-dd-yyyy
+function getTodaysDate() {
   var fullDate = new Date();
   //convert month to 2 digits
   var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) : '0' + (fullDate.getMonth()+1);
 
-  var currentDate =  twoDigitMonth + "-" + fullDate.getDate() + "-" + fullDate.getFullYear();
-  console.log(currentDate);
-  // The last quiz that was taken
-  var quizNumber = localStorage.getItem("quizNumber");
-  if (quizNumber == null) {
-    quizNumber = "quiz-1";
-    localStorage.setItem("quizNumber", "quiz-1");
-  };
-  // new page url
-  var pageUrl = "quiz/" + currentDate + "/" + quizNumber + ".html";
-  // transition to that page if it exists, otherwise transition to no quizes page
-  console.log(pageUrl);
+  var finalDate =  twoDigitMonth + "-" + fullDate.getDate() + "-" + fullDate.getFullYear();
+  return finalDate;
+};
+
+//function that either gets the quiz for today, or sends you to the page showing your score if there are none
+function getTodaysQuiz() {
+  // the date as a 8 digit number 04-27-2012
+  var fullDate = new Date();
   
-  $.ajax({
-      url:pageUrl,
-      type:'HEAD',
-      error:
-          function(){
-              //do something depressing
-              alert("No Page with that name!")
-          },
-      success:
-          function(){
-              //do something cheerful :)
-              $.mobile.changePage(pageUrl);
-          }
-  });
+  // last day of the event, if it is past this date we just redirect to the final score page
+  var endDate = new Date("May 20, 2012");
+  if (fullDate >= endDate) {
+    $.mobile.changePage("quiz/index.html");
+  }else {
+    if (localStorage.getItem("lastQuiz") != null) {
+      console.log(localStorage.getItem("lastQuiz"));
+      $.mobile.changePage(localStorage.getItem("lastQuiz"));
+      return;
+    };
+    // new page url
+    var pageUrl = "quiz/" + getTodaysDate() + "/quiz-1.html";
+    // transition to that page if it exists, otherwise transition to no quizes page
+    console.log(pageUrl);
+    $.mobile.changePage(pageUrl);
+  };
   //$.mobile.changePage(pageUrl, { transition: "slideup"} );
 };
 
@@ -79,6 +76,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
     $("div.ui-page-active h1.banner.wrong").removeClass("hide");
   };
   
+  //console.log($(this).data("url"));
   $('a.answer').click(function(e){
          // disable the buttons because this quiz has been completed
          if (quizCompleted(currentPage) != null) {
@@ -115,7 +113,8 @@ $( document ).delegate(".quizpage", "pageinit", function() {
             localStorage.setItem(currentPage, true);
          };
     
-
+         // last completed quiz url so we can automatically return here
+         localStorage.setItem("lastQuiz", "/quiz/" + getTodaysDate() + "/" + currentPage + ".html");
   });
   
 });
