@@ -48,32 +48,104 @@
 
 <body>
 
+
 	<div id="sunday" data-role="page" data-theme="a">
 
-		<header data-role="header" data-position="fixed">
-        	<hgroup>
-			<h1>Sunday</h1>
-            <h2><time datetime="2012-5-13">May 13, 2012</time></h2>
-        	</hgroup>
-             
-		</header>
-        
-<nav class="subnav" data-role="navbar" data-type="horizontal">
-				<ul>
-					<li><a href="#sunday">Su</a></li>
-					<li><a href="#">M</a></li>
-					<li><a href="#">Tu</a></li>
-                    <li><a href="#">W</a></li>
-                    <li><a href="#">Th</a></li>
-                    <li><a href="#">F</a></li>
-                    <li><a href="#">S</a></li>
-                    <li><a href="#">Su</a></li>
+		<!--<nav data-role="navbar" data-type="horizontal">
+				<ul class="ui-grid-d">
+					<li class="ui-block-a"><a href="#sunday">Su</a></li>
+					<li class="ui-block-b"><a href="#">M</a></li>
+					<li class="ui-block-c"><a href="#">Tu</a></li>
+                    <li class="ui-block-d"><a href="#">W</a></li>
+                    <li class="ui-block-a"><a href="#">Th</a></li>
+                    <li class="ui-block-b"><a href="#">F</a></li>
+                    <li class="ui-block-c"><a href="#">S</a></li>
+                    <li class="ui-block-d"><a href="#">Su</a></li>
 				</ul>
 			</nav>
+        -->
 
-		<section data-role="content" >	
+		<section data-role="content" >
+        	
+        <header data-role="header" data-position="fixed">
+			<h1>Sunday <time datetime="2012-05-13">May 13<sup>th</sup></time></h1>
+		</header>
+        
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
-			<h1><time datetime="2012-05-13T07:030:00">7:30 a.m. - 8:45 a.m.</time></h1>
+			<h1><time datetime="2012-05-13T07:30:00">7:30 a.m. - 8:45 a.m.</time></h1>
+			<article>
+			<p>Departure breakfast at the Albuquerque Sheraton Airport Hotel, (Old Wyndam).</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h1><time datetime="2012-05-13T09:30:00">9:30 a.m.</time></h1>
+			<article>
+			<p>Charter flight departs Cutter Aviation for Washington D.C.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h1><time datetime="2012-05-13T15:00:00">3:00 p.m.</time></h1>
+			<article>
+			<p>Flight arrives into FBO at Reagon National Airport (DCA) - Contingent on obtaining a required Special Waiver required for all charter flights into (DCA). If a waiver is not obtained, we will fly into an FBO at Dulles International Airport.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h1><time datetime="2012-05-13T16:00:00">4:00 p.m.</time></h1>
+			<article>
+			<p>Arrive for check-in at the Mayflower Renaissance Hotel, 1127 Connecticut Ave., (202) 347-3000.</p>
+			</article>
+			</div>
+            
+            <h3>Evening Free</h3>
+            	
+		</section><!-- container -->
+		
+        
+        
+        
+		<footer data-role="footer" data-id="foot" data-position="fixed">
+       
+        
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="iten.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+		
+	</div><!-- #sunday page -->
+    
+    
+    
+    <div id="monday" data-role="page" data-theme="a">
+
+		<!--<nav data-role="navbar" data-type="horizontal">
+				<ul class="ui-grid-d">
+					<li class="ui-block-a"><a href="#sunday">Su</a></li>
+					<li class="ui-block-b"><a href="#">M</a></li>
+					<li class="ui-block-c"><a href="#">Tu</a></li>
+                    <li class="ui-block-d"><a href="#">W</a></li>
+                    <li class="ui-block-a"><a href="#">Th</a></li>
+                    <li class="ui-block-b"><a href="#">F</a></li>
+                    <li class="ui-block-c"><a href="#">S</a></li>
+                    <li class="ui-block-d"><a href="#">Su</a></li>
+				</ul>
+			</nav>
+        -->
+
+		<section data-role="content" >
+        	
+        <header data-role="header" data-position="fixed">
+			<h1>Monday <time datetime="2012-5-13">May 14<sup>th</sup></time></h1>
+		</header>
+        
+			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h1><time datetime="2012-05-14T07:030:00">7:30 a.m. - 8:45 a.m.</time></h1>
 			<article>
 			<p>Departure breakfast at the Albuquerque Sheraton Airport Hotel, (Old Wyndam).</p>
 			</article>
@@ -102,7 +174,7 @@
             
             <h3>Evening Free</h3>
             	
-		</section><!-- /container -->
+		</section><!-- container -->
 		
         
         
@@ -119,7 +191,7 @@
 			</nav>
 		</footer>
 		
-	</div><!-- /sunday page -->
+	</div><!-- #monday page -->
     
     
     
