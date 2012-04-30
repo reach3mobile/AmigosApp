@@ -1,4 +1,4 @@
-var firstDay = 29;
+var firstDay = new Date(2012, 3, 29);
 var lastDay = 20;
 // get the current date as mm-dd-yyyy
 function getTodaysDate() {
@@ -10,50 +10,57 @@ function getTodaysDate() {
   return finalDate;
 };
 
-// get the day as a number 0-6
-function getDayoftheMonth() {
-  var today = new Date();
-  today = today.getDate();
-
-  return today;
-};
-
 function nextPageUrl(thisPage) {
   // WARNING: this could have problems if someone leaves the quiz open and then completes it the next day... Fix later.
   // get the current URL
   var url = $.mobile.path.parseUrl(window.location);
-  console.log(url.pathname)
+  
   // get the number out of the current page ID
    var pgNumb = parseInt(thisPage.match(/\d+/));
    // there are 5 questions per page, if this is question 5 the next one is on a different page
+   
    var newUrl = url.pathname;
    if (pgNumb % 5 == 0) {
-     // get the date from the page name
+     // get the number from the page name
      var dateNumb = parseInt(newUrl.match(/\d+/));
+     // store this variable 
+     
      // add 1
      dateNumb += 1;
-     if (dataNumb > lastDay) {
+     
+     // there are eight pages so send home if the new page would be higher
+     if (dateNumb > 8) {
        return "quizindex.html";
      };
-     newUrl.replace(/(\d+)/g, dateNumb);
+     localStorage.setItem("pageNumber", dateNumb);
+     newUrl = "quiz-day-" + dateNumb + ".html";
+     
    };
    // add 1
    pgNumb += 1;
-   // there are only 40 questions so if the next page is 40 goto the total score page
-   if (pgNumb == 41) {
-     return "quizindex.html";
-   };
    // insert it back into the page ID
    var newPage = thisPage.replace(/(\d+)/g, pgNumb);
    // return the complete URL
-   console.log(newUrl + "#" + newPage);
+  
    return newUrl + "#" + newPage;
 };
 
+function daysSinceStart(){
+  var today = new Date();
+  var oneDay=1000*60*60*24;
+  var days = Math.ceil((today.getTime()-firstDay.getTime())/(oneDay));
+  console.log("days: " + days);
+  return days;
+};
+
 function remainingQuiz() {
-  // check to see if the storage contains the number of answered questions if not init to 0
-  if (localStorage.getItem("answered") == null) {
-    localStorage.setItem("answered", 0);
+  // check to see if the storage contains the number of unlocked days, if not init 1
+  if (localStorage.getItem("unlocked") == null) {
+    localStorage.setItem("unlocked", 1);
+  };
+  // check to see if the storage contains the number of the last page played, if not 1
+  if (localStorage.getItem("pageNumber") == null) {
+    localStorage.setItem("pageNumber", 1);
   };
   // check to see if the score for today has be created if not make it 0
   if (localStorage.getItem("scoreToday") == null) {
@@ -64,72 +71,29 @@ function remainingQuiz() {
   // check to see if the storage contains the date, if not set to today
   if (localStorage.getItem("today") == null) {
     localStorage.setItem("today", getTodaysDate());
-    console.log(today);
   };
+  var days = daysSinceStart();
   // if the date is not today then we need to reset to 0 again
   if (localStorage.getItem("today") != getTodaysDate()) {
-    console.log(today + "saved, today " + localStorage.getItem("today"));
     console.log("resetting quizes");
-    localStorage.setItem("lastQuiz", "quiz-day-" + getDayoftheMonth() +".html#quiz-1");
+    // we might should set the player on the first quiz for this day.
+    localStorage.setItem("lastQuiz", "quiz-day-" + days + ".html");
+    localStorage.setItem("unlocked", days);
     localStorage.setItem("today", today);
-    localStorage.setItem("answered", 0);
     localStorage.setItem("scoreToday", 0);
   };
-  // number of questions answered today
-  var answered = localStorage.getItem("answered");
-  // how many can be answered
-  var remaining = 5;
-  // difference
-  remaining -= answered;
   // if there are no more remaining questions we will just show the score, other wise keep going!
-  if (remaining != 0) {
+  var pageNumber = localStorage.getItem("pageNumber");
+  if (pageNumber <= days) {
     return true;
   };
   return false;
 }
 
-function nextQuiz() {
-  if (remainingQuiz() == true) {
-    console.log("next page URL", localStorage.getItem("lastQuiz"));
-    window.location = localStorage.getItem("lastQuiz"); 
-  }else {
-    $.mobile.changePage("quizindex.html");
-  };
-}
-
-function prevQuiz() {
-  var pgNumb = parseInt(currentPage.match(/\d+/));
-   // subtract 1
-   pgNumb -= 1;
-   // get the current URL
-   var url = $.mobile.path.parseUrl(window.location);
-   // there are only 5 questions per page so if it is a muliple of 5 we need to go back a page
-   //console.log(url);
-   var newUrl = url.pathname;
-   
-   if (pgNumb % 5 == 0) {
-      // get the date from the page name
-      var dateNumb = parseInt(newUrl.match(/\d+/));
-      // add 1
-      dateNumb -= 1;
-      if (dataNumb < firstDay) {
-        window.location = "quizindex.html";
-        return;
-      };
-      newUrl.replace(/(\d+)/g, dateNumb);
-    };
-   // insert it back into the page ID
-   var newPage = currentPage.replace(/(\d+)/g, pgNumb);
-   
-   // return the complete URL
-   //console.log(newUrl + "#" + newPage + ".html");
-   window.location = newUrl + "#" + newPage;
-}
-
 //function that either gets the quiz for today, or sends you to the page showing your score if there are none
 function getTodaysQuiz() {
   // the date
-  var fullDate = new Date();
+  var fullDate = getTodaysDate();
   
   // last day of the event, if it is past this date we just redirect to the final score page
   var endDate = new Date("May 21, 2012");
@@ -151,7 +115,7 @@ function getTodaysQuiz() {
       return;
     };
     // player has never played before so send to first quiz
-    window.location = "quiz-day-" + firstDay +".html#quiz-1";
+    window.location = "quiz-day-1.html#quiz-1";
     //window.location = "quiz-day-" + today + ".html#quiz-2";
   };
 
@@ -197,10 +161,13 @@ $(".quizpage").live("pageshow", function (event) {
       var scoreToday = parseInt(localStorage.getItem("scoreToday"));
       // update the displays
       $("div.ui-page-active p.score").text("Total Score: " + score + "/40");
-      $("div.ui-page-active p.dayscore").text("Score Today: " + scoreToday + "/5");
+      $("div.ui-page-active p.dayscore").text("Score Today: " + scoreToday);
       
       if (localStorage.getItem(currentPage + "win") != null) {
         // show the button to move to the next quiz
+        if (remainingQuiz() == false) {
+          $("div.ui-page-active a.nextQuizButton").text("See Score");
+        };
         $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
         if (localStorage.getItem(currentPage + "win") == "true") {
           $("div.ui-page-active h1.banner.right").removeClass("hide");
@@ -277,7 +244,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
             
             // update the score display
             $("div.ui-page-active p.score").text("Total Score: " + score + "/40");
-            $("div.ui-page-active p.dayscore").text("Score Today: " + scoreToday + "/5");
+            $("div.ui-page-active p.dayscore").text("Score Today: " + scoreToday);
          };
          // store the button that was pressed
          var buttonSelector = $(this).attr("class").replace(/\s/g , ".");
@@ -292,10 +259,26 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          localStorage.setItem("lastQuiz", nextPageUrl(currentPage));
          
          // show the button to move to the next quiz (if we havent used all the quizes today)
-         if (remainingQuiz() != 0) {
+         if (remainingQuiz() == true) {
+           $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
+         }else {
+           $("div.ui-page-active a.nextQuizButton").text("See Score");
            $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
          };
   });
   
+  $('a.nextQuizButton').click(function(e){ 
+      if (remainingQuiz() == false) {
+        e.preventDefault();
+        window.location = "quizindex.html";
+        return;
+      };
+      var target = $(e.target).closest('a');
+      if( target ) {
+          e.preventDefault();
+          window.location = target.attr('href');
+          console.log(target.attr('href'));
+      }
+    });
+  
 });
-
