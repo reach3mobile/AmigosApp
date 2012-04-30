@@ -1,4 +1,5 @@
 var firstDay = 29;
+var lastDay = 20;
 // get the current date as mm-dd-yyyy
 function getTodaysDate() {
   var fullDate = new Date();
@@ -24,6 +25,18 @@ function nextPageUrl(thisPage) {
   console.log(url.pathname)
   // get the number out of the current page ID
    var pgNumb = parseInt(thisPage.match(/\d+/));
+   // there are 5 questions per page, if this is question 5 the next one is on a different page
+   var newUrl = url.pathname;
+   if (pgNumb % 5 == 0) {
+     // get the date from the page name
+     var dateNumb = parseInt(newUrl.match(/\d+/));
+     // add 1
+     dateNumb += 1;
+     if (dataNumb > lastDay) {
+       return "quizindex.html";
+     };
+     newUrl.replace(/(\d+)/g, dateNumb);
+   };
    // add 1
    pgNumb += 1;
    // there are only 40 questions so if the next page is 40 goto the total score page
@@ -33,8 +46,8 @@ function nextPageUrl(thisPage) {
    // insert it back into the page ID
    var newPage = thisPage.replace(/(\d+)/g, pgNumb);
    // return the complete URL
-   console.log(url.pathname + "#" + newPage);
-   return url.pathname + "#" + newPage;
+   console.log(newUrl + "#" + newPage);
+   return newUrl + "#" + newPage;
 };
 
 function remainingQuiz() {
@@ -47,7 +60,7 @@ function remainingQuiz() {
     localStorage.setItem("scoreToday", 0);
   };
   // todays date
-  var today = new Date();
+  var today = getTodaysDate();
   // check to see if the storage contains the date, if not set to today
   if (localStorage.getItem("today") == null) {
     localStorage.setItem("today", getTodaysDate());
@@ -55,7 +68,7 @@ function remainingQuiz() {
   };
   // if the date is not today then we need to reset to 0 again
   if (localStorage.getItem("today") != getTodaysDate()) {
-    console.log(today + "saved today " + localStorage.getItem("today"));
+    console.log(today + "saved, today " + localStorage.getItem("today"));
     console.log("resetting quizes");
     localStorage.setItem("lastQuiz", "quiz-day-" + getDayoftheMonth() +".html#quiz-1");
     localStorage.setItem("today", today);
@@ -90,24 +103,21 @@ function prevQuiz() {
    pgNumb -= 1;
    // get the current URL
    var url = $.mobile.path.parseUrl(window.location);
-   // there are only 5 questions per page so it is 0 we need to go back a page
-   url = url.pathname;
+   // there are only 5 questions per page so if it is a muliple of 5 we need to go back a page
    //console.log(url);
-   var page = getDayoftheMonth();
-   var newUrl;
-   if (pgNumb == 0) {
-     // go back one page
-      page -= 1;
-      newUrl = url.replace(/(\d+)/g, page);
-      // if that would put us before the first day of the quiz then just return to the quiz home page.
-      if (page < firstDay) {
-         $.mobile.changePage("quizindex.html");
-         return;
+   var newUrl = url.pathname;
+   
+   if (pgNumb % 5 == 0) {
+      // get the date from the page name
+      var dateNumb = parseInt(newUrl.match(/\d+/));
+      // add 1
+      dateNumb -= 1;
+      if (dataNumb < firstDay) {
+        window.location = "quizindex.html";
+        return;
       };
-   }else {
-     // otherwise just pass the current page through
-     newUrl = url;
-   };
+      newUrl.replace(/(\d+)/g, dateNumb);
+    };
    // insert it back into the page ID
    var newPage = currentPage.replace(/(\d+)/g, pgNumb);
    
