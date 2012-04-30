@@ -1,3 +1,4 @@
+var firstDay = 29;
 // get the current date as mm-dd-yyyy
 function getTodaysDate() {
   var fullDate = new Date();
@@ -9,10 +10,10 @@ function getTodaysDate() {
 };
 
 // get the day as a number 0-6
-function getDayoftheWeek() {
+function getDayoftheMonth() {
   var today = new Date();
-  today = today.getDay();
-  console.log(today);
+  today = today.getDate();
+
   return today;
 };
 
@@ -49,12 +50,14 @@ function remainingQuiz() {
   var today = new Date();
   // check to see if the storage contains the date, if not set to today
   if (localStorage.getItem("today") == null) {
-    localStorage.setItem("today", today);
+    localStorage.setItem("today", getTodaysDate());
+    console.log(today);
   };
   // if the date is not today then we need to reset to 0 again
-  if (localStorage.getItem("today") != today) {
+  if (localStorage.getItem("today") != getTodaysDate()) {
+    console.log(today + "saved today " + localStorage.getItem("today"));
     console.log("resetting quizes");
-    localStorage.setItem("lastQuiz", "quiz-day-" + getDayoftheWeek() +".html#quiz-1");
+    localStorage.setItem("lastQuiz", "quiz-day-" + getDayoftheMonth() +".html#quiz-1");
     localStorage.setItem("today", today);
     localStorage.setItem("answered", 0);
     localStorage.setItem("scoreToday", 0);
@@ -85,16 +88,32 @@ function prevQuiz() {
   var pgNumb = parseInt(currentPage.match(/\d+/));
    // subtract 1
    pgNumb -= 1;
-   // there are only 40 questions so if the next page is 40 goto the total score page
+   // get the current URL
+   var url = $.mobile.path.parseUrl(window.location);
+   // there are only 5 questions per page so it is 0 we need to go back a page
+   url = url.pathname;
+   //console.log(url);
+   var page = getDayoftheMonth();
+   var newUrl;
    if (pgNumb == 0) {
-     $.mobile.changePage("quizindex.html");
+     // go back one page
+      page -= 1;
+      newUrl = url.replace(/(\d+)/g, page);
+      // if that would put us before the first day of the quiz then just return to the quiz home page.
+      if (page < firstDay) {
+         $.mobile.changePage("quizindex.html");
+         return;
+      };
+   }else {
+     // otherwise just pass the current page through
+     newUrl = url;
    };
    // insert it back into the page ID
    var newPage = currentPage.replace(/(\d+)/g, pgNumb);
    
    // return the complete URL
-   //console.log(window.location);
-    $.mobile.changePage(newPage + ".html");
+   //console.log(newUrl + "#" + newPage + ".html");
+   window.location = newUrl + "#" + newPage;
 }
 
 //function that either gets the quiz for today, or sends you to the page showing your score if there are none
@@ -122,7 +141,7 @@ function getTodaysQuiz() {
       return;
     };
     // player has never played before so send to first quiz
-    window.location = "quiz-day-0.html#quiz-1";
+    window.location = "quiz-day-" + firstDay +".html#quiz-1";
     //window.location = "quiz-day-" + today + ".html#quiz-2";
   };
 
