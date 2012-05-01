@@ -214,13 +214,21 @@ header {
 	width: 12.5%;
 }
 
-img.bio-pic {
-	border: 8px white solid;
-	border-bottom: 24px white solid;
-	-moz-box-shadow: 3px 3px 20 18 rgba(0,0,0,56);
-	-webkit-box-shadow: 3px 3px 20 18 rgba(0,0,0,56);
-	box-shadow: 3px 3px 20 18 rgba(40,67,124,56);
+.bio-pic {
+	margin-top: 65px;
+	border: 12px white solid;
+	border-bottom: 36px white solid;
+	-moz-transform:rotate(5deg) translate(45px, -45px);
+	-o-transform:rotate(5deg) translate(45px, -45px);
+	-webkit-transform:rotate(5deg) translate(45px, -45px);
+	transform:rotate(5deg) translate(45px, -45px);
+	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
+section>h1 {
+	margin-left: 20px;
+}
+
+
 
 
 
