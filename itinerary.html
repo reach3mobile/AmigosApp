@@ -51,34 +51,18 @@
 
 	<div id="sunday" data-role="page" data-theme="a">
 
-		<!--<nav data-role="navbar" data-type="horizontal">
-				<ul class="ui-grid-d">
-					<li class="ui-block-a"><a href="#sunday">Su</a></li>
-					<li class="ui-block-b"><a href="#">M</a></li>
-					<li class="ui-block-c"><a href="#">Tu</a></li>
-                    <li class="ui-block-d"><a href="#">W</a></li>
-                    <li class="ui-block-a"><a href="#">Th</a></li>
-                    <li class="ui-block-b"><a href="#">F</a></li>
-                    <li class="ui-block-c"><a href="#">S</a></li>
-                    <li class="ui-block-d"><a href="#">Su</a></li>
-				</ul>
-			</nav>
-        -->
-
 		<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
-						
-							<a data-role="button" href="#sunday">Su</a>
-							<a data-role="button" href="#">M</a>
-							<a data-role="button" href="#">Tu</a>
-		                    <a data-role="button" href="#">W</a>
-		                    <a data-role="button" href="#">Th</a>
-		                    <a data-role="button" href="#">F</a>
-		                    <a data-role="button" href="#">S</a>
-		                    <a data-role="button" href="#">Su</a>
-					
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
 		</nav>
 
-		<section data-role="content" >
+		<section data-role="content">
         	
         <header data-role="header" data-position="fixed">
 			<h1>Sunday <time datetime="2012-05-13">May 13<sup>th</sup></time></h1>
@@ -112,21 +96,24 @@
 			</article>
 			</div>
             
-            <h3>Evening Free</h3>
+            <div data-role="collapsible" data-collapsed="true" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h1><time datetime="2012-05-13T16:00:00">Evening Free</time></h1>
+			<article>
+			<p></p>
+			</article>
+			</div>
+            
             	
 		</section><!-- container -->
-		
-        
-        
         
 		<footer data-role="footer" data-id="foot" data-position="fixed">
        
         
 			<nav data-role="navbar">
 				<ul>
-					<li><a href="iten.html">Itinerary</a></li>
+					<li><a href="itinerary.html">Itinerary</a></li>
 					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
-					<li><a href="bio.html">Bio</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
 				</ul>
 			</nav>
 		</footer>
@@ -135,91 +122,515 @@
     
     
     
+    
+    
     <div id="monday" data-role="page" data-theme="a">
 
-		<!--<nav data-role="navbar" data-type="horizontal">
-				<ul class="ui-grid-d">
-					<li class="ui-block-a"><a href="#sunday">Su</a></li>
-					<li class="ui-block-b"><a href="#">M</a></li>
-					<li class="ui-block-c"><a href="#">Tu</a></li>
-                    <li class="ui-block-d"><a href="#">W</a></li>
-                    <li class="ui-block-a"><a href="#">Th</a></li>
-                    <li class="ui-block-b"><a href="#">F</a></li>
-                    <li class="ui-block-c"><a href="#">S</a></li>
-                    <li class="ui-block-d"><a href="#">Su</a></li>
-				</ul>
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
 			</nav>
-        -->
 
-		<section data-role="content" >
-        	
+		<section data-role="content">	
         <header data-role="header" data-position="fixed">
-			<h1>Monday <time datetime="2012-5-13">May 14<sup>th</sup></time></h1>
+			<h1>Monday, <time datetime="2012-05-14">May 14<sup>th</sup></time></h1>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
-			<h1><time datetime="2012-05-14T07:030:00">7:30 a.m. - 8:45 a.m.</time></h1>
+			<h2><time datetime="2012-05-14T08:00:00">8:00 a.m. - Noon</time></h2>
 			<article>
-			<p>Departure breakfast at the Albuquerque Sheraton Airport Hotel, (Old Wyndam).</p>
+			<p>Depart for VIP tour of the United States Naval Academy - Annapolis, Maryland.</p>
 			</article>
 			</div>
             
             <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
-			<h1><time datetime="2012-05-13T109:30:00">9:30 a.m.</time></h1>
+			<h2><time datetime="2012-05-14T12:00:00">Noon - 1:30 p.m.</time></h2>
 			<article>
-			<p>Charter flight departs Cutter Aviation for Washington D.C.</p>
+			<p>Lunch on your own in Annapolis.</p>
 			</article>
 			</div>
             
             <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
-			<h1><time datetime="2012-05-13T15:00:00">3:00 p.m.</time></h1>
+			<h2><time datetime="2012-05-14T13:45:00">1:45 - 2:45 p.m.</time></h2>
 			<article>
-			<p>Flight arrives into FBO at Reagon National Airport (DCA) - Contingent on obtaining a required Special Waiver required for all charter flights into (DCA). If a waiver is not obtained, we will fly into an FBO at Dulles International Airport.</p>
+			<p>Tour Maryland state capital building.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="true" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-14T14:45:00">2:45 - 4:30 p.m.</time></h2>
+			<article>
+			<p> </p>
 			</article>
 			</div>
             
             <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
-			<h1><time datetime="2012-05-13T16:00:00">4:00 p.m.</time></h1>
+			<h2><time datetime="2012-05-14T17:30:00">5:30 p.m.</time></h2>
 			<article>
-			<p>Arrive for check-in at the Mayflower Renaissance Hotel, 1127 Connecticut Ave., (202) 347-3000.</p>
+			<p>Arrive back at the Mayflower Hotel.</p>
 			</article>
 			</div>
             
-            <h3>Evening Free</h3>
+            <div data-role="collapsible" data-collapsed="true" data-iconpos="right" data-theme="a" data-content-theme="a">
+            <h2>Evening Free</h2>
+            <article>
+			<p></p>
+			</article>
+            </div>
             	
 		</section><!-- container -->
-		
-        
-        
-        
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
-        
+	
+		<footer>
 			<nav data-role="navbar">
 				<ul>
-					<li><a href="iten.html">Itinerary</a></li>
+					<li><a href="itinerary.html">Itinerary</a></li>
 					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
-					<li><a href="bio.html">Bio</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
 				</ul>
 			</nav>
 		</footer>
-		
-	</div><!-- #monday page -->
+        
+</div><!-- #monday page -->
     
     
     
     
     
+ 
+<div id="tuesday" data-role="page" data-theme="a">
+
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
+			</nav>
+
+		<section data-role="content">	
+        <header data-role="header" data-position="fixed">
+			<h1>Tuesday, <time datetime="2012-05-15">May 15<sup>th</sup></time></h1>
+		</header>
+        
+			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-15T08:00:00">8:00 a.m. - Noon</time></h2>
+			<article>
+			<p>Tour and briefing of the U.S. Secret Service Training Academy.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-15T13:00:00">1:00 p.m.</time></h2>
+			<article>
+			<p>Arrive back at the Mayflower Hotel.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-15T16:45:00">4:45 p.m.</time></h2>
+			<article>
+			<p>Coaches depart for the Canadian Embassy.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-15T17:15:00">5:15 p.m.</time></h2>
+			<article>
+			<p>Fiftieth anniversary Amigo group photo at the embassy.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-15T17:30:00">5:30 - 7:30 p.m.</time></h2>
+			<article>
+			<p>Amigo reception at the Canadian Embassy.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-15T19:45:00">7:45 p.m.</time></h2>
+			<article>
+			<p>Coaches return to the Mayflower Hotel.</p>
+			</article>
+			</div>
+            	
+		</section><!-- container -->
+        
+		<footer>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="itinerary.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+        
+</div><!-- #tuesday page -->   
     
     
     
     
     
+<div id="wednesday" data-role="page" data-theme="a">
+
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
+			</nav>
+
+		<section data-role="content">	
+        <header data-role="header" data-position="fixed">
+			<h1>Wednesday, <time datetime="2012-05-16">May 16<sup>th</sup></time></h1>
+		</header>
+        
+			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-16T09:30:00">9:30 a.m.</time></h2>
+			<article>
+			<p>Coaches depart for the Anderson House for tour of The Order of the Cincinnati.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-16T11:00:00">11:00 a.m. - 12:30 p.m.</time></h2>
+			<article>
+			<p>Amigo luncheon in honor of Amigo past presidents will follow at the Anderson House.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-16T12:45:00">12:45 p.m.</time></h2>
+			<article>
+			<p>Coaches depart for airport. (DCA or DIA)</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-16T14:15:00">2:15 p.m.</time></h2>
+			<article>
+			<p>Charter flight departs, hopefully from DCA main terminal for Atlanta, Georgia.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-16T15:45:00">3:45 p.m.</time></h2>
+			<article>
+			<p>Flight arrives into FBO at Atlanta Hartsfield Airport (ATL).</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-16T16:30:00">4:30 p.m.</time></h2>
+			<article>
+			<p>Coaches arrive at the Ritz-Carlton Buckhead Hotel, 3434 Peachtree Road, NE, (404) 237-2700.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="true" data-iconpos="right" data-theme="a" data-content-theme="a">
+            <h2>Evening Free</h2>
+            <article>
+			<p></p>
+			</article>
+            </div>
+            	
+		</section><!-- container -->
+        
+		<footer>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="itinerary.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+        
+</div><!-- #wednesday page -->    
+    
+
+
+
+<div id="thursday" data-role="page" data-theme="a">
+
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
+			</nav>
+
+		<section data-role="content">	
+        <header data-role="header" data-position="fixed">
+			<h1>Thursday, <time datetime="2012-05-17">May 17<sup>th</sup></time></h1>
+		</header>
+        
+			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-17T08:00:00">8:00 a.m.</time></h2>
+			<article>
+			<p>Coaches depart for Auburn, Alabama.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-17T09:30:00">9:30 - 11:30 a.m.</time></h2>
+			<article>
+			<p>Tour of Auburn University campus.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-17T11:45:00">11:45 a.m. - 1:00 p.m.</time></h2>
+			<article>
+			<p>Luncheon at the home of President Jay Gouge (Former NM Amigo) on campus.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-17T16:15:00">4:15 p.m.</time></h2>
+			<article>
+			<p>Coaches arrive back at the Ritz-Carlton Hotel.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-17T17:30:00">5:30 - 7:30 p.m.</time></h2>
+			<article>
+			<p>Amigo Reception at the Ritz Carlton.</p>
+			</article>
+			</div>
+            	
+		</section><!-- container -->
+        
+		<footer>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="itinerary.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+        
+</div><!-- #thursday page --> 
+
+
+
+
+
+<div id="friday" data-role="page" data-theme="a">
+
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
+			</nav>
+
+		<section data-role="content">	
+        <header data-role="header" data-position="fixed">
+			<h1>Friday, <time datetime="2012-05-18">May 18<sup>th</sup></time></h1>
+		</header>
+        
+			<div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-18T09:00:00">9:00 a.m.</time></h2>
+			<article>
+			<p>Coaches depart for Atlanta Hartsfield Airport.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-18T10:00:00">10:00 a.m.</time></h2>
+			<article>
+			<p>Flight departs from FBO for San Antonio International Airport (SAT).</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-18T11:30:00">11:30 a.m.</time></h2>
+			<article>
+			<p>Flight arrives into FBO at (SAT).</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-18T12:00:00">12:00 p.m.</time></h2>
+			<article>
+			<p>Coaches arrive at The Westin La Cantera Resort, 16641 La Cantera Parkway, (210) 558-6500.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+            <h2>Afternoon Free</h2>
+            <article>
+            <p>Golfers may wish to play The Palmer Course at the Westin.</p>
+            </article>
+            </div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-18T17:30:00">5:30 - 7:30 p.m.</time></h2>
+			<article>
+			<p>Amigo reception on the Old Fort Lawn at the Westin. (If you are golfing, you will most likely miss the reception.)</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="true" data-iconpos="right" data-theme="a" data-content-theme="a">
+            <h2>R &amp; R Begins</h2>
+            <article>
+			<p></p>
+			</article>
+            </div>
+            	
+		</section><!-- container -->
+        
+		<footer>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="itinerary.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+        
+</div><!-- #friday page -->
     
     
-    
-    
-    
+
+
+
+<div id="saturday" data-role="page" data-theme="a">
+
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
+			</nav>
+
+		<section data-role="content">	
+        <header data-role="header" data-position="fixed">
+			<h1>Saturday, <time datetime="2012-05-19">May 19<sup>th</sup></time></h1>
+		</header>
+        
+			<div data-role="collapsible" data-collapsed="true" data-iconpos="right" data-theme="a" data-content-theme="a">
+            <h2>R &amp; R Continues</h2>
+            <article>
+            <p></p>
+            </article>
+            </div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-19T08:00:00">8:00 a.m.</time></h2>
+			<article>
+			<p>Amigo Golf Tournament on the Resort Course at the Westin.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-19T10:00:00">10:00 a.m. - 10:00 p.m.</time></h2>
+			<article>
+			<p>Amigos shuttle bus runs from Westin Resort to the Downtown River walk area.</p>
+			</article>
+			</div>
+            	
+		</section><!-- container -->
+        
+		<footer>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="itinerary.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+        
+</div><!-- #saturday page -->
+
+
+
+
+
+<div id="sunday2" data-role="page" data-theme="a">
+
+			<nav data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a data-role="button" href="#sunday">Su</a>
+              <a data-role="button" href="#monday">M</a>
+              <a data-role="button" href="#tuesday">Tu</a>
+              <a data-role="button" href="#wednesday">W</a>
+              <a data-role="button" href="#thursday">Th</a>
+              <a data-role="button" href="#friday">F</a>
+              <a data-role="button" href="#saturday">S</a>
+              <a data-role="button" href="#sunday2">Su</a>
+			</nav>
+
+		<section data-role="content">	
+        <header data-role="header" data-position="fixed">
+			<h1>Sunday, <time datetime="2012-05-20">May 20<sup>th</sup></time></h1>
+		</header>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-20T10:15:00">10:15 a.m.</time></h2>
+			<article>
+			<p>Coaches depart hotel for the airport (SAT).</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-20T11:15:00">11:15 a.m.</time></h2>
+			<article>
+			<p>Charter flight departs from FBO for Albuquerque.</p>
+			</article>
+			</div>
+            
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right" data-theme="a" data-content-theme="a">
+			<h2><time datetime="2012-05-20T12:15:00">12:15 p.m.</time></h2>
+			<article>
+			<p>Flight arrives at Cutter Aviation.</p>
+			</article>
+			</div>
+            	
+		</section><!-- container -->
+        
+		<footer>
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="itinerary.html">Itinerary</a></li>
+					<li><a onClick="getTodaysQuiz()">Quiz</a></li>
+					<li><a href="bio-index.html">Bio</a></li>
+				</ul>
+			</nav>
+		</footer>
+        
+</div><!-- #sunday2 page -->
+
     
     
   <!-- JavaScript at the bottom for fast page loading -->
