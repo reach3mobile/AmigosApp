@@ -11,7 +11,6 @@ function getTodaysDate() {
 };
 
 function nextPageUrl(thisPage) {
-  // WARNING: this could have problems if someone leaves the quiz open and then completes it the next day... Fix later.
   // get the current URL
   var url = $.mobile.path.parseUrl(window.location);
   
@@ -119,6 +118,82 @@ function getTodaysQuiz() {
     //window.location = "quiz-day-" + today + ".html#quiz-2";
   };
 
+};
+
+function nextQuiz(){
+  // if there are no more quizzes for today override and return to the quiz index
+  if (remainingQuiz() == false) {
+    window.location = "quizindex.html";
+    return;
+  };
+  // get the current URL
+  var url = $.mobile.path.parseUrl(window.location);
+
+  //console.log(thisPage);
+  // get the number out of the current page ID
+   var pgNumb = parseInt(currentPage.match(/\d+/));
+   // there are 5 questions per page, if this is question 5 the next one is on a different page
+   
+   var newUrl = url.pathname;
+   if (pgNumb % 5 == 0) {
+     // get the number from the page name
+     var dateNumb = parseInt(newUrl.match(/\d+/));
+     // store this variable 
+     
+     // add 1
+     dateNumb += 1;
+     
+     // there are eight pages so send home if the new page would be higher
+     if (dateNumb > 8) {
+       return "quizindex.html";
+     };
+     localStorage.setItem("pageNumber", dateNumb);
+     newUrl = "quiz-day-" + dateNumb + ".html";
+     
+   };
+   // add 1
+   pgNumb += 1;
+   // insert it back into the page ID
+   var newPage = currentPage.replace(/(\d+)/g, pgNumb);
+   // return the complete URL
+  // send the user to the next quiz
+  window.location = newUrl + "#" + newPage;
+};
+
+function prevQuiz(){
+  // get the current URL
+  var url = $.mobile.path.parseUrl(window.location);
+  
+  // get the number out of the current page ID
+   var pgNumb = parseInt(currentPage.match(/\d+/));
+   // there are 5 questions per page, if this is question 5 the next one is on a different page
+   
+   var newUrl = url.pathname;
+   
+   // subtract 1
+   pgNumb -= 1;
+    
+   if (pgNumb % 5 == 0) {
+     // get the number from the page name
+     var dateNumb = parseInt(newUrl.match(/\d+/));
+     // store this variable 
+     
+     // subtract 1
+     dateNumb -= 1;
+     
+     // there are eight pages so send home if the new page would be higher
+     if (dateNumb <= 0) {
+       window.location = "quizindex.html";
+       return;
+     };
+     newUrl = "quiz-day-" + dateNumb + ".html";
+     
+   };
+   
+   // insert it back into the page ID
+   var newPage = currentPage.replace(/(\d+)/g, pgNumb);
+   // return the complete URL
+   window.location = newUrl + "#" + newPage;
 };
 
 $("*").live("pageshow", function (event) {
@@ -266,19 +341,5 @@ $( document ).delegate(".quizpage", "pageinit", function() {
            $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
          };
   });
-  
-  $('a.nextQuizButton').click(function(e){ 
-      if (remainingQuiz() == false) {
-        e.preventDefault();
-        window.location = "quizindex.html";
-        return;
-      };
-      var target = $(e.target).closest('a');
-      if( target ) {
-          e.preventDefault();
-          window.location = target.attr('href');
-          console.log(target.attr('href'));
-      }
-    });
   
 });
