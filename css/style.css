@@ -224,16 +224,18 @@ header {
 	transform:rotate(5deg) translate(45px, -45px);
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
-section>h1 {
+.bio-page section>h1 {
 	margin-left: 20px;
 }
 
-.bio-page section {
+.itin-page {
 	width: 310px;
 	border-radius: 26px;
 	border: 18px #424242 ridge;
 	margin: 5px auto;
 	padding 5px;
+	background-image: -moz-linear-gradient(90deg,rgba(0,0,0,0.44), rgba(255,255,255,0.44));
+	background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 	/*background-image: -moz-linear-gradient(270deg, #FFF 0%, #333 100%);
 	background-image: -moz-linear-gradient(top, #FFF 0%, #333 100%);
 	background-image: -moz-linear-gradient(#FFF 0%, #333 100%);
