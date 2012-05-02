@@ -119,7 +119,7 @@ function getTodaysQuiz() {
     // otherwise send them to the score page again
     }else if (remainingQuiz() == false) {
       console.log("out of quizes today");
-      $.mobile.changePage("quizindex.html");
+      window.location = "quizindex.html"; //$.mobile.changePage("quizindex.html");
       return;
     };
     // player has never played before so send to first quiz
