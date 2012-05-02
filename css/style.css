@@ -236,14 +236,6 @@ header {
 	padding 5px;
 	background-image: -moz-linear-gradient(90deg,rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 	background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
-	/*background-image: -moz-linear-gradient(270deg, #FFF 0%, #333 100%);
-	background-image: -moz-linear-gradient(top, #FFF 0%, #333 100%);
-	background-image: -moz-linear-gradient(#FFF 0%, #333 100%);
-	background-image: -webkit-linear-gradient(270deg, #FFF 0%, #333 100%);
-	background-image: -webkit-linear-gradient(top, #FFF 0%, #333 100%);
-	background-image: -webkit-linear-gradient(#FFF 0%, #333 100%);*/
- 
-	
 }
 
 
