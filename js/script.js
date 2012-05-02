@@ -129,8 +129,12 @@ function getTodaysQuiz() {
 
 };
 
-function getTodaysIten() {
-  window.location = "itenerary.html#day-" + daysSinceStart();
+function getTodaysItin() {
+  window.location = "itinerary.html#day-" + daysSinceStart();
+};
+
+function getTodaysBio() {
+  window.location = "bio-index.html#bio-" + daysSinceStart();
 };
 
 function nextQuiz(){
@@ -210,8 +214,8 @@ function prevQuiz(){
 };
 
 $("*").live("pageshow", function (event) {
-  remainingQuiz();
   versionCheck();
+  remainingQuiz();
 });
 
 $("#quizindex").live("pageshow", function (event) {
