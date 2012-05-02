@@ -1,8 +1,13 @@
 CACHE MANIFEST
+# 2012-05-02:v1
+
+# Explicitly cached 'master entries'.
+CACHE:
 index.html
 js/libs/jquery-1.7.1.min.js
 js/libs/jquery.mobile-1.1.0.min.js
 js/libs/modernizr-2.0.6.min.js
+js/helper.js
 js/script.js
 js/plugins.js
 js/defaults.js
@@ -20,4 +25,10 @@ img/icons-36-black.png
 img/icons-36-white.png
 quiz-day-1.html
 quiz-day-2.html
+quiz-day-3.html
+quiz-day-4.html
+quiz-day-5.html
+quiz-day-6.html
 quizindex.html
+itinerary.html
+bio-index.html
