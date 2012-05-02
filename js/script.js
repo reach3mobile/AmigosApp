@@ -147,6 +147,15 @@ function getTodaysBio() {
   window.location = "bio-index.html#bio-" + daysSinceStart();
 };
 
+function getTodaysPhoto() {
+  // if it has been more than 8 days we are just going to send them to the first day instead so they dont get a 404
+  if (daysSinceStart() > 8) {
+    window.location = "photo.html#pic-1";
+    return;
+  };
+  window.location = "photo.html#pic-" + daysSinceStart();
+}
+
 function nextQuiz(){
   // if there are no more quizzes for today override and return to the quiz index
   if (remainingQuiz() == false) {

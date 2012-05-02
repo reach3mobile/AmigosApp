@@ -48,28 +48,32 @@
 
 <body>
 
-	<div id="one" data-role="page" data-theme="c">
+	<div id="pic-1" data-role="page" data-theme="c" class="pic-page">
 
-		<div data-role="header" data-position="fixed">
+		<header data-role="header" data-position="fixed" data-theme="c">
 			<h1>Welcome</h1>
-		</div><!-- /header -->
+		</header>
 
-		<div data-role="content">	
-			<p>If I wasnt lazy there would be something here! For now try click Quiz. This is the main index page for the app.</p>	
-		</div><!-- /content -->
+		<section class="pic" data-role="content">
+        <p>This is a photo page, check out the source for page names</p>
+    </section><!-- /content -->
 		
-		<div data-role="footer" data-id="foot" data-position="fixed">
-			<div data-role="navbar">
+		<footer data-role="footer" data-id="foot" data-position="fixed">
+			<nav data-role="navbar">
 				<ul>
 					<li><a onclick="getTodaysItin();">Itinerary</a></li>
-					<li><a data-ajax="false" onClick="getTodaysQuiz();">Quiz</a></li>
+					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
 					<li><a onclick="getTodaysBio();">Bio</a></li>
-					<li><a onclick="getTodaysPhoto();">Photo</a></li>
+					<li><a onclick="getTodaysPhoto();" class="ui-btn-active">Bio</a></li>
 				</ul>
-			</div><!-- /navbar -->
-		</div><!-- /footer -->
+			</nav>
+		</footer>
 		
 	</div><!-- /page one -->
+    
+    
+    
+    
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
