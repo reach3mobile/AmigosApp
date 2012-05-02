@@ -1,5 +1,14 @@
-var firstDay = new Date(2012, 3, 29);
-var lastDay = 20;
+var firstDay = new Date(2012, 4, 1);
+var version = 1;
+//check to make sure that the current database is up to date
+function versionCheck() {
+  if (localStorage.getItem("version") != version) {
+    console.log("Version out of date, blasting storage");
+    localStorage.clear();
+    localStorage.setItem("version", version);
+  };
+};
+
 // get the current date as mm-dd-yyyy
 function getTodaysDate() {
   var fullDate = new Date();
@@ -44,7 +53,7 @@ function nextPageUrl(thisPage) {
    return newUrl + "#" + newPage;
 };
 
-function daysSinceStart(){
+function daysSinceStart() {
   var today = new Date();
   var oneDay=1000*60*60*24;
   var days = Math.ceil((today.getTime()-firstDay.getTime())/(oneDay));
@@ -118,6 +127,10 @@ function getTodaysQuiz() {
     //window.location = "quiz-day-" + today + ".html#quiz-2";
   };
 
+};
+
+function getTodaysIten() {
+  window.location = "itenerary.html#day-" + daysSinceStart();
 };
 
 function nextQuiz(){
@@ -197,7 +210,8 @@ function prevQuiz(){
 };
 
 $("*").live("pageshow", function (event) {
-  remainingQuiz(); 
+  remainingQuiz();
+  versionCheck();
 });
 
 $("#quizindex").live("pageshow", function (event) {
@@ -241,7 +255,7 @@ $(".quizpage").live("pageshow", function (event) {
       if (localStorage.getItem(currentPage + "win") != null) {
         // show the button to move to the next quiz
         if (remainingQuiz() == false) {
-          $("div.ui-page-active a.nextQuizButton").text("See Score");
+          $("div.ui-page-active a.nextQuizButton > span > span").text("See Score");
         };
         $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
         if (localStorage.getItem(currentPage + "win") == "true") {
@@ -337,7 +351,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          if (remainingQuiz() == true) {
            $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
          }else {
-           $("div.ui-page-active a.nextQuizButton").text("See Score");
+           $("div.ui-page-active a.nextQuizButton > span > span").text("See Score");
            $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
          };
   });
