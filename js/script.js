@@ -130,10 +130,20 @@ function getTodaysQuiz() {
 };
 
 function getTodaysItin() {
+  // if it has been more than 8 days we are just going to send them to the first day instead so they dont get a 404
+  if (daysSinceStart() > 8) {
+    window.location = "itinerary.html#day-1";
+    return;
+  };
   window.location = "itinerary.html#day-" + daysSinceStart();
 };
 
 function getTodaysBio() {
+  // if it has been more than 8 days we are just going to send them to the first day instead so they dont get a 404
+  if (daysSinceStart() > 8) {
+    window.location = "bio-index.html#bio-1";
+    return;
+  };
   window.location = "bio-index.html#bio-" + daysSinceStart();
 };
 
