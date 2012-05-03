@@ -224,17 +224,26 @@ header {
 	transform:rotate(-5deg) translate(45px, -45px);
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
-figcaption {
+figure {
+	position:relative;
+}
+.bio-pic+figcaption {
+	position: absolute;
+	width: 100%;
+	left: 1;
+	right:1;
+	margin: 0 auto;
 	font-weight: bold;
-	-moz-transform:rotate(-5deg) translate(100px, -105px);
-	-o-transform:rotate(-5deg) translate(100px, -105px);
-	-webkit-transform:rotate(-5deg) translate(100px, -105px);
-	transform:rotate(-5deg) translate(100px, -105px);
+	text-align: center;
+	-moz-transform:rotate(-5deg);
+	-o-transform:rotate(-5deg);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
 	
 }
 
 .itin-page {
-	width: 310px;
+	width: 95%;
 	border-radius: 26px;
 	border: 18px #424242 ridge;
 	margin: 5px auto;
