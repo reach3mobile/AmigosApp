@@ -290,13 +290,15 @@ $(".quizpage").live("pageshow", function (event) {
       
       var playerAnswer = localStorage.getItem(currentPage);
       if (playerAnswer != null) {
-        var color;
+        var icon;
         if (localStorage.getItem(currentPage + "win") == "true") {
-          color = "green";
+          icon = "ui-icon-check";
         }else{
-          color = "red";
+          icon = "ui-icon-delete";
         };
-        $("div.ui-page-active a." + playerAnswer).css('background-color', color);
+        $("div.ui-page-active a." + playerAnswer).parent().next().removeClass("ui-icon-arrow-r");
+        $("div.ui-page-active a." + playerAnswer).parent().next().addClass(icon);
+        //$("div.ui-page-active a." + playerAnswer).css('background-color', color);
       };
       console.log(currentPage);
 });
@@ -326,16 +328,20 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          var win = currentPage + "win";
          console.log(win);
          if ($(this).hasClass("wrong")) {
-           // change the background color of the clicked link (update needed to keep corners round)
-            $(this).parent().css('background-color', 'red');
+           // change the icon of the tapped button
+            $(this).parent().next().removeClass("ui-icon-arrow-r");
+            $(this).parent().next().addClass("ui-icon-delete");
+            
+            
             // hide the correct banner and display the incorrect banner
             bannerWrong.removeClass("hide");
             bannerRight.addClass("hide");
             // store that this has been answered wrong
             localStorage.setItem(win, "false");
          }else if($(this).hasClass("right")) {
-           // change the background color of the clicked link (update needed to keep corners round)
-            $(this).parent().css('background-color', 'green');
+           // change the icon of the tapped button
+            $(this).parent().next().removeClass("ui-icon-arrow-r");
+            $(this).parent().next().addClass("ui-icon-check");
            // hide the correct banner and display the incorrect banner
             bannerRight.removeClass("hide");
             bannerWrong.addClass("hide");
