@@ -23,6 +23,12 @@ img/icons-18-black.png
 img/icons-18-white.png
 img/icons-36-black.png
 img/icons-36-white.png
+img/h/apple-touch-icon.png
+img/m/apple-touch-icon.png
+img/l/apple-touch-icon-precomposed.png
+img/l/apple-touch-icon.png
+img/startup-tablet-landscape.png
+img/startup-tablet-portrait.png
 quiz-day-1.html
 quiz-day-2.html
 quiz-day-3.html
@@ -32,3 +38,4 @@ quiz-day-6.html
 quizindex.html
 itinerary.html
 bio-index.html
+photo.html
