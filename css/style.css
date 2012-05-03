@@ -216,30 +216,32 @@ header {
 
 .bio-pic {
 	margin-top: 65px;
+	/*margin-left: auto;
+	margin-right: auto;
+	text-align: center;*/
 	border: 12px white solid;
-	border-bottom: 48px white solid;
-	-moz-transform:rotate(-5deg) translate(45px, -45px);
-	-o-transform:rotate(-5deg) translate(45px, -45px);
-	-webkit-transform:rotate(-5deg) translate(45px, -45px);
-	transform:rotate(-5deg) translate(45px, -45px);
+	border-bottom: 36px white solid;
+	-moz-transform:rotate(-5deg) translate(45px, 5px);
+	-o-transform:rotate(-5deg) translate(45px, 5px);
+	-webkit-transform:rotate(-5deg) translate(45px, 5px);
+	transform:rotate(-5deg) translate(45px, 5px);
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
-figure {
+/*figure {
 	position:relative;
-}
-.bio-pic+figcaption {
-	position: absolute;
-	width: 100%;
-	left: 1;
-	right:1;
-	margin: 0 auto;
+}*/
+figcaption {
+	/*position: fixed;
+	top: 10px;
+	left: 40px;*/
+	margin: 50px auto -50px auto;
 	font-weight: bold;
-	text-align: center;
-	-moz-transform:rotate(-5deg);
-	-o-transform:rotate(-5deg);
-	-webkit-transform:rotate(-5deg);
-	transform:rotate(-5deg);
-	
+	font-size: 1.5em;
+	/*text-align: center;*/
+	/*-moz-transform:rotate(-5deg) translate(45px, 45px);
+	-o-transform:rotate(-5deg) translate(45px, 45px);
+	-webkit-transform:rotate(-5deg) translate(45px, 45px);
+	transform:rotate(-5deg) translate(45px, 45px);*/
 }
 
 .itin-page {
@@ -252,7 +254,9 @@ figure {
 	background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 }
 
-
+header {
+	box-shadow: 3px 1px 10px 0 rgba(0,0,0,56);
+}
 
 
 

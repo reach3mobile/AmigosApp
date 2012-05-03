@@ -2068,7 +2068,7 @@ body {
     background: url(../img/itin_bg.png)!important;
     background-repeat:repeat-y!important;
     background-position:center center!important;
-    background-attachment:fixed!important;
+    background-attachment:scroll!important;
     background-size:100% 100%!important;
     
 }
