@@ -217,15 +217,20 @@ header {
 .bio-pic {
 	margin-top: 65px;
 	border: 12px white solid;
-	border-bottom: 36px white solid;
-	-moz-transform:rotate(5deg) translate(45px, -45px);
-	-o-transform:rotate(5deg) translate(45px, -45px);
-	-webkit-transform:rotate(5deg) translate(45px, -45px);
-	transform:rotate(5deg) translate(45px, -45px);
+	border-bottom: 48px white solid;
+	-moz-transform:rotate(-5deg) translate(45px, -45px);
+	-o-transform:rotate(-5deg) translate(45px, -45px);
+	-webkit-transform:rotate(-5deg) translate(45px, -45px);
+	transform:rotate(-5deg) translate(45px, -45px);
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
-.bio-page section>h1 {
-	margin-left: 20px;
+figcaption {
+	font-weight: bold;
+	-moz-transform:rotate(-5deg) translate(100px, -105px);
+	-o-transform:rotate(-5deg) translate(100px, -105px);
+	-webkit-transform:rotate(-5deg) translate(100px, -105px);
+	transform:rotate(-5deg) translate(100px, -105px);
+	
 }
 
 .itin-page {
@@ -236,14 +241,6 @@ header {
 	padding 5px;
 	background-image: -moz-linear-gradient(90deg,rgba(0,0,0,0.44), rgba(255,255,255,0.44));
 	background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
-	/*background-image: -moz-linear-gradient(270deg, #FFF 0%, #333 100%);
-	background-image: -moz-linear-gradient(top, #FFF 0%, #333 100%);
-	background-image: -moz-linear-gradient(#FFF 0%, #333 100%);
-	background-image: -webkit-linear-gradient(270deg, #FFF 0%, #333 100%);
-	background-image: -webkit-linear-gradient(top, #FFF 0%, #333 100%);
-	background-image: -webkit-linear-gradient(#FFF 0%, #333 100%);*/
- 
-	
 }
 
 
