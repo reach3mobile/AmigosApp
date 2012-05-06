@@ -40,7 +40,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <!-- jQuery mobile stylesheet -->
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Quiz.css">
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -59,19 +59,31 @@
 			<p>Your total score:</p>
 			<p class="totalscore">0/40</p>
 			<p class="goodjob">Good Job!</p>
-			<a class="nextQuizButton" onclick="getTodaysQuiz();" data-role="button">Start Quizzing!</a>	
+			<a class="nextQuizButton" onClick="getTodaysQuiz();" data-role="button">Start Quizzing!</a>	
 		</div><!-- /content -->
 		
-		<div data-role="footer" data-id="foot" data-position="fixed">
-			<div data-role="navbar">
+
+
+<a onClick="getTodaysBio();"><img class="bio_icon" class="icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_Roll.png';" 
+    onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
+		<footer data-role="footer" data-id="foot" data-position="fixed">
+       
+        
+			<nav data-role="navbar">
 				<ul>
-					<li><a onclick="getTodaysItin();">Itinerary</a></li>
-					<li><a class="ui-btn-active" href="quizindex.html">Quiz</a></li>
-					<li><a onclick="getTodaysBio();">Bio</a></li>
-					<li><a onclick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon" class="icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
+					
+					
+					
 				</ul>
-			</div><!-- /navbar -->
-		</div><!-- /footer -->
+			</nav>
+		</footer>
 		
 	</div><!-- /page one -->
   <!-- JavaScript at the bottom for fast page loading -->
