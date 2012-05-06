@@ -221,10 +221,10 @@ header {
 	text-align: center;*/
 	border: 12px white solid;
 	border-bottom: 36px white solid;
-	-moz-transform:rotate(-5deg) translate(45px, 5px);
-	-o-transform:rotate(-5deg) translate(45px, 5px);
-	-webkit-transform:rotate(-5deg) translate(45px, 5px);
-	transform:rotate(-5deg) translate(45px, 5px);
+	-moz-transform:rotate(-5deg) translate(15px, 5px);
+	-o-transform:rotate(-5deg) translate(15px, 5px);
+	-webkit-transform:rotate(-5deg) translate(15px, 5px);
+	transform:rotate(-5deg) translate(15px, 5px);
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
 .NM-pic {
@@ -245,6 +245,8 @@ figcaption {
 	margin: 10px auto -50px auto;
 	font-weight: bold;
 	font-size: 1.5em;
+	color: white;
+	text-shadow: none;
 	/*text-align: center;*/
 	/*-moz-transform:rotate(-5deg) translate(45px, 45px);
 	-o-transform:rotate(-5deg) translate(45px, 45px);
@@ -258,11 +260,17 @@ figcaption {
 	margin: 10px auto -50px auto;
 	font-weight: bold;
 	font-size: 1.5em;
+	color: white;
+	text-shadow: none;
 	/*text-align: center;*/
 	/*-moz-transform:rotate(-5deg) translate(45px, 45px);
 	-o-transform:rotate(-5deg) translate(45px, 45px);
 	-webkit-transform:rotate(-5deg) translate(45px, 45px);
 	transform:rotate(-5deg) translate(45px, 45px);*/
+}
+.bio article p {
+	color: white;
+	text-shadow: none;
 }
 
 .itin-page {
