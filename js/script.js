@@ -1,5 +1,5 @@
 var firstDay = new Date(2012, 4, 1);
-var version = 1;
+var version = 2;
 //check to make sure that the current database is up to date
 function versionCheck() {
   if (localStorage.getItem("version") != version) {
