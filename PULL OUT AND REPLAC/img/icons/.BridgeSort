@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<dirinfo>
+<files>
+<item key='icon_amigo_roll.png20120503111551' />
+<item key='icon_amigo.png20120503111533' />
+<item key='icons_Intin_Active.png20120503103540' />
+</files>
+<stack version='1' expanded='false' framerate='29.97' onionskin='0' >
+<files>
+	<item key='icons_Intin_Active.png20120503103540' />
+	<item key='icons_Intin_Roll.png20120503103729' />
+	<item key='icons_Intin.png20120503103031' />
+	<item key='icons_NM_Active.png20120503103515' />
+	<item key='icons_NM_Roll.png20120503103632' />
+	<item key='icons_NM.png20120503102903' />
+	<item key='icons_Quiz_Active.png20120503103459' />
+	<item key='icons_Quiz_Roll.png20120503103609' />
+	<item key='icons_Quiz.png20120503102819' />
+</files>
+</stack>
+</dirinfo>

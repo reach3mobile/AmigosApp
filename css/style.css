@@ -227,6 +227,14 @@ header {
 	transform:rotate(-5deg) translate(45px, 5px);
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
+.NM-pic {
+	margin-top: 65px;
+	/*margin-left: auto;
+	margin-right: auto;
+	text-align: center;*/
+	border: 8px white solid;
+	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
+}
 /*figure {
 	position:relative;
 }*/
@@ -234,7 +242,20 @@ figcaption {
 	/*position: fixed;
 	top: 10px;
 	left: 40px;*/
-	margin: 50px auto -50px auto;
+	margin: 10px auto -50px auto;
+	font-weight: bold;
+	font-size: 1.5em;
+	/*text-align: center;*/
+	/*-moz-transform:rotate(-5deg) translate(45px, 45px);
+	-o-transform:rotate(-5deg) translate(45px, 45px);
+	-webkit-transform:rotate(-5deg) translate(45px, 45px);
+	transform:rotate(-5deg) translate(45px, 45px);*/
+}
+.pic figcaption {
+	/*position: fixed;
+	top: 10px;
+	left: 40px;*/
+	margin: 10px auto -50px auto;
 	font-weight: bold;
 	font-size: 1.5em;
 	/*text-align: center;*/
@@ -259,7 +280,9 @@ header {
 }
 
 
-
+.icon-left-padding {
+	margin-left: 20px;
+}
 
 
 
