@@ -68,7 +68,7 @@
         	
         <header data-role="header" data-position="fixed" data-theme="c">
 			<h1>Sunday <time datetime="2012-05-13">May 13<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -109,18 +109,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
 		
 	</div><!-- #sunday page -->
     
@@ -146,9 +151,9 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Monday, <time datetime="2012-05-14">May 14<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -195,18 +200,23 @@
             	
 		</section><!-- container -->
 	
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #monday page -->
     
@@ -233,9 +243,9 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Tuesday, <time datetime="2012-05-15">May 15<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -282,18 +292,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #tuesday page -->   
     
@@ -319,9 +334,9 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Wednesday, <time datetime="2012-05-16">May 16<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -375,18 +390,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #wednesday page -->    
     
@@ -411,9 +431,9 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Thursday, <time datetime="2012-05-17">May 17<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -453,18 +473,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #thursday page --> 
 
@@ -490,9 +515,9 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Friday, <time datetime="2012-05-18">May 18<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -546,18 +571,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #friday page -->
     
@@ -583,9 +613,9 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Saturday, <time datetime="2012-05-19">May 19<sup>th</sup></time></h1>
-			<a onclick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
+			<a onClick="nextItinPage();" class="ui-btn-right" data-icon="arrow-r">Next</a>
 		</header>
         
 			<div data-role="collapsible" data-collapsed="true" data-iconpos="left" data-theme="c" data-content-theme="c">
@@ -611,18 +641,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #saturday page -->
 
@@ -648,7 +683,7 @@
 
 		<section data-role="content">	
         <header data-role="header" data-position="fixed" data-theme="c">
-			<a onclick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<a onClick="prevItinPage();" class="ui-btn-left" data-icon="arrow-l">Back</a>
 			<h1>Sunday, <time datetime="2012-05-20">May 20<sup>th</sup></time></h1>
 		</header>
             
@@ -675,18 +710,23 @@
             	
 		</section><!-- container -->
         
-		<footer data-role="footer" data-id="foot" data-position="fixed">
-       
+		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_Roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
+		
         
-			<nav data-role="navbar">
+        <footer data-role="footer" data-id="foot" data-position="fixed">
+       		<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysItin();" class="ui-btn-active">Itinerary</a></li>
-					<li><a onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onClick="getTodaysBio();">Bio</a></li>
-					<li><a onClick="getTodaysPhoto();">Photo</a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
+					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
+					<li><a onClick="getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
+    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
 				</ul>
 			</nav>
 		</footer>
+
         
 </div><!-- #sunday2 page -->
 
