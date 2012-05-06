@@ -199,12 +199,21 @@ function prevPageNumber() {
 function nextItinPage() {
    // change to the new page
    $.mobile.changePage("itinerary.html#day-" + nextPageNumber());
-  
 };
 
 function prevItinPage() {
   // change to the new page
   $.mobile.changePage("itinerary.html#day-" + prevPageNumber());
+};
+
+function nextBioPage() {
+   // change to the new page
+   $.mobile.changePage("bios.html#bio-" + nextPageNumber());
+};
+
+function prevBioPage() {
+  // change to the new page
+  $.mobile.changePage("bios.html#bio-" + prevPageNumber());
 };
 
 function nextQuiz(){
@@ -286,6 +295,19 @@ function prevQuiz(){
 $("*").live("pageshow", function (event) {
   versionCheck();
   remainingQuiz();
+});
+
+$(".bio-page").live("pageshow", function (event) {
+  var url = $.mobile.path.parseUrl(window.location);
+  url = url.hash;
+  var pgNumb = parseInt(url.match(/\d+/));
+  console.log(pgNumb);
+  
+  if (pgNumb == daysSinceStart()) {
+    console.log("today");
+    $("div.ui-page-active a.nextbiobutton").addClass("hidden");
+  };
+  
 });
 
 $("#quizindex").live("pageshow", function (event) {
