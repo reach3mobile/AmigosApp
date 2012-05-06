@@ -37,10 +37,11 @@
 
   <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Main Stylesheet 
+  <link rel="stylesheet" href="css/style.css">-->
   <!-- jQuery mobile stylesheet -->
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css">
+  <link rel="stylesheet" href="css/nav_page.css">
+    <link rel="stylesheet" href="css/jquery.mobile-test.css">
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -48,28 +49,21 @@
 
 <body>
 
-	<div id="one" data-role="page" data-theme="c">
 
-		<div data-role="header" data-position="fixed">
-			<h1>Welcome</h1>
-		</div><!-- /header -->
 
-		<div data-role="content">	
-			<p>If I wasnt lazy there would be something here! For now try click Quiz. This is the main index page for the app.</p>	
-		</div><!-- /content -->
+
 		
-		<div data-role="footer" data-id="foot" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a onclick="getTodaysItin();">Itinerary</a></li>
-					<li><a data-ajax="false" onClick="getTodaysQuiz();">Quiz</a></li>
-					<li><a onclick="getTodaysBio();">Bio</a></li>
-					<li><a onclick="getTodaysPhoto();">Photo</a></li>
+			<div class="navbar">
+				<div class="itin"><a onClick="getTodaysItin();"><img src="img/intin.png" /><p>Itinerary</p></a></div>
+				<div class="both_buttons">
+				<div style="margin-right:10px;" class="quiz"><a data-ajax="false" onClick="getTodaysQuiz();"><img src="img/stump.png" /><p>Stump the Amigo</p></a></div>
+				<div class="other"><a onClick="getTodaysPhoto();"><img src="img/nm.png" /><p>New Mexico</p><p style="font-size:8px;">Past, Present and Future</p></a></div>
+				</div>
+				<div class="amigo"><a onClick="getTodaysBio();"><img src="img/amigo.png" /></a></div>
 				</ul>
 			</div><!-- /navbar -->
-		</div><!-- /footer -->
 		
-	</div><!-- /page one -->
+
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
