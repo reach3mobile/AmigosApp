@@ -240,7 +240,9 @@ function nextQuiz(){
    var pgNumb = parseInt(currentPage.match(/\d+/));
    // there are 5 questions per page, if this is question 5 the next one is on a different page
    
+   // this gives us the file name for the current page
    var newUrl = url.pathname;
+   // if the quiz is a multiple of 5 then the next question is on another file
    if (pgNumb % 5 == 0) {
      // get the number from the page name
      var dateNumb = parseInt(newUrl.match(/\d+/));
