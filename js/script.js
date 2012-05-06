@@ -154,7 +154,58 @@ function getTodaysPhoto() {
     return;
   };
   window.location = "photos.html#pic-" + daysSinceStart();
-}
+};
+
+function nextPageNumber() {
+  // get the current URL
+  var url = $.mobile.path.parseUrl(window.location);
+  // we just need the subpage number
+  url = url.hash;
+  // get the number out of the current page ID
+   var pgNumb = parseInt(url.match(/\d+/));
+   // make sure that there was a number pulled
+   if (isNaN(pgNumb)) {
+   // if not we are probably on page one
+     return 2;
+   };
+   // bump the number
+   pgNumb += 1;
+   // make sure it is not out of range
+   if (pgNumb > 8) {
+     return 8;
+   };
+   // return the number
+   return pgNumb;
+};
+
+function prevPageNumber() {
+  // get the current URL
+  var url = $.mobile.path.parseUrl(window.location);
+  url = url.hash;
+  
+  //console.log(thisPage);
+  // get the number out of the current page hash
+   var pgNumb = parseInt(url.match(/\d+/));
+   if (isNaN(pgNumb)) {
+      return 1;
+    };
+   pgNumb -= 1;
+   if (pgNumb < 1) {
+     return 1;
+   };
+   return pgNumb;
+};
+
+function nextItinPage() {
+   // change to the new page
+   $.mobile.changePage("itinerary.html#day-" + nextPageNumber());
+  
+};
+
+function prevItinPage() {
+  // change to the new page
+  $.mobile.changePage("itinerary.html#day-" + prevPageNumber());
+};
 
 function nextQuiz(){
   // if there are no more quizzes for today override and return to the quiz index
