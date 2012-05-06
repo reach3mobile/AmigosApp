@@ -315,7 +315,7 @@ $(".bio-page").live("pageshow", function (event) {
   var pgNumb = parseInt(url.match(/\d+/));
   console.log(pgNumb);
   
-  if (pgNumb == daysSinceStart()) {
+  if (pgNumb >= daysSinceStart()) {
     console.log("today");
     $("div.ui-page-active a.nextbiobutton").addClass("hidden");
   };
@@ -328,7 +328,7 @@ $(".photo-page").live("pageshow", function (event) {
   var pgNumb = parseInt(url.match(/\d+/));
   console.log(pgNumb);
   
-  if (pgNumb == daysSinceStart()) {
+  if (pgNumb >= daysSinceStart()) {
     console.log("today");
     $("div.ui-page-active a.nextphotobutton").addClass("hidden");
   };
