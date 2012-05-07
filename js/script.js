@@ -196,16 +196,6 @@ function prevPageNumber() {
    return pgNumb;
 };
 
-function nextItinPage() {
-   // change to the new page
-   $.mobile.changePage("itinerary.html#day-" + nextPageNumber());
-};
-
-function prevItinPage() {
-  // change to the new page
-  $.mobile.changePage("itinerary.html#day-" + prevPageNumber());
-};
-
 function nextBioPage() {
    // change to the new page
    $.mobile.changePage("bios.html#bio-" + nextPageNumber());
