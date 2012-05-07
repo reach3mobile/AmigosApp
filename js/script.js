@@ -206,16 +206,6 @@ function prevBioPage() {
   $.mobile.changePage("bios.html#bio-" + prevPageNumber());
 };
 
-function nextPhotoPage() {
-   // change to the new page
-   $.mobile.changePage("photos.html#pic-" + nextPageNumber());
-};
-
-function prevPhotoPage() {
-  // change to the new page
-  $.mobile.changePage("photos.html#pic-" + prevPageNumber());
-};
-
 function nextQuiz(){
   // if there are no more quizzes for today override and return to the quiz index
   if (remainingQuiz() == false) {
