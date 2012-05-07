@@ -273,15 +273,15 @@ figcaption {
 	text-shadow: none;
 }
 
-.itin-page {
-	width: 95%;
-	border-radius: 26px;
-	border: 18px #424242 ridge;
-	margin: 5px auto;
-	padding 5px;
-	background-image: -moz-linear-gradient(90deg,rgba(0,0,0,0.44), rgba(255,255,255,0.44));
-	background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
-}
+/*.itin-page {
+  width: 95%;
+  border-radius: 26px;
+  border: 18px #424242 ridge;
+  margin: 5px auto;
+  padding 5px;
+  background-image: -moz-linear-gradient(90deg,rgba(0,0,0,0.44), rgba(255,255,255,0.44));
+  background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
+}*/
 
 header {
 	box-shadow: 3px 1px 10px 0 rgba(0,0,0,56);
