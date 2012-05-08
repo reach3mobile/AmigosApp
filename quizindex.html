@@ -40,7 +40,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <!-- jQuery mobile stylesheet -->
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Quiz.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Photo.css">
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -54,7 +54,7 @@
 			<h1>Welcome</h1>
 		</div><!-- /header -->
 
-		<div data-role="content">	
+		<div data-role="content" class="whiteText">	
 			<p class="noquiz">There are no more quizzes for today!</p>
 			<p>Your total score:</p>
 			<p class="totalscore">0/40</p>
@@ -64,14 +64,14 @@
 		
 
 
-<a onClick="getTodaysBio();"><img class="bio_icon" class="icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" 
+<a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" 
     onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
 		<footer data-role="footer" data-id="foot" data-position="fixed">
        
         
 			<nav data-role="navbar">
 				<ul>
-					<li><a onClick="getTodaysBio();"><img class="bio_icon" class="icon_size" src="img/icons/icon_amigo.png" /></a></li>
+					<li><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" /></a></li>
 					<li><a onClick="getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
     onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
 					<li><a onClick="getTodaysPhoto();"><img class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
