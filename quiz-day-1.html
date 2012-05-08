@@ -40,7 +40,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <!-- jQuery mobile stylesheet -->
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Quiz.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Photo.css">
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -49,13 +49,19 @@
 <body>
 	
  	<div id="quiz-1" class="quizpage" data-role="page" data-theme="c">
+	  
+     <!-- new header-->
+		<header data-role="header" data-position="fixed" data-theme="c">
+			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+			<h1>Quiz</h1>
+			<a onClick="nextQuiz();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next Quiz!</a>
+		</header>
 
 
 		<div data-role="content" id="quiz1" class="quizcontent">
 			<p class="score">Total Score: 0/40</p>
 			<p class="dayscore">Score Today: 0</p><hr />
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>	
+				
 			<p>How high above the river is the Rio Grande Gorge Bridge?</p>	
 			
 			<ul data-role="listview" data-inset="true">
@@ -63,10 +69,11 @@
 				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">2500 Feet</a></li>
 				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">42 Feet</a></li>
 			</ul>
-			<a onClick="prevQuiz();" data-role="button" data-inline="true">Previous</a>
-			<a class="nextQuizButton hidden" onClick="nextQuiz();" data-role="button" data-inline="true" data-theme="c">Next Question</a>
+			<!--<a onClick="prevQuiz();" data-role="button" data-inline="true">Previous</a>
+			<a class="nextQuizButton hidden" onClick="nextQuiz();" data-role="button" data-inline="true" data-theme="c">Next Question</a> -->
 			
-				
+			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
+			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>	
 		</div><!-- /content -->
 		
 		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
@@ -89,14 +96,18 @@
 	</div><!-- /quiz one -->
 	
 	<div id="quiz-2" class="quizpage" data-role="page" data-theme="c">
+	  <!-- new header-->
+	  <header data-role="header" data-position="fixed" data-theme="c">
+	    <a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+	    <h1>Quiz</h1>
+	    <a onClick="nextQuiz();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next Quiz!</a>
+	  </header>
 
 		
 
 		<div data-role="content" id="quiz2" class="quizcontent">
 			<p class="score">Total Score: 0/40</p>
 			<p class="dayscore">Score Today: 0</p><hr />
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>	
 			<p>What land did the United States buy from Mexico in the “Gadsden Purchase”?</p>	
 			
 			<ul data-role="listview" data-inset="true">
@@ -104,8 +115,8 @@
 				<li class="ui-btn-icon-left"><a class="right answer b icon-left-padding" href="#">All land west of the Rio Grande, including New Mexico’s boot heel</a></li>
 				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">2000 Acres</a></li>
 			</ul>
-			<a onClick="prevQuiz();" data-role="button" data-inline="true">Previous</a>
-			<a class="nextQuizButton hidden" onClick="nextQuiz();" data-role="button" data-inline="true" data-theme="c">Next Question</a>
+			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
+			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
 		</div><!-- /content -->
 		
 		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
@@ -127,14 +138,19 @@
 	</div><!-- /quiz-2 -->
 	
 	<div id="quiz-3" class="quizpage" data-role="page" data-theme="c">
+	  <!-- new header-->
+	  <header data-role="header" data-position="fixed" data-theme="c">
+	    <a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a>
+	    <h1>Quiz</h1>
+	    <a onClick="nextQuiz();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next Quiz!</a>
+	  </header>
 
 		
 
 		<div data-role="content" id="quiz3" class="quizcontent">
 			<p class="score">Total Score: 0/40</p>
 			<p class="dayscore">Score Today: 0</p><hr />
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>	
+			
 			<p>What was the largest town in New Mexico at the end of the nineteenth century?</p>	
 			
 			<ul data-role="listview" data-inset="true">
@@ -142,8 +158,8 @@
 				<li class="ui-btn-icon-left"><a class="right answer b icon-left-padding" href="#">Las Vegas</a></li>
 				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">Los Alamos</a></li>
 			</ul>
-			<a onClick="prevQuiz();" data-role="button" data-inline="true">Previous</a>
-			<a class="nextQuizButton hidden" onClick="nextQuiz();" data-role="button" data-inline="true" data-theme="c">Next Question</a>
+			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
+			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
 		</div><!-- /content -->
 		
 		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
@@ -164,7 +180,7 @@
 		</footer>
 	</div><!-- /quiz-3 -->
 	
-	<div id="quiz-4" class="quizpage" data-role="page" data-theme="c">
+	<div id="quiz-4" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next Quiz!</a> 		</header>
 
 		
 
@@ -180,8 +196,8 @@
 				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">Five, declared a historic area in 1976.</a></li>
 				<li class="ui-btn-icon-left"><a class="right answer c icon-left-padding" href="#">Fourty-Nine, declared a historic area in 1979.</a></li>
 			</ul>
-			<a onClick="prevQuiz();" data-role="button" data-inline="true">Previous</a>
-			<a class="nextQuizButton hidden" onClick="nextQuiz();" data-role="button" data-inline="true" data-theme="c">Next Question</a>
+			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
+			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
 		</div><!-- /content -->
 		
 		<!--bio's button--><a onClick="getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
@@ -203,15 +219,14 @@
 
 	</div><!-- /quiz-4 -->
 	
-	<div id="quiz-5" class="quizpage" data-role="page" data-theme="c">
+	<div id="quiz-5" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next Quiz!</a> 		</header>
 
 		
 
 		<div data-role="content" id="quiz5" class="quizcontent">
 			<p class="score">Total Score: 0/40</p>
 			<p class="dayscore">Score Today: 0</p><hr />
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>	
+		      
 			<p>America’s longest and highest narrow gauge steam railroad connects what two cities?</p>	
 			
 			<ul data-role="listview" data-inset="true">
@@ -219,8 +234,8 @@
 				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">Albuquerque, New Mexico and Austin, Texas</a></li>
 				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">Las Vegas, New Mexico and Denver Colorado</a></li>
 			</ul>
-			<a onClick="prevQuiz();" data-role="button" data-inline="true">Previous</a>
-			<a class="nextQuizButton hidden" onClick="nextQuiz();" data-role="button" data-inline="true" data-theme="c">Next Question</a>
+			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
+			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
 		</div><!-- /content -->
 		
 		
