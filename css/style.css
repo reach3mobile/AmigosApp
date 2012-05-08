@@ -207,11 +207,8 @@ td { vertical-align: top; }
 
 .bio-pic {
 	margin-top: 65px;
-	/*margin-left: auto;
-	margin-right: auto;
-	text-align: center;*/
-	border: 12px white solid;
-	border-bottom: 36px white solid;
+	border: 8px white solid;
+	border-bottom: 24px white solid;
 	-moz-transform:rotate(-5deg) translate(15px, 5px);
 	-o-transform:rotate(-5deg) translate(15px, 5px);
 	-webkit-transform:rotate(-5deg) translate(15px, 5px);
@@ -229,36 +226,36 @@ td { vertical-align: top; }
 /*figure {
 	position:relative;
 }*/
-figcaption {
-	/*position: fixed;
+/*figcaption {
+	position: fixed;
 	top: 10px;
-	left: 40px;*/
+	left: 40px;
 	margin: 10px auto -50px auto;
 	font-weight: bold;
 	font-size: 1.5em;
 	color: white;
 	text-shadow: none;
-	/*text-align: center;*/
-	/*-moz-transform:rotate(-5deg) translate(45px, 45px);
+	text-align: center;
+	-moz-transform:rotate(-5deg) translate(45px, 45px);
 	-o-transform:rotate(-5deg) translate(45px, 45px);
 	-webkit-transform:rotate(-5deg) translate(45px, 45px);
-	transform:rotate(-5deg) translate(45px, 45px);*/
-}
-.pic figcaption {
-	/*position: fixed;
+	transform:rotate(-5deg) translate(45px, 45px);
+}*/
+/*.pic figcaption {
+	position: fixed;
 	top: 10px;
-	left: 40px;*/
+	left: 40px;
 	margin: 10px auto -50px auto;
 	font-weight: bold;
 	font-size: 1.5em;
 	color: white;
 	text-shadow: none;
-	/*text-align: center;*/
-	/*-moz-transform:rotate(-5deg) translate(45px, 45px);
+	text-align: center;
+	-moz-transform:rotate(-5deg) translate(45px, 45px);
 	-o-transform:rotate(-5deg) translate(45px, 45px);
 	-webkit-transform:rotate(-5deg) translate(45px, 45px);
-	transform:rotate(-5deg) translate(45px, 45px);*/
-}
+	transform:rotate(-5deg) translate(45px, 45px);
+}*/
 .bio article p {
 	color: white;
 	text-shadow: none;
@@ -267,16 +264,11 @@ figcaption {
 	color: white;
 	text-shadow: none;
 }
-
-/*.itin-page {
-  width: 95%;
-  border-radius: 26px;
-  border: 18px #424242 ridge;
-  margin: 5px auto;
-  padding 5px;
-  background-image: -moz-linear-gradient(90deg,rgba(0,0,0,0.44), rgba(255,255,255,0.44));
-  background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,0.44), rgba(255,255,255,0.44));
-}*/
+.bio figure {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
 
 header {
 	box-shadow: 3px 1px 10px 0 rgba(0,0,0,56);
