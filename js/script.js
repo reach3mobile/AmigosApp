@@ -21,13 +21,13 @@ function getTodaysDate() {
 
 function nextPageUrl(thisPage) {
   // get the current URL
-  var url = $.mobile.path.parseUrl(window.location);
+  var url = $.mobile.path.parseUrl(window.location.href);
   
   // get the number out of the current page ID
    var pgNumb = parseInt(thisPage.match(/\d+/));
    // there are 5 questions per page, if this is question 5 the next one is on a different page
    
-   var newUrl = url.pathname;
+   var newUrl = url.filename;
    if (pgNumb % 5 == 0) {
      // get the number from the page name
      var dateNumb = parseInt(newUrl.match(/\d+/));
@@ -163,7 +163,7 @@ function nextQuiz(){
     return;
   };
   // get the current URL
-  var url = $.mobile.path.parseUrl(window.location);
+  var url = $.mobile.path.parseUrl(window.location.href);
 
   //console.log(thisPage);
   // get the number out of the current page ID
@@ -171,7 +171,7 @@ function nextQuiz(){
    // there are 5 questions per page, if this is question 5 the next one is on a different page
    
    // this gives us the file name for the current page
-   var newUrl = url.pathname;
+   var newUrl = url.filename;
    // if the quiz is a multiple of 5 then the next question is on another file
    if (pgNumb % 5 == 0) {
      // get the number from the page name
@@ -180,7 +180,6 @@ function nextQuiz(){
      
      // add 1
      dateNumb += 1;
-     
      // there are eight pages so send home if the new page would be higher
      if (dateNumb > 8) {
        return "quizindex.html";
@@ -200,13 +199,13 @@ function nextQuiz(){
 
 function prevQuiz(){
   // get the current URL
-  var url = $.mobile.path.parseUrl(window.location);
+  var url = $.mobile.path.parseUrl(window.location.href);
   
   // get the number out of the current page ID
    var pgNumb = parseInt(currentPage.match(/\d+/));
    // there are 5 questions per page, if this is question 5 the next one is on a different page
    
-   var newUrl = url.pathname;
+   var newUrl = url.filename;
    
    // subtract 1
    pgNumb -= 1;
