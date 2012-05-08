@@ -221,7 +221,7 @@ td { vertical-align: top; }
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
 
-.bio article p, .bio article h1 {
+.bio article p, .bio article h1{
 	color: white;
 	text-shadow: none;
 }
