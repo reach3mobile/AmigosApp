@@ -204,15 +204,6 @@ td { vertical-align: top; }
    ========================================================================== */
 
 
-header {
-	text-align:center;
-	line-height: 1.2em;
-}
-
-.subnav {
-	display:inline-block;
-	width: 12.5%;
-}
 
 .bio-pic {
 	margin-top: 65px;
@@ -269,6 +260,10 @@ figcaption {
 	transform:rotate(-5deg) translate(45px, 45px);*/
 }
 .bio article p {
+	color: white;
+	text-shadow: none;
+}
+.bio article h1 {
 	color: white;
 	text-shadow: none;
 }
