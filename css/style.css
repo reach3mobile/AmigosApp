@@ -206,7 +206,7 @@ td { vertical-align: top; }
 
 
 .bio-pic {
-	margin-top: 65px;
+	margin-top: 15px;
 	border: 8px white solid;
 	border-bottom: 24px white solid;
 	-moz-transform:rotate(-5deg);
@@ -216,16 +216,16 @@ td { vertical-align: top; }
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
 .NM-pic {
-	margin-top: 65px;
+	margin-top: 15px;
 	border: 8px white solid;
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
 }
 
-.bio article p {
+.bio article p, .bio article h1 {
 	color: white;
 	text-shadow: none;
 }
-.bio article h1 {
+.goodbye article p, .goodbye article h1 {
 	color: white;
 	text-shadow: none;
 }
