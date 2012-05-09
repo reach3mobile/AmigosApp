@@ -257,7 +257,7 @@ header {
 
 .navbar_index {
     width:100%;
-    height:100%;
+    height:auto;
     text-align:center;
 }
 .navbar_index p{
@@ -288,29 +288,29 @@ header {
     text-shadow: none;
 }
 .itin {
-	margin-top:5%;
-    text-align:center;
-    margin-right:auto;
-    margin-left:auto;
-    text-shadow: none;
+	margin-top:2%!important;
+    text-align:center!important;
+    margin-right:auto!important;
+    margin-left:auto!important;
+    text-shadow: none!important;
 }
 .nm {
-    float:right;
-    text-shadow: none;
+    float:right!important;
+
 }
 .quiz {
-    float:left;
-    text-shadow: none;
+    float:left!important;
+
     }
 .both_buttons{
-    margin-top:0px;
-    width:85%;
-    margin: 0 auto;
+    margin-top:0px!important;
+    width:85%!important;
+    margin: 0 auto!important;
 }
 .amigo{
-	clear:both;
-    margin:0 auto;
-    text-shadow: none;
+	clear:both!important;
+    margin:0 auto!important;
+ 
 }
 
 
