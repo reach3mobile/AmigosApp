@@ -288,25 +288,29 @@ header {
     text-shadow: none;
 }
 .itin {
-	margin-top:10%;
+	margin-top:5%;
     text-align:center;
     margin-right:auto;
     margin-left:auto;
+    text-shadow: none;
 }
 .nm {
     float:right;
+    text-shadow: none;
 }
 .quiz {
     float:left;
+    text-shadow: none;
     }
 .both_buttons{
     margin-top:0px;
-    width:80%;
+    width:70%;
     margin: 0 auto;
 }
 .amigo{
-    clear:both;
+	clear:both;
     margin:0 auto;
+    text-shadow: none;
 }
 
 
