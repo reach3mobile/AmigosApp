@@ -28,19 +28,7 @@ js/plugins.js
 js/defaults.js
 
 # css
-css/custom.css
-css/jquery.mobile-1.1.0.css
-css/jquery.mobile-1.1.0.min.css
 css/jquery.mobile-1.1.0.minTEST_Photo.css
-css/jquery.mobile-1.1.0.minTEST_Quiz.css
-css/jquery.mobile-test.css
-css/jquery.mobile-test2.css
-css/jquery.mobile.structure-1.1.0.css
-css/jquery.mobile.structure-1.1.0.min.css
-css/jquery.mobile.theme-1.1.0.css
-css/jquery.mobile.theme-1.1.0.min.css
-css/nav_page.css
-css/style-expirement.css
 css/style.css
 
 # images
