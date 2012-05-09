@@ -253,3 +253,10 @@ font-size:8px;
 width:70px;
 height:17px;
 }
+.welcome{
+color:white;
+background-color:#fff;
+-webkit-border-radius: 0px 0px 14px 14px;
+-moz-border-radius: 0px 0px 14px 14px;
+border-radius: 0px 0px 14px 14px;
+}
