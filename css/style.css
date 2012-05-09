@@ -225,7 +225,7 @@ td { vertical-align: top; }
 	color: white;
 	text-shadow: none;
 }
-.whiteText, .goodbye article p, .goodbye article h1 {
+.goodbye article p, .goodbye article h1 {
 	color: white;
 	text-shadow: none;
 }

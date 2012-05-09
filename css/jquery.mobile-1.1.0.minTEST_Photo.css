@@ -228,9 +228,18 @@ icon_size{
 .ui-page {z-index:3;}
 
 .quizcontent{
-margin-top:20px;
+margin-top:15px;
 
 background-color:#fff;
+-webkit-border-radius: 14px;
+-moz-border-radius: 14px;
+border-radius: 14px;
+
+}
+.whiteText{
+background-color:#fff;
+color:#000;
+text-align:center;
 -webkit-border-radius: 14px;
 -moz-border-radius: 14px;
 border-radius: 14px;
