@@ -238,6 +238,20 @@ $("*").live("pageshow", function (event) {
   remainingQuiz();
 });
 
+// called when the index page is shown.
+$(".navbar_index").live("pageshow", function (event) {
+  // the button at the top of the index page
+  var button = $("div.ui-page-active a.introbutton");
+  // if it is not the first day or the last day then hide the button
+  if (daysSinceStart() > 1 && daysSinceStart() < 8) {
+    button.addClass("hidden");
+  // if it is the last day or beyond then change to goodbye and update url
+  }else if (daysSinceStart() >= 8) {
+    $("div.ui-page-active a.introbutton > span > span").text("Goodbye!");
+    button.attr("href", "#goodbyePage");
+  };
+});
+
 $(".bio-page").live("pageshow", function (event) {
   var url = $.mobile.path.parseUrl(window.location);
   url = url.hash;
