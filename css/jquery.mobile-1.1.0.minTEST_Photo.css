@@ -122,6 +122,7 @@
 body {
     background: url(../img/bg.jpg)!important;
     background-repeat:repeat-y!important;
+    background-color:#000000;
     background-position:center center!important;
     background-attachment:fixed!important;
     background-size:100% 100%!important;
