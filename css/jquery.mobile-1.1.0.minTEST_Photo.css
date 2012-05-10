@@ -1,4 +1,5 @@
 /*! jQuery Mobile v1.1.0 db342b1f315c282692791aa870455901fdb46a55 jquerymobile.com | jquery.org/license */
+.ui-page {visibility:visible;}
 .ui-bar-a {
 	border: none/*{a-bar-border}*/;
 	background: 			black /*{a-bar-background-color}*/;
@@ -129,7 +130,7 @@ body {
 }
 .ui-page {
     background: none!important;
-    visibility:visible;
+
     
 }
 
