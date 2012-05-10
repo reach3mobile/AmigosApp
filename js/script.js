@@ -104,8 +104,8 @@ function getTodaysQuiz() {
   var fullDate = getTodaysDate();
   
   // last day of the event, if it is past this date we just redirect to the final score page
-  var endDate = new Date("May 21, 2012");
-  if (fullDate >= endDate) {
+  //var endDate = new Date("May 21, 2012");
+  if (daysSinceStart() > 8) {
     $.mobile.changePage("quizindex.html");
   }else {
     
