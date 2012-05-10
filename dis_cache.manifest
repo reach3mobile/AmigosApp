@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 05-08-2012 v4
+# 05-08-2012 v5
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -17,6 +17,7 @@ quizindex.html
 itinerary.html
 bios.html
 photos.html
+404.html
 
 # js
 js/libs/jquery-1.7.1.min.js
@@ -26,6 +27,8 @@ js/helper.js
 js/script.js
 js/plugins.js
 js/defaults.js
+js/bubble.js
+js/bookmark_bubble.js
 
 # css
 css/jquery.mobile-1.1.0.minTEST_Photo.css
@@ -48,6 +51,7 @@ img/startup-tablet-landscape.png
 img/startup-tablet-portrait.png
 img/amigo.png
 img/bg.jpg
+img/bg_repeat.jpg
 img/bio_chrisWebster.jpg
 img/bio_dannyLopez.jpg
 img/bio_deborahPeacock.jpg
@@ -57,14 +61,17 @@ img/bio_mikePemberton.jpg
 img/bio_paulMargetson.jpg
 img/bio_samPick.jpg
 img/intin.png
-img/itin_bg.png
+img/intin_roll.png
 img/nm.png
+img/nm_roll.png
 img/nmpic1.jpg
 img/nmpic2.jpg
 img/nmpic3.jpg
 img/nmpic4.jpg
 img/nmpic5.jpg
 img/nmpic6.jpg
+img/nmpic7.jpg
+img/nmpic8.jpg
 img/no-photo.png
 img/quiz_bg.png
 img/stump.png
@@ -72,9 +79,11 @@ img/icons/bg.jpg
 img/icons/icon_amigo.png
 img/icons/icon_amigo_roll.png
 img/icons/icons_Intin.png
-img/icons/icons_Intin.psd
 img/icons/icons_Intin_Roll.png
 img/icons/icons_NM.png
 img/icons/icons_NM_Roll.png
 img/icons/icons_Quiz.png
 img/icons/icons_Quiz_Roll.png
+img/r3-logo.jpg
+img/share.png
+img/stump_roll.png
