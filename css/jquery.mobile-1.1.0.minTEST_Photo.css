@@ -129,6 +129,7 @@ body {
 }
 .ui-page {
     background: none!important;
+    visibility:visible;
     
 }
 
