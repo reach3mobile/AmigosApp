@@ -252,8 +252,8 @@ padding-right:25px;
 text-align:center!important;
 float:right;
 font-size:8px;
-width:70px;
-height:17px;
+width:21%;
+height:10%;
 }
 .welcome{
 color:white;
@@ -261,4 +261,18 @@ background-color:#fff;
 -webkit-border-radius: 0px 0px 14px 14px;
 -moz-border-radius: 0px 0px 14px 14px;
 border-radius: 0px 0px 14px 14px;
+}
+.ui-footer .ui-btn-inner{
+float:left;
+background:transparent;
+border:none;
+padding-bottom:10px;
+}
+.ui-footer {
+height:10%;
+padding-top:0px;
+}
+.ui-navbar img {
+height:70%;
+width:auto;
 }
