@@ -272,6 +272,10 @@ border-radius: 0px 0px 14px 14px;
 .goodbye .ui-content p{
 color:#000000;
 }
+.goodbye .ui-content img {
+margin-top:10px;
+float:left;
+}
 .ui-footer .ui-btn-inner{
 float:left;
 background:transparent;
@@ -296,4 +300,7 @@ min-height:30px;
 	text-align:center;
 	padding:10px;
 	font-size:20px;
+	-webkit-border-radius: 14px 14px 14px 14px;
+-moz-border-radius: 14px 14px 14px 14px;
+border-radius: 14px 14px 14px 14px;
 }
