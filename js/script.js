@@ -439,7 +439,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
   
 });
 
-// Check if a new cache is available on page load.
+// Check if a new cache is available on page load
 window.addEventListener('load', function(e) {
 
   window.applicationCache.addEventListener('updateready', function(e) {
