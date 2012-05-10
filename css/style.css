@@ -42,9 +42,9 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: #506d2e; }
-a:visited { color: #506d2e; }
-a:hover { color: #506d2e; }
+a { color: #F2830C; }
+a:visited { color: #F2830C; }
+a:hover { color: #F2830C; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
