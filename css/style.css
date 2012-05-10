@@ -219,7 +219,10 @@ td { vertical-align: top; }
 	margin-top: 15px;
 	border: 8px white solid;
 	box-shadow: 3px 3px 20px 0 rgba(0,0,0,56);
+	width:95%;
+	height:auto;
 }
+
 
 .bio article p, .bio article h1{
 	color: white;
@@ -312,8 +315,6 @@ header {
     margin:0 auto!important;
  
 }
-
-
 
 
 
