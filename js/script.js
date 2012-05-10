@@ -238,6 +238,17 @@ $("*").live("pageshow", function (event) {
   remainingQuiz();
 });
 
+$("#goodbyePage").live("pageshow", function (event) {
+  // just in case they never played the quiz 0 it out if it doesnt exist
+  if (localStorage.getItem("score") == null) {
+    localStorage.setItem("score", 0);
+  };
+  var score = localStorage.getItem("score");
+
+  var scoreString = score + "/40";
+  $(".totalscore").text(scoreString);
+});
+
 // called when the index page is shown.
 $(".navbar_index").live("pageshow", function (event) {
   // the button at the top of the index page
