@@ -319,7 +319,7 @@ $(".quizpage").live("pageshow", function (event) {
       if (localStorage.getItem(currentPage + "win") != null) {
         // show the button to move to the next quiz
         if (remainingQuiz() == false) {
-          $("div.ui-page-active a.nextQuizButton > span > span").text("See Score");
+          $("div.ui-page-active a.nextQuizButton > span > span:first-child").text("See Score");
         };
         $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
         if (localStorage.getItem(currentPage + "win") == "true") {
@@ -421,7 +421,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          if (remainingQuiz() == true) {
            $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
          }else {
-           $("div.ui-page-active a.nextQuizButton > span > span").text("See Score");
+           $("div.ui-page-active a.nextQuizButton > span > span:first-child").text("See Score");
            $("div.ui-page-active a.nextQuizButton").removeClass("hidden");
          };
   });
