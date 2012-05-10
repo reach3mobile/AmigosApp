@@ -258,7 +258,7 @@ $(".navbar_index").live("pageshow", function (event) {
     button.addClass("hidden");
   // if it is the last day or beyond then change to goodbye and update url
   }else if (daysSinceStart() >= 8) {
-    $("div.ui-page-active a.introbutton > span > span").text("Goodbye!");
+    $("div.ui-page-active a.introbutton > span > span").text("Goodbye! (click me)");
     button.attr("href", "#goodbyePage");
   };
 });
