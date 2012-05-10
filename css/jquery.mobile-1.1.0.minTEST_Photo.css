@@ -281,3 +281,9 @@ height:75%;
 width:auto;
 min-height:30px;
 }
+.lst_score {
+	background-color:#ffffff!important;
+	text-align:center;
+	padding:10px;
+	font-size:20px;
+}
