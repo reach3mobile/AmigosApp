@@ -222,11 +222,7 @@ td { vertical-align: top; }
 	width:95%;
 	height:auto;
 }
-.photo-page figcaption{
-	color:#ffffff;
-	text-shadow: 2px 2px #000000;
-	text-align:center;
-}
+
 
 .bio article p, .bio article h1{
 	color: white;
