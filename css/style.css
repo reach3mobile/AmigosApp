@@ -48,7 +48,7 @@ a { color: #F2830C; text-decoration:none; }
 a:visited { color: #F2830C; }
 a:hover { color: #F2830C; }
 
-a:focus { outline: thin dotted; }
+/*a:focus { outline: thin dotted; }*/
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
