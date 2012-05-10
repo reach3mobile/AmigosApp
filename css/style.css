@@ -202,7 +202,14 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Brianna Kirkland
    ========================================================================== */
-
+header {
+	text-align:center;
+	line-height: 1.2em;
+}
+.subnav {
+	display:inline-block;
+	width: 12.5%;
+}
 
 
 .bio-pic {
