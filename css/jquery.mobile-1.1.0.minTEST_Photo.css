@@ -177,8 +177,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00494949', e
 }
 
 .days{
-	width:290px;
+	width:285px;
 	margin:0 auto;
+	background-color:white;
+	background-position:left;
 }
 ui.footer {
 		background:none!important;
