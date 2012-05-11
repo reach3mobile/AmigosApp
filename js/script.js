@@ -106,7 +106,7 @@ function getTodaysQuiz() {
   // last day of the event, if it is past this date we just redirect to the final score page
   //var endDate = new Date("May 21, 2012");
   if (daysSinceStart() > 8) {
-    $.mobile.changePage("quizindex.html");
+    window.location = "quizindex.html";
   }else {
     
     // it is within the play period, lets see if they player left off somewhere
@@ -182,7 +182,8 @@ function nextQuiz(){
      dateNumb += 1;
      // there are eight pages so send home if the new page would be higher
      if (dateNumb > 8) {
-       return "quizindex.html";
+       window.location = "quizindex.html";
+       return; 
      };
      localStorage.setItem("pageNumber", dateNumb);
      newUrl = "quiz-day-" + dateNumb + ".html";
@@ -308,7 +309,10 @@ $("#quizindex").live("pageshow", function (event) {
       };
       if (daysSinceStart() > 8) {
         $("div.ui-page-active a.nextQuizButton").addClass("hidden");
-      };  
+      }; 
+      if (localStorage.getItem("quiz-40win") != null) {
+        $("div.ui-page-active a.nextQuizButton").addClass("hidden");
+      }; 
 });
 var currentPage;
 
