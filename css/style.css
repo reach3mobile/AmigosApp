@@ -44,7 +44,7 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 
 
-a { color: #F2830C; text-decoration:none; }
+a { color: #000000; text-decoration:none; }
 a:visited { color: #F2830C; }
 a:hover { color: #F2830C; text-shadow:none;}
 
@@ -277,7 +277,7 @@ header {
     
 }
 .itin a:link {
-        margin-top:5%;
+        margin-top:3%;
 	margin-right:auto!important;
         margin-left:auto!important;
 	height:107px;
