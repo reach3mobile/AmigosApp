@@ -46,7 +46,7 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 a { color: #F2830C; text-decoration:none; }
 a:visited { color: #F2830C; }
-a:hover { color: #F2830C; }
+a:hover { color: #F2830C; text-shadow:none;}
 
 /*a:focus { outline: thin dotted; }*/
 
@@ -258,14 +258,9 @@ header {
 }
 
 
-<!-- NAV_LANDING_INDEX_PAGE -->
-
+/* NAV_LANDING_INDEX_PAGE */
 .nav_bod {
-    background: url(../img/bg.jpg)!important;
-    background-repeat:repeat-y!important;
-    background-position:center center!important;
-    background-attachment:scroll!important;
-    background-size:100% 100%!important;
+	background-attachment:scroll!important;
 }
 
 .navbar_index {
@@ -349,6 +344,7 @@ header {
 	width:150px;
 	display:block;
 	background: url(../img/amigo_roll.png);
+	background-repeat:no-repeat;
 }
 .navbar_index a:hover p {
     color:white;

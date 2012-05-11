@@ -144,13 +144,11 @@ body {
     background-attachment:fixed!important;
 }
 .ui-page {
-    background: none!important;
-
-    
+    background: none!important;  
 }
 
 
-.bg-grad{
+.bg_grad {
 position:fixed;
 bottom:0px;
 left:0px;
@@ -163,8 +161,6 @@ background: -o-linear-gradient(top,  rgba(73,73,73,0) 0%,rgba(5,5,5,1) 100%); /*
 background: -ms-linear-gradient(top,  rgba(73,73,73,0) 0%,rgba(5,5,5,1) 100%); /* IE10+ */
 background: linear-gradient(top,  rgba(73,73,73,0) 0%,rgba(5,5,5,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00494949', endColorstr='#050505',GradientType=0 ); /* IE6-9 */
-
-
 }
 
 
