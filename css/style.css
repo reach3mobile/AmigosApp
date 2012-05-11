@@ -281,16 +281,10 @@ header {
     font-size:10px;
     
 }
-.navbar_index a:link p {
-    
-    color:white;
-    font-family:sans-serif;
-    font-size:10px;
-    text-shadow: none;
-}
 .itin a:link {
-	    margin-right:auto!important;
-    margin-left:auto!important;
+        margin-top:5%;
+	margin-right:auto!important;
+        margin-left:auto!important;
 	height:107px;
 	width:109px;
 	display:block;
