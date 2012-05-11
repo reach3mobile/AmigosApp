@@ -44,8 +44,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 
 
-a { color: #000000; text-decoration:none; }
-a:visited { color: #F2830C; }
+a { color: #000000; text-decoration:none; text-shadow:none;}
+a:visited { color: #F2830C; text-shadow:none;}
 a:hover { color: #F2830C; text-shadow:none;}
 
 /*a:focus { outline: thin dotted; }*/
