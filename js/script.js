@@ -1,4 +1,4 @@
-var firstDay = new Date(2012, 4, 3); // YYYY M(0 based) D
+var firstDay = new Date(2012, 4, 4); // YYYY M(0 based) D
 var version = 4;
 //check to make sure that the current database is up to date
 function versionCheck() {
