@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 05-08-2012 v5
+# 05-08-2012 v6
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -50,6 +50,7 @@ img/l/apple-touch-icon.png
 img/startup-tablet-landscape.png
 img/startup-tablet-portrait.png
 img/amigo.png
+img/amigo_roll.png
 img/bg.jpg
 img/bg_repeat.jpg
 img/bio_chrisWebster.jpg
