@@ -1,5 +1,5 @@
 var firstDay = new Date(2012, 4, 3); // YYYY M(0 based) D
-var version = 3;
+var version = 4;
 //check to make sure that the current database is up to date
 function versionCheck() {
   if (localStorage.getItem("version") != version) {
@@ -132,7 +132,7 @@ function getTodaysQuiz() {
 function getTodaysItin() {
   // if it has been more than 8 days we are just going to send them to the first day instead so they dont get a 404
   if (daysSinceStart() > 8) {
-    window.location = "itinerary.html#day-1";
+    window.location = "itinerary.html#day-8";
     return;
   };
   window.location = "itinerary.html#day-" + daysSinceStart();
@@ -141,7 +141,7 @@ function getTodaysItin() {
 function getTodaysBio() {
   // if it has been more than 8 days we are just going to send them to the first day instead so they dont get a 404
   if (daysSinceStart() > 8) {
-    window.location = "bios.html#bio-1";
+    window.location = "bios.html#bio-8";
     return;
   };
   window.location = "bios.html#bio-" + daysSinceStart();
@@ -150,7 +150,7 @@ function getTodaysBio() {
 function getTodaysPhoto() {
   // if it has been more than 8 days we are just going to send them to the first day instead so they dont get a 404
   if (daysSinceStart() > 8) {
-    window.location = "photos.html#pic-1";
+    window.location = "photos.html#pic-8";
     return;
   };
   window.location = "photos.html#pic-" + daysSinceStart();
@@ -304,6 +304,9 @@ $("#quizindex").live("pageshow", function (event) {
       if (remainingQuiz() == true) {
         $(".noquiz").addClass("hidden");
       }else {
+        $("div.ui-page-active a.nextQuizButton").addClass("hidden");
+      };
+      if (daysSinceStart() > 8) {
         $("div.ui-page-active a.nextQuizButton").addClass("hidden");
       };  
 });
