@@ -288,6 +288,74 @@ header {
     font-size:10px;
     text-shadow: none;
 }
+.itin a:link {
+	    margin-right:auto!important;
+    margin-left:auto!important;
+	height:107px;
+	width:109px;
+	display:block;
+	background: url(../img/intin.png);
+}
+.itin a:hover {
+	height:107px;
+	width:109px;
+	display:block;
+	background: url(../img/intin_roll.png);
+}
+.itin {
+    margin-top:2%!important;
+    text-align:center!important;
+    text-shadow: none!important;
+}
+.quiz a:link {
+        float:left!important;
+	height:107px;
+	width:109px;
+	display:block;
+	background: url(../img/stump.png);
+}
+.quiz a:hover {
+	height:107px;
+	width:109px;
+	display:block;
+	background: url(../img/stump_roll.png);
+}
+.quiz{
+	float:left!important;
+}
+
+
+.nm a:link {
+        float:right!important;
+	height:107px;
+	width:109px;
+	display:block;
+	background: url(../img/nm.png);
+}
+.nm a:hover {
+	height:107px;
+	width:109px;
+	display:block;
+	background: url(../img/nm_roll.png);
+}
+.nm{
+	float:right!important;
+}
+
+.amigo a:link {
+        clear:both!important;
+        margin:0 auto!important;
+	height:147px;
+	width:150px;
+	display:block;
+	background: url(../img/amigo.png);
+}
+.amigo a:hover {
+	height:147px;
+	width:150px;
+	display:block;
+	background: url(../img/amigo_roll.png);
+}
 .navbar_index a:hover p {
     color:white;
     font-family:sans-serif;
@@ -300,32 +368,13 @@ header {
     font-size:10px;
     text-shadow: none;
 }
-.itin {
-	margin-top:2%!important;
-    text-align:center!important;
-    margin-right:auto!important;
-    margin-left:auto!important;
-    text-shadow: none!important;
-}
-.nm {
-    float:right!important;
 
-}
-.quiz {
-    float:left!important;
 
-    }
 .both_buttons{
     margin-top:0px!important;
     width:240px!important;
     margin: 0 auto!important;
 }
-.amigo{
-	clear:both!important;
-    margin:0 auto!important;
- 
-}
-
 
 
 
