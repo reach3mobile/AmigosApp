@@ -352,3 +352,7 @@ border-radius: 14px 14px 14px 14px;
 padding-top:10px;
 clear:right;
 }
+.button_bg {
+background-color:white;
+background-position:left;
+}
