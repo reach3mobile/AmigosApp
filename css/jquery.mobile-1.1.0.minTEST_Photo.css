@@ -346,3 +346,7 @@ background-color:rgba(0,0,0,.3);
 -moz-border-radius: 14px 14px 14px 14px;
 border-radius: 14px 14px 14px 14px;
 }
+.quizpage p {
+padding-top:10px;
+clear:right;
+}
