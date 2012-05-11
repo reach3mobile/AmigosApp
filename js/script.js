@@ -3,7 +3,7 @@ var version = 4;
 //check to make sure that the current database is up to date
 function versionCheck() {
   if (localStorage.getItem("version") != version) {
-    console.log("Version out of date, blasting storage");
+    //console.log("Version out of date, blasting storage");
     localStorage.clear();
     localStorage.setItem("version", version);
   };
@@ -57,7 +57,7 @@ function daysSinceStart() {
   var today = new Date();
   var oneDay=1000*60*60*24;
   var days = Math.ceil((today.getTime()-firstDay.getTime())/(oneDay));
-  console.log("days: " + days);
+  //console.log("days: " + days);
   return days;
 };
 
@@ -83,7 +83,7 @@ function remainingQuiz() {
   var days = daysSinceStart();
   // if the date is not today then we need to reset to 0 again
   if (localStorage.getItem("today") != getTodaysDate()) {
-    console.log("resetting quizes");
+    //console.log("resetting quizes");
     // we might should set the player on the first quiz for this day.
     localStorage.setItem("lastQuiz", "quiz-day-" + days + ".html");
     localStorage.setItem("unlocked", days);
@@ -113,12 +113,12 @@ function getTodaysQuiz() {
     var lastQuiz = localStorage.getItem("lastQuiz");
     // if they did, AND we still have quizes left for today then go to that quiz
     if (lastQuiz != null && remainingQuiz() == true) {
-      console.log(localStorage.getItem("lastQuiz"));
+      //console.log(localStorage.getItem("lastQuiz"));
       window.location = localStorage.getItem("lastQuiz");
       return;
     // otherwise send them to the score page again
     }else if (remainingQuiz() == false) {
-      console.log("out of quizes today");
+      //console.log("out of quizes today");
       window.location = "quizindex.html"; //$.mobile.changePage("quizindex.html");
       return;
     };
@@ -165,7 +165,7 @@ function nextQuiz(){
   // get the current URL
   var url = $.mobile.path.parseUrl(window.location.href);
 
-  //console.log(thisPage);
+  ////console.log(thisPage);
   // get the number out of the current page ID
    var pgNumb = parseInt(currentPage.match(/\d+/));
    // there are 5 questions per page, if this is question 5 the next one is on a different page
@@ -267,10 +267,10 @@ $(".bio-page").live("pageshow", function (event) {
   var url = $.mobile.path.parseUrl(window.location);
   url = url.hash;
   var pgNumb = parseInt(url.match(/\d+/));
-  console.log(pgNumb);
+  //console.log(pgNumb);
   
   if (pgNumb >= daysSinceStart()) {
-    console.log("today");
+    //console.log("today");
     $("div.ui-page-active a.nextbiobutton").addClass("hidden");
   };
   
@@ -280,10 +280,10 @@ $(".photo-page").live("pageshow", function (event) {
   var url = $.mobile.path.parseUrl(window.location);
   url = url.hash;
   var pgNumb = parseInt(url.match(/\d+/));
-  console.log(pgNumb);
+  //console.log(pgNumb);
   
   if (pgNumb >= daysSinceStart()) {
-    console.log("today");
+    //console.log("today");
     $("div.ui-page-active a.nextphotobutton").addClass("hidden");
   };
   
@@ -313,7 +313,7 @@ $("#quizindex").live("pageshow", function (event) {
 var currentPage;
 
 $(".quizpage").live("pageshow", function (event) {
-      //console.log($page.attr("id"));
+      ////console.log($page.attr("id"));
       currentPage = $(this).attr("id");
       // grab the current score
       if (localStorage.getItem("score") == null) {
@@ -355,7 +355,7 @@ $(".quizpage").live("pageshow", function (event) {
         $("div.ui-page-active a." + playerAnswer).parent().next().addClass(icon);
         //$("div.ui-page-active a." + playerAnswer).css('background-color', color);
       };
-      console.log(currentPage);
+      //console.log(currentPage);
 });
 
 $( document ).delegate(".quizpage", "pageinit", function() {
@@ -366,7 +366,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
     localStorage.setItem("scoreToday", 0);
   };
   var score = parseInt(localStorage.getItem("score"));
-  //console.log($(this).data("url"));
+  ////console.log($(this).data("url"));
   $('a.answer').click(function(e){
          // disable the buttons because this quiz has been completed
          if (localStorage.getItem(currentPage) != null) {
@@ -381,7 +381,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          
          // this is the key for wheather this quest is right or wrong for when we need to reload the page
          var win = currentPage + "win";
-         console.log(win);
+         //console.log(win);
          if ($(this).hasClass("wrong")) {
            // change the icon of the tapped button
             $(this).parent().next().removeClass("ui-icon-arrow-r");
@@ -408,7 +408,7 @@ $( document ).delegate(".quizpage", "pageinit", function() {
             // update the score for today
             var scoreToday = parseInt(localStorage.getItem("scoreToday"));
             scoreToday += 1;
-            console.log(scoreToday);
+            //console.log(scoreToday);
             localStorage.setItem("scoreToday", scoreToday);
             
             // store that this quiz has been answered sucessfully
@@ -421,14 +421,14 @@ $( document ).delegate(".quizpage", "pageinit", function() {
          };
          // store the button that was pressed
          var buttonSelector = $(this).attr("class").replace(/\s/g , ".");
-         //console.log(buttonSelector);
+         ////console.log(buttonSelector);
          localStorage.setItem(currentPage, buttonSelector);
          // we answered a quiz so update the storage to reflect that
          var answered = parseInt(localStorage.getItem("answered"));
          answered += 1;
          localStorage.setItem("answered", answered);
          // the url for the next page so we can automatically return there
-         //console.log("next page: " + nextPageUrl(currentPage));
+         ////console.log("next page: " + nextPageUrl(currentPage));
          localStorage.setItem("lastQuiz", nextPageUrl(currentPage));
          
          // show the button to move to the next quiz (if we havent used all the quizes today)
