@@ -1,261 +1,156 @@
 <!doctype html>
-<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
-<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en" manifest="cache.manifest"> <!--<![endif]-->
-
+<!--[if IEMobile 7 ]> <html class="no-js iem7" lang=en> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class=no-js lang=en manifest=cache.manifest> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-
-  <title>Quiz</title>
-  <meta name="description" content="">
-
-  <!-- Mobile viewport optimization h5bp.com/ad -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width">
-
-  <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
-  <!-- For iPhone 4 with high-resolution Retina display: -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
-  <!-- For first-generation iPad: -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
-  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
-  <!-- For nokia devices: -->
-  <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
-
-  <!-- iOS web app, delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
-  
-  <!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
-  <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
-  
-  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
-  <meta http-equiv="cleartype" content="on">
-
-  <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- jQuery mobile stylesheet -->
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Photo.css">
-
-  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+<meta charset=utf-8>
+<title>Quiz</title>
+<meta name=description content>
+<meta name=HandheldFriendly content=True>
+<meta name=MobileOptimized content=320>
+<meta name=viewport content="width=device-width">
+<link rel=apple-touch-icon-precomposed sizes=114x114 href=img/h/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed sizes=72x72 href=img/m/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed href=img/l/apple-touch-icon-precomposed.png>
+<link rel="shortcut icon" href=img/l/apple-touch-icon.png>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black>
+<script>(function(){var b;if(navigator.platform==="iPad"){b=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{b=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+b+'"/>')})();</script>
+<meta http-equiv=cleartype content=on>
+<link rel=stylesheet href=css/style.css>
+<link rel=stylesheet href=css/jquery.mobile-1.1.0.minTEST_Photo.css>
+<script src=js/libs/modernizr-2.0.6.min.js></script>
 </head>
-
-<body style="visibility:hidden;">
-	
- 	<div id="quiz-21" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right hidden nextQuizButton" data-icon="arrow-r" data-iconpos="right">Next</a> 		</header>
-
-		
-
-		<div data-role="content" id="quiz21" class="quizcontent">
-			<p class="score">Total Score: 0/40</p>
-			<p class="dayscore">Score Today: 0</p>
-				
-			<p>What rank does New Mexico Tech have in wage earning capacity after graduation in comparison with all institutions of higher learning in the Western United States?</p>	
-			
-			<ul data-role="listview" data-inset="true">
-				<li class="ui-btn-icon-left"><a class="right answer a icon-left-padding" href="#">Second</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">Fourth</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">Sixth</a></li>
-			</ul>
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
-				
-		</div><!-- /content -->
-		
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onmouseover="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onmouseover="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onmouseover="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-	</div><!-- /quiz-21 -->
-	
-	<div id="quiz-22" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right hidden nextQuizButton" data-icon="arrow-r" data-iconpos="right">Next</a> 		</header>
-
-		
-
-		<div data-role="content" id="quiz22" class="quizcontent">
-			<p class="score">Total Score: 0/40</p>
-			<p class="dayscore">Score Today: 0</p>
-				
-			<p>In what month and year did Phase II of the Rail Runner Express open and where did it travel to?</p>	
-			
-			<ul data-role="listview" data-inset="true">
-				<li class="ui-btn-icon-left"><a class="wrong answer a icon-left-padding" href="#">November, 2008. Bernalillo</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">December, 2008. Santa Fe</a></li>
-				<li class="ui-btn-icon-left"><a class="right answer c icon-left-padding" href="#">December, 2009. Santa Fe</a></li>
-			</ul>
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
-		</div><!-- /content -->
-		
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onmouseover="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onmouseover="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onmouseover="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-	</div><!-- /quiz-22 -->
-	
-	<div id="quiz-23" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right hidden nextQuizButton" data-icon="arrow-r" data-iconpos="right">Next</a> 		</header>
-
-		
-
-		<div data-role="content" id="quiz23" class="quizcontent">
-			<p class="score">Total Score: 0/40</p>
-			<p class="dayscore">Score Today: 0</p>
-				
-			<p>In what city is it illegal for a cab driver to reach out and pull prospective customers inside the taxi?</p>	
-			
-			<ul data-role="listview" data-inset="true">
-				<li class="ui-btn-icon-left"><a class="wrong answer a icon-left-padding" href="#">Las Cruces</a></li>
-				<li class="ui-btn-icon-left"><a class="right answer b icon-left-padding" href="#">Albuquerque</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">Santa fe</a></li>
-			</ul>
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
-		</div><!-- /content -->
-		
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onmouseover="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onmouseover="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onmouseover="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-	</div><!-- /quiz-23 -->
-	
-	<div id="quiz-24" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right hidden nextQuizButton" data-icon="arrow-r" data-iconpos="right">Next</a> 		</header>
-
-		
-
-		<div data-role="content" id="quiz24" class="quizcontent">
-			<p class="score">Total Score: 0/40</p>
-			<p class="dayscore">Score Today: 0</p>
-				
-			<p>Where is the campus of Eastern New Mexico State University?</p>	
-			
-			<ul data-role="listview" data-inset="true">
-				<li class="ui-btn-icon-left"><a class="wrong answer a icon-left-padding" href="#">Carlsbad</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">Roswell</a></li>
-				<li class="ui-btn-icon-left"><a class="right answer c icon-left-padding" href="#">Portales</a></li>
-			</ul>
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
-		</div><!-- /content -->
-		
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onmouseover="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onmouseover="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onmouseover="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-	</div><!-- /quiz-24 -->
-	
-	<div id="quiz-25" class="quizpage" data-role="page" data-theme="c"> 	        <!-- new header--> 		<header data-role="header" data-position="fixed" data-theme="c"> 			<a onClick="prevQuiz();" class="ui-btn-left" data-icon="arrow-l">Back</a> 			<h1>Quiz</h1> 			<a onClick="nextQuiz();" class="ui-btn-right hidden nextQuizButton" data-icon="arrow-r" data-iconpos="right">Next</a> 		</header>
-
-		
-
-		<div data-role="content" id="quiz25" class="quizcontent">
-			<p class="score">Total Score: 0/40</p>
-			<p class="dayscore">Score Today: 0</p>
-				
-			<p>What is the total acreage of the Mescalero Apache Indian Reservation?</p>	
-			
-			<ul data-role="listview" data-inset="true">
-				<li class="ui-btn-icon-left"><a class="right answer a icon-left-padding" href="#">Above 450,00 but below 475,000</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer b icon-left-padding" href="#">Above 500,000 but below 510,000</a></li>
-				<li class="ui-btn-icon-left"><a class="wrong answer c icon-left-padding" href="#">472,320</a></li>
-			</ul>
-			<h1 class="hide banner right" style="clear:both;">Genius!</h1>	
-			<h1 class="hide banner wrong" style="clear:both;">Better luck next time!</h1>
-		</div><!-- /content -->
-		
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onmouseover="this.src='img/icons/icon_amigo_roll.png';" onmouseout="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onmouseover="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onmouseover="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onmouseover="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-	</div><!-- /quiz-25 -->
-
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
- <!--
- 	Default settings for jQM need to to be loaded before jQM
- -->  
-  <script src="js/defaults.js"></script>
-  
-  <script src="js/libs/jquery.mobile-1.1.0.min.js"></script>
-
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/helper.js"></script>
-  <script src="js/script.js"></script>
-  
-  
-  <!-- end scripts-->
-
-  
-
+<body style=visibility:hidden>
+<div id=quiz-21 class=quizpage data-role=page data-theme=c> <header data-role=header data-position=fixed data-theme=c> <a onClick=prevQuiz() class=ui-btn-left data-icon=arrow-l>Back</a> <h1>Quiz</h1> <a onClick=nextQuiz() class="ui-btn-right hidden nextQuizButton" data-icon=arrow-r data-iconpos=right>Next</a> </header>
+<div data-role=content id=quiz21 class=quizcontent>
+<p class=score>Total Score: 0/40</p>
+<p class=dayscore>Score Today: 0</p>
+<p>What rank does New Mexico Tech have in wage earning capacity after graduation in comparison with all institutions of higher learning in the Western United States?</p>
+<ul data-role=listview data-inset=true>
+<li class=ui-btn-icon-left><a class="right answer a icon-left-padding" href=#>Second</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer b icon-left-padding" href=#>Fourth</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer c icon-left-padding" href=#>Sixth</a></li>
+</ul>
+<h1 class="hide banner right" style=clear:both>Genius!</h1>
+<h1 class="hide banner wrong" style=clear:both>Better luck next time!</h1>
+</div>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onmouseover="this.src='img/icons/icon_amigo_roll.png'" onmouseout="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onmouseover="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onmouseover="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onmouseover="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=quiz-22 class=quizpage data-role=page data-theme=c> <header data-role=header data-position=fixed data-theme=c> <a onClick=prevQuiz() class=ui-btn-left data-icon=arrow-l>Back</a> <h1>Quiz</h1> <a onClick=nextQuiz() class="ui-btn-right hidden nextQuizButton" data-icon=arrow-r data-iconpos=right>Next</a> </header>
+<div data-role=content id=quiz22 class=quizcontent>
+<p class=score>Total Score: 0/40</p>
+<p class=dayscore>Score Today: 0</p>
+<p>In what month and year did Phase II of the Rail Runner Express open and where did it travel to?</p>
+<ul data-role=listview data-inset=true>
+<li class=ui-btn-icon-left><a class="wrong answer a icon-left-padding" href=#>November, 2008. Bernalillo</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer b icon-left-padding" href=#>December, 2008. Santa Fe</a></li>
+<li class=ui-btn-icon-left><a class="right answer c icon-left-padding" href=#>December, 2009. Santa Fe</a></li>
+</ul>
+<h1 class="hide banner right" style=clear:both>Genius!</h1>
+<h1 class="hide banner wrong" style=clear:both>Better luck next time!</h1>
+</div>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onmouseover="this.src='img/icons/icon_amigo_roll.png'" onmouseout="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onmouseover="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onmouseover="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onmouseover="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=quiz-23 class=quizpage data-role=page data-theme=c> <header data-role=header data-position=fixed data-theme=c> <a onClick=prevQuiz() class=ui-btn-left data-icon=arrow-l>Back</a> <h1>Quiz</h1> <a onClick=nextQuiz() class="ui-btn-right hidden nextQuizButton" data-icon=arrow-r data-iconpos=right>Next</a> </header>
+<div data-role=content id=quiz23 class=quizcontent>
+<p class=score>Total Score: 0/40</p>
+<p class=dayscore>Score Today: 0</p>
+<p>In what city is it illegal for a cab driver to reach out and pull prospective customers inside the taxi?</p>
+<ul data-role=listview data-inset=true>
+<li class=ui-btn-icon-left><a class="wrong answer a icon-left-padding" href=#>Las Cruces</a></li>
+<li class=ui-btn-icon-left><a class="right answer b icon-left-padding" href=#>Albuquerque</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer c icon-left-padding" href=#>Santa fe</a></li>
+</ul>
+<h1 class="hide banner right" style=clear:both>Genius!</h1>
+<h1 class="hide banner wrong" style=clear:both>Better luck next time!</h1>
+</div>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onmouseover="this.src='img/icons/icon_amigo_roll.png'" onmouseout="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onmouseover="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onmouseover="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onmouseover="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=quiz-24 class=quizpage data-role=page data-theme=c> <header data-role=header data-position=fixed data-theme=c> <a onClick=prevQuiz() class=ui-btn-left data-icon=arrow-l>Back</a> <h1>Quiz</h1> <a onClick=nextQuiz() class="ui-btn-right hidden nextQuizButton" data-icon=arrow-r data-iconpos=right>Next</a> </header>
+<div data-role=content id=quiz24 class=quizcontent>
+<p class=score>Total Score: 0/40</p>
+<p class=dayscore>Score Today: 0</p>
+<p>Where is the campus of Eastern New Mexico State University?</p>
+<ul data-role=listview data-inset=true>
+<li class=ui-btn-icon-left><a class="wrong answer a icon-left-padding" href=#>Carlsbad</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer b icon-left-padding" href=#>Roswell</a></li>
+<li class=ui-btn-icon-left><a class="right answer c icon-left-padding" href=#>Portales</a></li>
+</ul>
+<h1 class="hide banner right" style=clear:both>Genius!</h1>
+<h1 class="hide banner wrong" style=clear:both>Better luck next time!</h1>
+</div>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onmouseover="this.src='img/icons/icon_amigo_roll.png'" onmouseout="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onmouseover="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onmouseover="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onmouseover="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=quiz-25 class=quizpage data-role=page data-theme=c> <header data-role=header data-position=fixed data-theme=c> <a onClick=prevQuiz() class=ui-btn-left data-icon=arrow-l>Back</a> <h1>Quiz</h1> <a onClick=nextQuiz() class="ui-btn-right hidden nextQuizButton" data-icon=arrow-r data-iconpos=right>Next</a> </header>
+<div data-role=content id=quiz25 class=quizcontent>
+<p class=score>Total Score: 0/40</p>
+<p class=dayscore>Score Today: 0</p>
+<p>What is the total acreage of the Mescalero Apache Indian Reservation?</p>
+<ul data-role=listview data-inset=true>
+<li class=ui-btn-icon-left><a class="right answer a icon-left-padding" href=#>Above 450,00 but below 475,000</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer b icon-left-padding" href=#>Above 500,000 but below 510,000</a></li>
+<li class=ui-btn-icon-left><a class="wrong answer c icon-left-padding" href=#>472,320</a></li>
+</ul>
+<h1 class="hide banner right" style=clear:both>Genius!</h1>
+<h1 class="hide banner wrong" style=clear:both>Better luck next time!</h1>
+</div>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onmouseover="this.src='img/icons/icon_amigo_roll.png'" onmouseout="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onmouseover="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onmouseover="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onmouseover="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js></script>
+<script>window.jQuery||document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>');</script>
+<script src=js/defaults.js></script>
+<script src=js/libs/jquery.mobile-1.1.0.min.js></script>
+<script src=js/helper.js></script>
+<script src=js/script.js></script>
 </body>
 </html>

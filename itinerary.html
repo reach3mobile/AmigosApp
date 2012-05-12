@@ -1,952 +1,668 @@
 <!doctype html>
-<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
-<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en" manifest="cache.manifest"> <!--<![endif]-->
-
+<!--[if IEMobile 7 ]> <html class="no-js iem7" lang=en> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class=no-js lang=en manifest=cache.manifest> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-
-  <title>Today's Itinerary</title>
-  <meta name="description" content="">
-
-  <!-- Mobile viewport optimization h5bp.com/ad -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width">
-
-  <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
-  <!-- For iPhone 4 with high-resolution Retina display: -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
-  <!-- For first-generation iPad: -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
-  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
-  <!-- For nokia devices: -->
-  <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
-
-  <!-- iOS web app, delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
-  
-  <!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
-  <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
-  
-  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
-  <meta http-equiv="cleartype" content="on">
-
-  <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
-
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- jQuery mobile stylesheet -->
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Photo.css">
-  
-  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
-  
-  
+<meta charset=utf-8>
+<title>Today's Itinerary</title>
+<meta name=description content>
+<meta name=HandheldFriendly content=True>
+<meta name=MobileOptimized content=320>
+<meta name=viewport content="width=device-width">
+<link rel=apple-touch-icon-precomposed sizes=114x114 href=img/h/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed sizes=72x72 href=img/m/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed href=img/l/apple-touch-icon-precomposed.png>
+<link rel="shortcut icon" href=img/l/apple-touch-icon.png>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black>
+<script>(function(){var b;if(navigator.platform==="iPad"){b=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{b=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+b+'"/>')})();</script>
+<meta http-equiv=cleartype content=on>
+<link rel=stylesheet href=css/style.css>
+<link rel=stylesheet href=css/jquery.mobile-1.1.0.minTEST_Photo.css>
+<script src=js/libs/modernizr-2.0.6.min.js></script>
 </head>
-
-<body style="visibility:hidden;">
-
-
-
-	<div id="day-1" data-role="page" data-theme="c" class="itin-page">
-
-		<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">
-        	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<h1>Sunday <time datetime="2012-05-13">May 13<sup>th</sup></time></h1>
-			<a href="#day-2" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-        <div>
-        <a href="#info" data-rel="dialog" data-role="button" class="button_bg">Trip Information</a>
-        </div>
-			
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T07:00:00">7:00 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p>Registration begins at the Albuquerque Sheraton Airport Hotel.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T07:01:00">7:00 a.m. - 8:30 a.m.</time></h2>
-			<article>
-			<p>Departure breakfast and announcements concerning the 2012 Goodwill Trip.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T08:40:00">8:40 a.m.</time></h2>
-			<article>
-			<p>Group moves to Cutter Aviation.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T09:00:00">9:00 a.m.</time></h2>
-			<article>
-			<p>Ramp security begins on tarmac.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T09:30:00">9:30 a.m.</time></h2>
-			<article>
-			<p>Charter flight departs Cutter Aviation for Dulles International Airport (DIA).</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T15:00:00">3:00 p.m.</time></h2>
-			<article>
-			<p>Flight arrives into Landmark Aviation at (DIA). Coaches depart for Mayflower Hotel, 1127 Connecticut Avenue NW. (202) 347-3000</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T16:00:00">4:00 p.m.</time></h2>
-			<article>
-			<p>Amigos arrive at Mayflower Hotel for welcome reception hosted by the Hotel in the China Room. Check-in to follow. Please remember our luggage will arrive approximately one hour after we arrive at the hotel, and then bellmen will begin delivering bags to our rooms.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="true" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-13T18:00:00">Evening Free</time></h2>
-			<article>
-			<p>Enjoy yourselves.</p>
-			</article>
-			</div>
-            
-            	
-		</section><!-- container -->
-        
-	
-	
-	
-	
-		<!--bio's button-->
-		<a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-		
-	</div><!-- #sunday page -->
-    
-    
-    
-    
-    
-
-    <div id="day-2" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-1" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Monday, <time datetime="2012-05-14">May 14<sup>th</sup></time></h1>
-			<a href="#day-3" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T08:00:00">8:00 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p>Coaches depart Hotel for Annapolis, Maryland.</p>
-			</article>
-			</div>
-			
-	    <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T09:00:00">9:00 a.m.</time></h2>
-			<article>
-			<p>Arrival at the United States Naval Academy for tour and briefing.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T11:45:00">11:45 a.m.</time></h2>
-			<article>
-			<p>Coaches transport group to Marina area in Annapolis.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T12:00:00">12:00 - 1:30 p.m.</time></h2>
-			<article>
-			<p>Lunch on your own, at a restaurant of your choice.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T13:45:00">1:45 p.m.</time></h2>
-			<article>
-			<p>Coaches move group to the Maryland State Capitol Building.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T14:00:00">2:00 - 3:00 p.m.</time></h2>
-			<article>
-			<p>Tour of State Capitol.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T15:15:00">3:15 - 4:30 p.m.</time></h2>
-			<article>
-			<p>Reception for Governor Martinez and Amigos on campus of St. John's College.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T16:30:00">4:30 p.m.</time></h2>
-			<article>
-			<p>Coaches depart for return to Mayflower Hotel.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-14T17:30:00">5:30 p.m.</time></h2>
-			<article>
-			<p>Arrive back at the Mayflower Hotel.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="true" data-iconpos="left" data-theme="c" data-content-theme="c">
-            <h2>Evening Free</h2>
-            <article>
-			<p>Enjoy yourselves.</p>
-			</article>
-            </div>
-            	
-		</section><!-- container -->
-	
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #monday page -->
-    
-    
-    
-    
-    
- 
-
-<div id="day-3" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-2" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Tuesday, <time datetime="2012-05-15">May 15<sup>th</sup></time></h1>
-			<a href="#day-4" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T08:00:00">8:00 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p>Coaches depart Hotel for Laurel, Maryland.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T08:45:00">8:45 a.m.</time></h2>
-			<article>
-			<p>Coaches arrive at United States Secret Service Training Facility for tour and briefing.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T11:30:00">11:30 a.m.</time></h2>
-			<article>
-			<p>Coaches return to Hotel.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T12:15:00">12:15 p.m.</time></h2>
-			<article>
-			<p>Coaches arrive Hotel.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T12:16:00">Lunch on your own.</time></h2>
-			<article>
-			<p>Possible activities after Lunch are not confirmed at time of printing.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T16:00:00">4:00 p.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">XX</a></h2>
-			<article>
-			<p>Coaches depart Hotel for group photo on the steps of the United States Capitol Building.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T17:00:00">5:00 p.m.</time></h2>
-			<article>
-			<p>Coaches transport group to the Canadian Embassy.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T17:30:00">5:30 - 7:30 p.m.</time></h2>
-			<article>
-			<p>Amigo Reception</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-15T19:45:00">7:45 p.m.</time></h2>
-			<article>
-			<p>Coaches return to Hotel.</p>
-			</article>
-			</div>
-            	
-		</section><!-- container -->
-        
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #tuesday page -->   
-    
-    
-    
-    
-    
-
-<div id="day-4" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-3" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Wednesday, <time datetime="2012-05-16">May 16<sup>th</sup></time></h1>
-			<a href="#day-5" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-			
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T07:00:00">7:00 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p><strong>Bags in your room by the door. Bellmen begin bag pull.</strong></p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T07:30:00">7:30 - 8:30 a.m.</time></h2>
-			<article>
-			<p>Amigo Breakfast in the Colonial Room at our Hotel. Hosted by Nuclear Energy Institute and URENCO.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T09:00:00">Check-out</time></h2>
-			<article>
-			<p>Remember to check-out at the Front Desk.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T09:15:00">9:15 a.m.</time></h2>
-			<article>
-			<p>Coaches depart Hotel for Anderson House.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T09:30:00">9:30 a.m. - 12:30 p.m.</time></h2>
-			<article>
-			<p>Briefing and tour of Anderson House, followed by Amigo Past President's Lucheon.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T12:45:00">12:45 p.m.</time></h2>
-			<article>
-			<p>Coaches depart for Dulles Airport and ramp security screening.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T14:15:00">2:15 p.m.</time></h2>
-			<article>
-			<p>Charter flight departs for Atlanta, Georgia (ATL).</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T16:15:00">4:15 p.m.</time></h2>
-			<article>
-			<p>Charter flight arrives into Landmark Aviation (ATL). Coaches depart for Ritz-Carlton, 3434 Peachtree Road, NE, (404) 237-2700.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-16T17:00:00">5:00 p.m.</time></h2>
-			<article>
-			<p>Amigos arrive at Atlanta Ritz-Carlton Buckhead. Please remember our luggage will arrive approximately one hour after we arrive at the Hotel, and then bellmen will begin delivering bags to our rooms.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="true" data-iconpos="left" data-theme="c" data-content-theme="c">
-            <h2>Evening Free</h2>
-            <article>
-			<p>Enjoy yourselves.</p>
-			</article>
-            </div>
-            	
-		</section><!-- container -->
-        
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #wednesday page -->    
-    
-
-
-
-
-<div id="day-5" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-4" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Thursday, <time datetime="2012-05-17">May 17<sup>th</sup></time></h1>
-			<a href="#day-6" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T08:00:00">8:00 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p>Coaches depart for Auburn, Alabama.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T09:15:00">9:15 a.m.</time></h2>
-			<article>
-			<p>Amigos arrive at Auburn University for welcome by former Amigo and current University President Jay Gogue.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T09:30:00">9:30  - 11:30 a.m.</time></h2>
-			<article>
-			<p>Tour of Campus.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T11:30:00">11:30 a.m. - 12:30 p.m.</time></h2>
-			<article>
-			<p>Lunch at the home of President Jay Gouge.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T12:45:00">12:45 p.m.</time></h2>
-			<article>
-			<p>Coaches depart for Atlanta.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T16:00:00">4:00 p.m.</time></h2>
-			<article>
-			<p>Amigos arrive at Hotel.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-17T17:30:00">5:30 - 7:30 p.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">XX</a></h2>
-			<article>
-			<p>Amigo Reception at the Ritz-Carlton Buckhead.</p>
-			</article>
-			</div>
-            	
-		</section><!-- container -->
-        
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #thursday page --> 
-
-
-
-
-
-
-<div id="day-6" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-5" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Friday, <time datetime="2012-05-18">May 18<sup>th</sup></time></h1>
-			<a href="#day-7" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-			<div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T06:30:00">6:30 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p><strong>Bags in your Room by the door. Bellmen begin bag pull.</strong></p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T06:31:00">Check-out</time></h2>
-			<article>
-			<p>Remember to check-out at the Front Desk.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T08:30:00">8:30 a.m.</time></h2>
-			<article>
-			<p>Coaches depart for Atlanta Airport and ramp security screening.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T10:00:00">10:00 a.m.</time></h2>
-			<article>
-			<p>Charter flight departs for San Antonio (SAT).</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T11:20:00">11:20 a.m.</time></h2>
-			<article>
-			<p>Charter flight arrives into Landmark Aviation in San Antonio.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T12:00:00">12:00 p.m.</time></h2>
-			<article>
-			<p>Amigos arrive at The Westin La Cantera Resort, 16641 La Cantera Parkway, (210) 558-6500. Please remember our luggage will arrive approx. one hour after we arrive and then Bellmen will deliver luggage to our rooms as they become available.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-            <h2>NOTE</h2>
-            <article>
-            <p>Some but not all rooms will be ready when we arrive. Hotel Shuttles will be running to and from the Shops at La Cantera. (Dining and upscale shopping)</p>
-            </article>
-            </div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-18T17:30:00">5:30 - 7:30 p.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">XX</a></h2>
-			<article>
-			<p>Amigo reception at the Westin, outside on the Old Fort Lawn.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="true" data-iconpos="left" data-theme="c" data-content-theme="c">
-            <h2>R &amp; R Begins</h2>
-            <article>
-			<p>Enjoy yourselves.</p>
-			</article>
-            </div>
-            	
-		</section><!-- container -->
-        
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #friday page -->
-    
-    
-
-
-
-
-<div id="day-7" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-6" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Saturday, <time datetime="2012-05-19">May 19<sup>th</sup></time></h1>
-			<a href="#day-8" class="ui-btn-right" data-icon="arrow-r" data-iconpos="right">Next</a>
-		</header>
-        
-			<div data-role="collapsible" data-collapsed="true" data-iconpos="left" data-theme="c" data-content-theme="c">
-            <h2>R &amp; R Continues</h2>
-            <article>
-            <p>Enjoy yourselves.</p>
-            </article>
-            </div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-19T10:00:00">10:00 a.m. - 10:00 p.m.</time></h2>
-			<article>
-			<p>Amigo Shuttle Bus will run continuously from the Westin to the River Walk area in San Antonio. (Approx. every 1&#189; hrs.)</p>
-			</article>
-			</div>
-            	
-		</section><!-- container -->
-        
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #saturday page -->
-
-
-
-
-
-
-<div id="day-8" data-role="page" data-theme="c">
-
-
-
-			<nav data-role="controlgroup" data-type="horizontal" data-mini="true" class="days">
-              <a data-role="button" href="#day-1">Su</a>
-              <a data-role="button" href="#day-2">M</a>
-              <a data-role="button" href="#day-3">Tu</a>
-              <a data-role="button" href="#day-4">W</a>
-              <a data-role="button" href="#day-5">Th</a>
-              <a data-role="button" href="#day-6">F</a>
-              <a data-role="button" href="#day-7">S</a>
-              <a data-role="button" href="#day-8">Su</a>
-		</nav>
-
-		<section data-role="content">	
-        <header data-role="header" data-position="fixed" data-theme="c">
-			<a href="#day-7" class="ui-btn-left" data-icon="arrow-l">Back</a>
-			<h1>Sunday, <time datetime="2012-05-20">May 20<sup>th</sup></time></h1>
-		</header>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-20T08:00:00">08:00 a.m.</time><a class="smlx introbutton" href="#dressCode" data-rel="dialog" data-role="button">X</a></h2>
-			<article>
-			<p><strong>Bags in your Room by the door. Bellmen begin bag pull.</strong></p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-20T08:01:00">Check-out</time></h2>
-			<article>
-			<p>Remember to check-out at the Front Desk.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-20T10:00:00">10:00 a.m.</time></h2>
-			<article>
-			<p>Coaches depart Hotel for ramp security screening at Landmark Aviation (SAT).</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-20T11:00:00">11:00 a.m.</time></h2>
-			<article>
-			<p>Charter flight departs San Antonio for Albuquerque.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-20T12:00:00">12:00 p.m.</time></h2>
-			<article>
-			<p>Charter flight arrives into Cutter Aviation at Albuquerque Sunport.</p>
-			</article>
-			</div>
-            
-            <div data-role="collapsible" data-collapsed="false" data-iconpos="left" data-theme="c" data-content-theme="c">
-			<h2><time datetime="2012-05-20T12:01:00">Welcome Home</time></h2>
-			<article>
-			<p>The Fiftieth Anniversary Goodwill Flight is now in the History Books.</p>
-            <p>Safe travels back to your Families!</p>
-			</article>
-			</div>
-            	
-		</section><!-- container -->
-        
-		<!--bio's button--><a href="javascript:getTodaysBio();"><img class="bio_icon icon_size" src="img/icons/icon_amigo.png" onMouseOver="this.src='img/icons/icon_amigo_roll.png';" onMouseOut="this.src='img/icons/icon_amigo.png';" /></a>
-		
-        
-        <footer data-role="footer" data-id="foot" data-position="fixed">
-       		<nav data-role="navbar">
-				<ul>
-					<li><a href="javascript:getTodaysBio();"></a></li>
-					<li><a href="javascript:getTodaysQuiz();"><img class="icon_size" src="img/icons/icons_Quiz.png" onMouseOver="this.src='img/icons/icons_Quiz_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Quiz.png';"/></a></li>
-					<li><a href="javascript:getTodaysPhoto();"><img style="z-index:2000;" class="icon_size" src="img/icons/icons_NM.png" onMouseOver="this.src='img/icons/icons_NM_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_NM.png';" /></a></li>
-					<li><a href="javascript:getTodaysItin();" class="ui-btn-active"><img class="icon_size" src="img/icons/icons_Intin.png" onMouseOver="this.src='img/icons/icons_Intin_Roll.png';" 
-    onmouseout="this.src='img/icons/icons_Intin.png';" /></a></li>
-				</ul>
-			</nav>
-		</footer>
-
-        
-</div><!-- #sunday2 page -->
-
-
-
-<!--  ============DIALOG BOXES=============  -->
-
-<div class="dialog_style" id="info" data-role="dialog" data-theme="c">
-					<header data-role="header" data-position="fixed" data-theme="c">
-			        <h1>Trip Information</h1>
-					</header>
-
-					<section class="welcome" data-role="content">
-
-			        	<article data-role="content" data-theme="c" data-content-theme="c">
-                        
-                        <ol>
-                        <li> Luggage must be tagged with <strong>Amigo bag tags</strong> for the duration of this trip. On departure days, bags must be placed by the door inside your room, by the time indicated in this Itinerary.</li>
-                        <li>You are responsible for any personal charges to your room. Please present a credit card upon check-in to cover your personal room charges. <strong>Our Hotels are Non-Smoking Hotels.</strong></li>
-                        <li>If you miss a Coach or Charter Flight, you are on your own and must catch up with the Amigos however you can.</li>
-                        </ol>
-                        
-                        <p>**If you have an emergency, Mike Pemberton's cell # is (575) 626-5956.</p>
-						
-			
-            			</article>
-
-			    </section><!-- /content -->
-					<a href="#" data-rel="back" data-role="button">Dismiss</a>
-
-				</div><!-- end dress code page -->
-
- 
- <div class="dialog_style" id="dressCode" data-role="dialog" data-theme="c">
-					<header data-role="header" data-position="fixed" data-theme="c">
-			        <h1>Amigo Attire</h1>
-					</header>
-
-					<section class="welcome" data-role="content">
-
-			        	<article data-role="content" data-theme="c" data-content-theme="c">
-						<p>Please note the X or XX for each day's attire.</p>
-						<p><strong>X</strong> - Amigo blue Polo Shirt, tan or khaki Slacks/Skirts, and your Amigo Name badge.</p>
-                        <p><strong>XX</strong> - White dress shirt, Amigo tie/scarf, blue Sports Coat, grey Slacks/Skirts, Amigo pocket crest and name badge.</p>
-			</article>
-
-			    </section><!-- /content -->
-					<a href="#" data-rel="back" data-role="button">Dismiss</a>
-
-				</div><!-- end info page -->  
-    
-    
-    
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
- <!--
- 	Default settings for jQM need to to be loaded before jQM
- -->  
-  <script src="js/defaults.js"></script>
-  
-  <script src="js/libs/jquery.mobile-1.1.0.min.js"></script>
-
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/helper.js"></script>
-  <script src="js/script.js"></script>
-  
-  
-  <!-- end scripts-->
-
-
-
+<body style=visibility:hidden>
+<div id=day-1 data-role=page data-theme=c class=itin-page>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<h1>Sunday <time datetime=2012-05-13>May 13<sup>th</sup></time></h1>
+<a href=#day-2 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div>
+<a href=#info data-rel=dialog data-role=button class=button_bg>Trip Information</a>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T07:00:00>7:00 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p>Registration begins at the Albuquerque Sheraton Airport Hotel.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T07:01:00>7:00 a.m. - 8:30 a.m.</time></h2>
+<article>
+<p>Departure breakfast and announcements concerning the 2012 Goodwill Trip.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T08:40:00>8:40 a.m.</time></h2>
+<article>
+<p>Group moves to Cutter Aviation.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T09:00:00>9:00 a.m.</time></h2>
+<article>
+<p>Ramp security begins on tarmac.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T09:30:00>9:30 a.m.</time></h2>
+<article>
+<p>Charter flight departs Cutter Aviation for Dulles International Airport (DIA).</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T15:00:00>3:00 p.m.</time></h2>
+<article>
+<p>Flight arrives into Landmark Aviation at (DIA). Coaches depart for Mayflower Hotel, 1127 Connecticut Avenue NW. (202) 347-3000</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T16:00:00>4:00 p.m.</time></h2>
+<article>
+<p>Amigos arrive at Mayflower Hotel for welcome reception hosted by the Hotel in the China Room. Check-in to follow. Please remember our luggage will arrive approximately one hour after we arrive at the hotel, and then bellmen will begin delivering bags to our rooms.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=true data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-13T18:00:00>Evening Free</time></h2>
+<article>
+<p>Enjoy yourselves.</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-2 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-1 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Monday, <time datetime=2012-05-14>May 14<sup>th</sup></time></h1>
+<a href=#day-3 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T08:00:00>8:00 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p>Coaches depart Hotel for Annapolis, Maryland.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T09:00:00>9:00 a.m.</time></h2>
+<article>
+<p>Arrival at the United States Naval Academy for tour and briefing.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T11:45:00>11:45 a.m.</time></h2>
+<article>
+<p>Coaches transport group to Marina area in Annapolis.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T12:00:00>12:00 - 1:30 p.m.</time></h2>
+<article>
+<p>Lunch on your own, at a restaurant of your choice.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T13:45:00>1:45 p.m.</time></h2>
+<article>
+<p>Coaches move group to the Maryland State Capitol Building.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T14:00:00>2:00 - 3:00 p.m.</time></h2>
+<article>
+<p>Tour of State Capitol.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T15:15:00>3:15 - 4:30 p.m.</time></h2>
+<article>
+<p>Reception for Governor Martinez and Amigos on campus of St. John's College.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T16:30:00>4:30 p.m.</time></h2>
+<article>
+<p>Coaches depart for return to Mayflower Hotel.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-14T17:30:00>5:30 p.m.</time></h2>
+<article>
+<p>Arrive back at the Mayflower Hotel.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=true data-iconpos=left data-theme=c data-content-theme=c>
+<h2>Evening Free</h2>
+<article>
+<p>Enjoy yourselves.</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-3 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-2 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Tuesday, <time datetime=2012-05-15>May 15<sup>th</sup></time></h1>
+<a href=#day-4 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T08:00:00>8:00 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p>Coaches depart Hotel for Laurel, Maryland.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T08:45:00>8:45 a.m.</time></h2>
+<article>
+<p>Coaches arrive at United States Secret Service Training Facility for tour and briefing.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T11:30:00>11:30 a.m.</time></h2>
+<article>
+<p>Coaches return to Hotel.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T12:15:00>12:15 p.m.</time></h2>
+<article>
+<p>Coaches arrive Hotel.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T12:16:00>Lunch on your own.</time></h2>
+<article>
+<p>Possible activities after Lunch are not confirmed at time of printing.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T16:00:00>4:00 p.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>XX</a></h2>
+<article>
+<p>Coaches depart Hotel for group photo on the steps of the United States Capitol Building.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T17:00:00>5:00 p.m.</time></h2>
+<article>
+<p>Coaches transport group to the Canadian Embassy.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T17:30:00>5:30 - 7:30 p.m.</time></h2>
+<article>
+<p>Amigo Reception</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-15T19:45:00>7:45 p.m.</time></h2>
+<article>
+<p>Coaches return to Hotel.</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-4 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-3 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Wednesday, <time datetime=2012-05-16>May 16<sup>th</sup></time></h1>
+<a href=#day-5 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T07:00:00>7:00 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p><strong>Bags in your room by the door. Bellmen begin bag pull.</strong></p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T07:30:00>7:30 - 8:30 a.m.</time></h2>
+<article>
+<p>Amigo Breakfast in the Colonial Room at our Hotel. Hosted by Nuclear Energy Institute and URENCO.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T09:00:00>Check-out</time></h2>
+<article>
+<p>Remember to check-out at the Front Desk.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T09:15:00>9:15 a.m.</time></h2>
+<article>
+<p>Coaches depart Hotel for Anderson House.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T09:30:00>9:30 a.m. - 12:30 p.m.</time></h2>
+<article>
+<p>Briefing and tour of Anderson House, followed by Amigo Past President's Lucheon.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T12:45:00>12:45 p.m.</time></h2>
+<article>
+<p>Coaches depart for Dulles Airport and ramp security screening.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T14:15:00>2:15 p.m.</time></h2>
+<article>
+<p>Charter flight departs for Atlanta, Georgia (ATL).</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T16:15:00>4:15 p.m.</time></h2>
+<article>
+<p>Charter flight arrives into Landmark Aviation (ATL). Coaches depart for Ritz-Carlton, 3434 Peachtree Road, NE, (404) 237-2700.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-16T17:00:00>5:00 p.m.</time></h2>
+<article>
+<p>Amigos arrive at Atlanta Ritz-Carlton Buckhead. Please remember our luggage will arrive approximately one hour after we arrive at the Hotel, and then bellmen will begin delivering bags to our rooms.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=true data-iconpos=left data-theme=c data-content-theme=c>
+<h2>Evening Free</h2>
+<article>
+<p>Enjoy yourselves.</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-5 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-4 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Thursday, <time datetime=2012-05-17>May 17<sup>th</sup></time></h1>
+<a href=#day-6 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T08:00:00>8:00 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p>Coaches depart for Auburn, Alabama.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T09:15:00>9:15 a.m.</time></h2>
+<article>
+<p>Amigos arrive at Auburn University for welcome by former Amigo and current University President Jay Gogue.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T09:30:00>9:30 - 11:30 a.m.</time></h2>
+<article>
+<p>Tour of Campus.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T11:30:00>11:30 a.m. - 12:30 p.m.</time></h2>
+<article>
+<p>Lunch at the home of President Jay Gouge.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T12:45:00>12:45 p.m.</time></h2>
+<article>
+<p>Coaches depart for Atlanta.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T16:00:00>4:00 p.m.</time></h2>
+<article>
+<p>Amigos arrive at Hotel.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-17T17:30:00>5:30 - 7:30 p.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>XX</a></h2>
+<article>
+<p>Amigo Reception at the Ritz-Carlton Buckhead.</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-6 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-5 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Friday, <time datetime=2012-05-18>May 18<sup>th</sup></time></h1>
+<a href=#day-7 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T06:30:00>6:30 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p><strong>Bags in your Room by the door. Bellmen begin bag pull.</strong></p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T06:31:00>Check-out</time></h2>
+<article>
+<p>Remember to check-out at the Front Desk.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T08:30:00>8:30 a.m.</time></h2>
+<article>
+<p>Coaches depart for Atlanta Airport and ramp security screening.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T10:00:00>10:00 a.m.</time></h2>
+<article>
+<p>Charter flight departs for San Antonio (SAT).</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T11:20:00>11:20 a.m.</time></h2>
+<article>
+<p>Charter flight arrives into Landmark Aviation in San Antonio.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T12:00:00>12:00 p.m.</time></h2>
+<article>
+<p>Amigos arrive at The Westin La Cantera Resort, 16641 La Cantera Parkway, (210) 558-6500. Please remember our luggage will arrive approx. one hour after we arrive and then Bellmen will deliver luggage to our rooms as they become available.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2>NOTE</h2>
+<article>
+<p>Some but not all rooms will be ready when we arrive. Hotel Shuttles will be running to and from the Shops at La Cantera. (Dining and upscale shopping)</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-18T17:30:00>5:30 - 7:30 p.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>XX</a></h2>
+<article>
+<p>Amigo reception at the Westin, outside on the Old Fort Lawn.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=true data-iconpos=left data-theme=c data-content-theme=c>
+<h2>R &amp; R Begins</h2>
+<article>
+<p>Enjoy yourselves.</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-7 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-6 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Saturday, <time datetime=2012-05-19>May 19<sup>th</sup></time></h1>
+<a href=#day-8 class=ui-btn-right data-icon=arrow-r data-iconpos=right>Next</a>
+</header>
+<div data-role=collapsible data-collapsed=true data-iconpos=left data-theme=c data-content-theme=c>
+<h2>R &amp; R Continues</h2>
+<article>
+<p>Enjoy yourselves.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-19T10:00:00>10:00 a.m. - 10:00 p.m.</time></h2>
+<article>
+<p>Amigo Shuttle Bus will run continuously from the Westin to the River Walk area in San Antonio. (Approx. every 1&#189; hrs.)</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div id=day-8 data-role=page data-theme=c>
+<nav data-role=controlgroup data-type=horizontal data-mini=true class=days>
+<a data-role=button href=#day-1>Su</a>
+<a data-role=button href=#day-2>M</a>
+<a data-role=button href=#day-3>Tu</a>
+<a data-role=button href=#day-4>W</a>
+<a data-role=button href=#day-5>Th</a>
+<a data-role=button href=#day-6>F</a>
+<a data-role=button href=#day-7>S</a>
+<a data-role=button href=#day-8>Su</a>
+</nav>
+<section data-role=content>
+<header data-role=header data-position=fixed data-theme=c>
+<a href=#day-7 class=ui-btn-left data-icon=arrow-l>Back</a>
+<h1>Sunday, <time datetime=2012-05-20>May 20<sup>th</sup></time></h1>
+</header>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-20T08:00:00>08:00 a.m.</time><a class="smlx introbutton" href=#dressCode data-rel=dialog data-role=button>X</a></h2>
+<article>
+<p><strong>Bags in your Room by the door. Bellmen begin bag pull.</strong></p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-20T08:01:00>Check-out</time></h2>
+<article>
+<p>Remember to check-out at the Front Desk.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-20T10:00:00>10:00 a.m.</time></h2>
+<article>
+<p>Coaches depart Hotel for ramp security screening at Landmark Aviation (SAT).</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-20T11:00:00>11:00 a.m.</time></h2>
+<article>
+<p>Charter flight departs San Antonio for Albuquerque.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-20T12:00:00>12:00 p.m.</time></h2>
+<article>
+<p>Charter flight arrives into Cutter Aviation at Albuquerque Sunport.</p>
+</article>
+</div>
+<div data-role=collapsible data-collapsed=false data-iconpos=left data-theme=c data-content-theme=c>
+<h2><time datetime=2012-05-20T12:01:00>Welcome Home</time></h2>
+<article>
+<p>The Fiftieth Anniversary Goodwill Flight is now in the History Books.</p>
+<p>Safe travels back to your Families!</p>
+</article>
+</div>
+</section>
+<a href=javascript:getTodaysBio()><img class="bio_icon icon_size" src=img/icons/icon_amigo.png onMouseOver="this.src='img/icons/icon_amigo_roll.png'" onMouseOut="this.src='img/icons/icon_amigo.png'" /></a>
+<footer data-role=footer data-id=foot data-position=fixed>
+<nav data-role=navbar>
+<ul>
+<li><a href=javascript:getTodaysBio()></a></li>
+<li><a href=javascript:getTodaysQuiz()><img class=icon_size src=img/icons/icons_Quiz.png onMouseOver="this.src='img/icons/icons_Quiz_Roll.png'" onmouseout="this.src='img/icons/icons_Quiz.png'"/></a></li>
+<li><a href=javascript:getTodaysPhoto()><img style=z-index:2000 class=icon_size src=img/icons/icons_NM.png onMouseOver="this.src='img/icons/icons_NM_Roll.png'" onmouseout="this.src='img/icons/icons_NM.png'" /></a></li>
+<li><a href=javascript:getTodaysItin() class=ui-btn-active><img class=icon_size src=img/icons/icons_Intin.png onMouseOver="this.src='img/icons/icons_Intin_Roll.png'" onmouseout="this.src='img/icons/icons_Intin.png'" /></a></li>
+</ul>
+</nav>
+</footer>
+</div>
+<div class=dialog_style id=info data-role=dialog data-theme=c>
+<header data-role=header data-position=fixed data-theme=c>
+<h1>Trip Information</h1>
+</header>
+<section class=welcome data-role=content>
+<article data-role=content data-theme=c data-content-theme=c>
+<ol>
+<li> Luggage must be tagged with <strong>Amigo bag tags</strong> for the duration of this trip. On departure days, bags must be placed by the door inside your room, by the time indicated in this Itinerary.</li>
+<li>You are responsible for any personal charges to your room. Please present a credit card upon check-in to cover your personal room charges. <strong>Our Hotels are Non-Smoking Hotels.</strong></li>
+<li>If you miss a Coach or Charter Flight, you are on your own and must catch up with the Amigos however you can.</li>
+</ol>
+<p>**If you have an emergency, Mike Pemberton's cell # is (575) 626-5956.</p>
+</article>
+</section>
+<a href=# data-rel=back data-role=button>Dismiss</a>
+</div>
+<div class=dialog_style id=dressCode data-role=dialog data-theme=c>
+<header data-role=header data-position=fixed data-theme=c>
+<h1>Amigo Attire</h1>
+</header>
+<section class=welcome data-role=content>
+<article data-role=content data-theme=c data-content-theme=c>
+<p>Please note the X or XX for each day's attire.</p>
+<p><strong>X</strong> - Amigo blue Polo Shirt, tan or khaki Slacks/Skirts, and your Amigo Name badge.</p>
+<p><strong>XX</strong> - White dress shirt, Amigo tie/scarf, blue Sports Coat, grey Slacks/Skirts, Amigo pocket crest and name badge.</p>
+</article>
+</section>
+<a href=# data-rel=back data-role=button>Dismiss</a>
+</div>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js></script>
+<script>window.jQuery||document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>');</script>
+<script src=js/defaults.js></script>
+<script src=js/libs/jquery.mobile-1.1.0.min.js></script>
+<script src=js/helper.js></script>
+<script src=js/script.js></script>
 </body>
 </html>

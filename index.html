@@ -1,128 +1,74 @@
 <!doctype html>
-<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
-<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en" manifest="cache.manifest"> <!--<![endif]-->
-
+<!--[if IEMobile 7 ]> <html class="no-js iem7" lang=en> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class=no-js lang=en manifest=cache.manifest> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-
-  <title>NM Amigos</title>
-  <meta name="description" content="">
-
-  <!-- Mobile viewport optimization h5bp.com/ad -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width">
-
-  <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
-  <!-- For iPhone 4 with high-resolution Retina display: -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
-  <!-- For first-generation iPad: -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
-  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
-  <!-- For nokia devices: -->
-  <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
-
-  <!-- iOS web app, delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
-  
-  <!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
-  <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
-  
-  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
-  <meta http-equiv="cleartype" content="on">
-
-  <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
-
-  <!-- Main Stylesheet 
-  <link rel="stylesheet" href="css/style.css">-->
-  <!-- jQuery mobile stylesheet -->
-
-  <link rel="stylesheet" href="css/jquery.mobile-1.1.0.minTEST_Photo.css">
-      <link rel="stylesheet" href="css/style.css">
-
-  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+<meta charset=utf-8>
+<title>NM Amigos</title>
+<meta name=description content>
+<meta name=HandheldFriendly content=True>
+<meta name=MobileOptimized content=320>
+<meta name=viewport content="width=device-width">
+<link rel=apple-touch-icon-precomposed sizes=114x114 href=img/h/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed sizes=72x72 href=img/m/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed href=img/l/apple-touch-icon-precomposed.png>
+<link rel="shortcut icon" href=img/l/apple-touch-icon.png>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black>
+<script>(function(){var b;if(navigator.platform==="iPad"){b=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{b=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+b+'"/>')})();</script>
+<meta http-equiv=cleartype content=on>
+<link rel=stylesheet href=css/jquery.mobile-1.1.0.minTEST_Photo.css>
+<link rel=stylesheet href=css/style.css>
+<script src=js/libs/modernizr-2.0.6.min.js></script>
 </head>
-
-<body class="nav_bod" style="visibility:hidden;">
-  
-  <div class="bg_grad"></div>
-  
-		
-			<div class="navbar_index" data-role="page">
-				
-			<a class="introbutton button_bg" href="#welcomePage" data-rel="dialog" data-role="button">Welcome! (click me)</a>
-				
-				
-				<div class="itin"><a href="javascript:getTodaysItin();" ></a><p style="text-shadow:none;color:#fff;">Itinerary</p></div>
-				<div class="both_buttons">
-				<div class="quiz"><a data-ajax="false" href="javascript:getTodaysQuiz();"></a><p style="text-shadow:none;color:#fff;">Stump the Amigo</p></div>
-				<div class="nm"><a href="javascript:getTodaysPhoto();"></a><p style="text-shadow:none;color:#fff;">New Mexico</p><p style="font-size:8px;text-shadow:none;color:#fff;">Past, Present and Future</p></div>
-				</div>
-				<div class="amigo"><a href="javascript:getTodaysBio();"></a></div>
-				</ul>
-			</div><!-- /navbar_index -->
-			
-			<div id="welcomePage" data-role="dialog" data-theme="c">
-					<header data-role="header" data-position="fixed" data-theme="c">
-			        <h1>Welcome!</h1>
-					</header>
-
-					<section class="welcome" data-role="content">
-
-			        	<article data-role="content" data-theme="c" data-content-theme="c">
-
-						<p>Bienvenidos y Hola Amigos.<p>
-			<p>As we know, the New Mexico Amigos is currently celebrating its 50th year as the organization serving our state as its official goodwill ambassadors.  Founded during a national tour and celebration of our state's 50th birthday 50 years ago, we are doubly proud to have these two magnificent anniversary celebrations coincide this year.  Que Viva!  As we embark on our annual goodwill ambassadorial mission, I am pleased to introduce to you a newly created app for your hand held mobile devices highlighting our organization, its leadership and members, our trip itinerary, New Mexico factoids in a quiz format, and more.  Each day of our trip will bring to life aspects within the aforementioned categories, and as the future unfolds, more substance and effectiveness will be the result, as we will observe our very own New Mexico Amigo app, Beep-Beep, grow and serve the purposes we are proud to represent and fulfill – sharing with the world how absolutely fantastic New Mexico is with its rich history, culture, art, recreation, geography, cuisine, climate, etc.  Our home state, New Mexico, The Land of Enchantment, offers residents and visitors alike a life and lifestyle like no other place, a land that is richly endowed by its cultural history, an atmosphere that exudes a sense of timelessness that soothes the spirit.  Off we go to share the enchantment.  Saludos!<br>
--	Chris Webster</p>
-			
-<!-- Install instructions -->
-			
+<body class=nav_bod style=visibility:hidden>
+<div class=bg_grad></div>
+<div class=navbar_index data-role=page>
+<a class="introbutton button_bg" href=#welcomePage data-rel=dialog data-role=button>Welcome! (click me)</a>
+<div class=itin><a href=javascript:getTodaysItin()></a><p style=text-shadow:none;color:#fff>Itinerary</p></div>
+<div class=both_buttons>
+<div class=quiz><a data-ajax=false href=javascript:getTodaysQuiz()></a><p style=text-shadow:none;color:#fff>Stump the Amigo</p></div>
+<div class=nm><a href=javascript:getTodaysPhoto()></a><p style=text-shadow:none;color:#fff>New Mexico</p><p style=font-size:8px;text-shadow:none;color:#fff>Past, Present and Future</p></div>
+</div>
+<div class=amigo><a href=javascript:getTodaysBio()></a></div>
+</ul>
+</div>
+<div id=welcomePage data-role=dialog data-theme=c>
+<header data-role=header data-position=fixed data-theme=c>
+<h1>Welcome!</h1>
+</header>
+<section class=welcome data-role=content>
+<article data-role=content data-theme=c data-content-theme=c>
+<p>Bienvenidos y Hola Amigos.<p>
+<p>As we know, the New Mexico Amigos is currently celebrating its 50th year as the organization serving our state as its official goodwill ambassadors. Founded during a national tour and celebration of our state's 50th birthday 50 years ago, we are doubly proud to have these two magnificent anniversary celebrations coincide this year. Que Viva! As we embark on our annual goodwill ambassadorial mission, I am pleased to introduce to you a newly created app for your hand held mobile devices highlighting our organization, its leadership and members, our trip itinerary, New Mexico factoids in a quiz format, and more. Each day of our trip will bring to life aspects within the aforementioned categories, and as the future unfolds, more substance and effectiveness will be the result, as we will observe our very own New Mexico Amigo app, Beep-Beep, grow and serve the purposes we are proud to represent and fulfill – sharing with the world how absolutely fantastic New Mexico is with its rich history, culture, art, recreation, geography, cuisine, climate, etc. Our home state, New Mexico, The Land of Enchantment, offers residents and visitors alike a life and lifestyle like no other place, a land that is richly endowed by its cultural history, an atmosphere that exudes a sense of timelessness that soothes the spirit. Off we go to share the enchantment. Saludos!<br>
+- Chris Webster</p>
 <hr />
-    <h1>Hello Amigos and welcome,</h1>
-<p>The New Mexico Past, Present and Future mobile itinerary app will be your mobile resource for the duration of the trip.  The app will populate with information beginning 5/13/12.  Until then we would like to walk you through the steps of adding our app icon to your device's home screen or bookmarks folder.  This will ensure that you have quick access to our helpful web-app. Have a great trip!
+<h1>Hello Amigos and welcome,</h1>
+<p>The New Mexico Past, Present and Future mobile itinerary app will be your mobile resource for the duration of the trip. The app will populate with information beginning 5/13/12. Until then we would like to walk you through the steps of adding our app icon to your device's home screen or bookmarks folder. This will ensure that you have quick access to our helpful web-app. Have a great trip!
 -The R3 team</p>
-
 <h2>How to save NM Amigo Itinerary app icon to your home screen on the top 5 smart phones.</h2>
-
 <p><strong><u>OS (iPhone, iPod, iPad):Adding app bookmark icon to home screen.</u></strong></p>
-
 <p>1. Touch the box/arrow or the + icon that's at the bottom of the screen, in the center of the bottom bar. Note: iPads will have this icon on the top of the window.</p>
 <p>2. You should get a list of options that pops up. </p>
 <p>3. Pick "Add to Home Screen" </p>
 <p>4. On the next screen, type in the name you want to use for the app and click the "add" button </p>
 <p>5. It should now appear alongside your other apps on your home screen. </p>
-
 <p>Click here for these instructions with screenshots: </p>
 <a href="http://www.wispolitics.com/index.iml?Article=267681">http://www.wispolitics.com/index.iml?Article=267681</a>
 <br>
 <br>
 <p><strong><u>BlackBerry: Adding app bookmark icon to home screen.</u></strong></p>
 <p>Press the "BlackBerry" key to bring up the pop-up menu and select "Add to Home Screen" from that menu.</p>
-
 <p>1. Type in the name of the bookmark in the first text box on the screen. This box will default to the name of the page, so you don't have to change it if you don't want to.</p>
-
 <p>2. Choose the folder that you want to save the bookmark to by selecting the box next to "Location" and choosing your desired folder from the drop-down menu. Press "Add" when you are ready to add the bookmark. Your bookmark will now be an icon on your home screen, or in the folder you selected.</p>
-
 <br>
-
-
 <p><strong><u>HTC Rezound: Adding app bookmark.</u></strong></p>
 <p>If you are not already on the Home screen, tap the Home key.</p>
-
-
 <p>1. Tap Menu.</p>
 <p>2. Tap Add.</p>
 <p>3. Tap Add bookmark.</p>
 <p>4. Enter the name of the bookmark, NM Amigos.</p>
 <p>5. Enter the location the bookmark should go to.
-
-  Tap Done.</p>
-
+Tap Done.</p>
 <p>The bookmark is now saved.</p>
 <p>Add bookmark to home screen</p>
 <p>1. From the Home screen, select the menu icon.</p>
@@ -130,113 +76,69 @@
 <p>3. Select Shortcut.</p>
 <p>4. Select bookmark.</p>
 <p>5. Select NM Amigos shortcut.</p>
-
-
 <br>
 <p><strong><u>Android: Adding app bookmark icon to home screen.</u></strong></p>
 <p>Follow these steps to add a URL bookmark icon to your Android's home screen:</p>
 <p>1. Bookmark the desired page from your phone's default browser.</p>
 <p>2. From your Android's home screen, where you would like to add the bookmark icon, long-press (press and hold unoccupied space with your finger for about 2 seconds).</p>
-<p>3. From &quot;Add to Home Screen&quot;, select &quot;Shortcuts&quot; and then select &quot;Bookmark&quot;.?</p>
+<p>3. From &quot;Add to Home Screen&quot;, select &quot;Shortcuts&quot; and then select &quot;Bookmark&quot;.?</p>
 <p>4. Select the desired bookmark and BOOM, you now have a bookmark icon shortcut on your Android's home screen!</p>
 <br>
-
 <p><strong><u>Windows Phone</u></strong></p>
-
 <p>1. Slide up the menu from the bottom of the screen </p>
 <p>2. Select "Pin to start" </p>
-
 <p>See instructions from Microsoft for more</p>
-<a href="http://www.microsoft.com/windowsphone/en-us/howto/wp7/start/pin-things-to-start.aspx" >http://www.microsoft.com/windowsphone/en-us/howto/wp7/start/pin-things-to-start.aspx</a> 
-
-
+<a href=http://www.microsoft.com/windowsphone/en-us/howto/wp7/start/pin-things-to-start.aspx>http://www.microsoft.com/windowsphone/en-us/howto/wp7/start/pin-things-to-start.aspx</a>
 <p>NOTE: If your phone is not listed here, the process will be similar.</p>
 <br>
-  <br>
+<br>
 <hr />
 <h2>How to use your app</h2>
-
 <p><strong>Home screen:</strong></p>
 <p>-Day 1, this screen will have a welcome message with these directions and a short welcome message.</p>
 <p>-Everyday, this screen will have buttons to your Itinerary, Quiz, NM (past, present and future photos page) and the amigo of the day bio page.</p>
-<p>NOTE: you can access this screen only through launching the app.  To navigate the site on other pages use the bottom NAVIGATION bar.</p>
-
+<p>NOTE: you can access this screen only through launching the app. To navigate the site on other pages use the bottom NAVIGATION bar.</p>
 <p><strong>Itinerary Page:</strong></p>
 <p>-Day 1, Trip information button on top of itinerary.</p>
 <p>-Top of app, use the &quot;Next&quot; and &quot;Prev&quot; buttons to navigate the days.</p>
-<p>-After times, you will sometimes see a &quot;x&quot; or &quot;xx&quot; these are the required cloths for the particular event.  Click on the x's for details.</p>
-
+<p>-After times, you will sometimes see a &quot;x&quot; or &quot;xx&quot; these are the required cloths for the particular event. Click on the x's for details.</p>
 <p><strong>Quiz:</strong></p>
-<p>-You will have access to five quizzes a day.  You can look back at old quizzes via the &quot;prev&quot; button.  You will not be able to skip ahead.</p>
-
+<p>-You will have access to five quizzes a day. You can look back at old quizzes via the &quot;prev&quot; button. You will not be able to skip ahead.</p>
 <p><strong>Bio Page:</strong></p>
-<p>-You will receive a new bio pic daily.  You will not be able to see future bios but you can see previous bios via the &quot;Prev&quot; button.</p>
-
+<p>-You will receive a new bio pic daily. You will not be able to see future bios but you can see previous bios via the &quot;Prev&quot; button.</p>
 <p><strong>NM Page:</strong></p>
-<p>-You will receive a new NM pic daily.  You will not be able to see future pics but you can see previous bios via the &quot;Prev&quot; button.</p>
+<p>-You will receive a new NM pic daily. You will not be able to see future pics but you can see previous bios via the &quot;Prev&quot; button.</p>
 <p>Note: on new smart phones you can rotate your device to see a larger version of the pic.</p>
-
 <p>Have a GREAT TRIP!</p>
-
-<!-- End Install instructions -->
-
-			</article>
-
-			    </section><!-- /content -->
-					<a href="#" data-rel="back" data-role="button">Dismiss</a>
-
-				</div><!-- end welcome page -->
-		
-				<div id="goodbyePage" data-role="dialog" data-theme="c">
-					<header data-role="header" data-position="fixed" data-theme="c">
-			        <h1>Goodbye!</h1>
-					</header>
-
-					<section class="goodbye" data-role="content">
-
-			        	<article data-role="content" data-theme="c" data-content-theme="c">
-					  
-					  
-		      <div class="lst_score">
-			  <p style="color:#fff;">Your total score:</p>
-			  <p style="color:#fff; font-weight:bold;" class="totalscore">0/40</p>
-		      </div>
-			      <img src="img/r3-logo.jpg" />
-						<p><strong style="font-size:20px;">Reach3Mobile™</strong> ("ReachReachReach") is the Southwest's premier private-sector mobile only technology innovator and solutions provider. We create and develop elegant smartphone and tablet products, utilizing bleeding edge programming technologies that remain largely unexplored by mainstream competitors. Our products are grounded in future forward ideation rather than seventeen-year-old browser based thinking. Our partnership with Institutions of Higher Learning provides us with a fathomless pool of the best and brightest minds that live to eradicate the boundaries between "It's possible" and "It's patented". From graceful mobile-optimized (.mobi) web sites to intuitive apps or robust enterprise level communications and commerce platforms, <strong>generating mobile consumer engagement opportunities that work in tandem with traditional 'offline' business goals and objectives has never been more accessible or within your reach.</strong></p>
-			            
-		    
-                        
-                        <h2><a href="http://youtu.be/2RJYrQwWX5A" target="_blank" title="New Mexico's Future">Click Here* for New Mexico's Future</a></h2>
-                        <p><small>*Note: You must be able to access the internet to view this link.</small></p>
-                        
-			
-					</article>
-
-			    </section><!-- /content -->
-					<a href="#" data-rel="back" data-role="button">Dismiss</a>
-
-				</div><!-- end goodbye page -->
-
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
- <!--
- 	Default settings for jQM need to to be loaded before jQM
- -->  
-  <script src="js/defaults.js"></script>
-  
-  <script src="js/libs/jquery.mobile-1.1.0.min.js"></script>
-
-  <script src="js/bookmark_bubble.js"></script>
-  <script src="js/bubble.js"></script>
-
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/helper.js"></script>
-  <script src="js/script.js"></script>
-    
-
+</article>
+</section>
+<a href=# data-rel=back data-role=button>Dismiss</a>
+</div>
+<div id=goodbyePage data-role=dialog data-theme=c>
+<header data-role=header data-position=fixed data-theme=c>
+<h1>Goodbye!</h1>
+</header>
+<section class=goodbye data-role=content>
+<article data-role=content data-theme=c data-content-theme=c>
+<div class=lst_score>
+<p style=color:#fff>Your total score:</p>
+<p style=color:#fff;font-weight:bold class=totalscore>0/40</p>
+</div>
+<img src=img/r3-logo.jpg />
+<p><strong style=font-size:20px>Reach3Mobile™</strong> (&quot;ReachReachReach&quot;) is the Southwest's premier private-sector mobile only technology innovator and solutions provider. We create and develop elegant smartphone and tablet products, utilizing bleeding edge programming technologies that remain largely unexplored by mainstream competitors. Our products are grounded in future forward ideation rather than seventeen-year-old browser based thinking. Our partnership with Institutions of Higher Learning provides us with a fathomless pool of the best and brightest minds that live to eradicate the boundaries between &quot;It's possible&quot; and &quot;It's patented&quot;. From graceful mobile-optimized (.mobi) web sites to intuitive apps or robust enterprise level communications and commerce platforms, <strong>generating mobile consumer engagement opportunities that work in tandem with traditional &quot;offline&quot; business goals and objectives has never been more accessible or within your reach.</strong></p>
+<h2><a href=http://youtu.be/2RJYrQwWX5A target=_blank title="New Mexico's Future">Click Here* for New Mexico's Future</a></h2>
+<p><small>*Note: You must be able to access the internet to view this link.</small></p>
+</article>
+</section>
+<a href=# data-rel=back data-role=button>Dismiss</a>
+</div>
+<script src=//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js></script>
+<script>window.jQuery||document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>');</script>
+<script src=js/defaults.js></script>
+<script src=js/libs/jquery.mobile-1.1.0.min.js></script>
+<script src=js/bookmark_bubble.js></script>
+<script src=js/bubble.js></script>
+<script src=js/helper.js></script>
+<script src=js/script.js></script>
 </body>
 </html>
