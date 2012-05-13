@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 05-08-2012 v7
+# 05-08-2012 v8
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -51,7 +51,6 @@ img/startup-tablet-landscape.png
 img/startup-tablet-portrait.png
 img/amigo.png
 img/amigo_roll.png
-img/bg.jpg
 img/bg_repeat.jpg
 img/bio_chrisWebster.jpg
 img/bio_dannyLopez.jpg
@@ -73,8 +72,6 @@ img/nmpic5.jpg
 img/nmpic6.jpg
 img/nmpic7.jpg
 img/nmpic8.jpg
-img/no-photo.png
-img/quiz_bg.png
 img/stump.png
 img/icons/bg.jpg
 img/icons/icon_amigo.png
