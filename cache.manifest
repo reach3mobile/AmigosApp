@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 05-08-2012 v8
+# 05-08-2012 v9
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -85,3 +85,10 @@ img/icons/icons_Quiz_Roll.png
 img/r3-logo.jpg
 img/share.png
 img/stump_roll.png
+
+# Resources that require the user to be online.
+NETWORK:
+http://www.wispolitics.com
+http://www.microsoft.com
+http://youtu.be
+ajax.googleapis.com
