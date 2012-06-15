@@ -58,7 +58,9 @@ function daysSinceStart() {
   var oneDay=1000*60*60*24;
   var days = Math.ceil((today.getTime()-firstDay.getTime())/(oneDay));
   //console.log("days: " + days);
-  return days;
+/*   return days; */
+// for demo mode always return 8
+	return 8;
 };
 
 function remainingQuiz() {
